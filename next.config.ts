@@ -52,22 +52,48 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        // No cache for HTML files
-        source: "/(.*).html",
+        // No cache for HTML files and pages
+        source: "/((?!_next|api|favicon.ico).*)",
         headers: [
           {
             key: "Cache-Control",
-            value: "no-cache, no-store, must-revalidate",
+            value: "no-cache, no-store, must-revalidate, proxy-revalidate",
+          },
+          {
+            key: "Pragma",
+            value: "no-cache",
+          },
+          {
+            key: "Expires",
+            value: "0",
+          },
+          {
+            key: "Surrogate-Control",
+            value: "no-store",
           },
         ],
       },
       {
-        // Cache static assets for 1 hour but allow revalidation
+        // Shorter cache for static assets with ETag support
         source: "/_next/static/(.*)",
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=3600, must-revalidate",
+            value: "public, max-age=1800, must-revalidate, stale-while-revalidate=86400",
+          },
+          {
+            key: "Vary",
+            value: "Accept-Encoding",
+          },
+        ],
+      },
+      {
+        // No cache for service worker and manifest
+        source: "/(sw.js|manifest.json)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "no-cache, no-store, must-revalidate",
           },
         ],
       },
