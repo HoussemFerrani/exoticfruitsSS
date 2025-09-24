@@ -37,7 +37,6 @@ export default function AboutUsSection() {
           {/* Text Content - Left Side */}
           <motion.div
             className="order-2 md:order-1"
-            key={`text-${isVisible}`}
             initial={{ opacity: 0, y: 50 }}
             animate={{
               opacity: isVisible ? 1 : 0,
@@ -51,7 +50,6 @@ export default function AboutUsSection() {
                 textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
                 fontFamily: "var(--font-family-base)"
               }}
-              key={`heading-${isVisible}`}
               initial={{ opacity: 0, y: 60 }}
               animate={{
                 opacity: isVisible ? 1 : 0,
@@ -64,7 +62,6 @@ export default function AboutUsSection() {
 
             <motion.div
               className="w-24 h-1 bg-orange-400 mb-8 rounded-full"
-              key={`line-${isVisible}`}
               initial={{ scaleX: 0 }}
               animate={{
                 scaleX: isVisible ? 1 : 0
@@ -75,7 +72,6 @@ export default function AboutUsSection() {
 
             <motion.div
               className="space-y-6 text-gray-700 text-lg leading-relaxed"
-              key={`desc-${isVisible}`}
               initial={{ opacity: 0, y: 40 }}
               animate={{
                 opacity: isVisible ? 1 : 0,
@@ -84,7 +80,6 @@ export default function AboutUsSection() {
               transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
             >
               <motion.p
-                key={`p1-${isVisible}`}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{
                   opacity: isVisible ? 1 : 0,
@@ -96,7 +91,6 @@ export default function AboutUsSection() {
               </motion.p>
 
               <motion.p
-                key={`p2-${isVisible}`}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{
                   opacity: isVisible ? 1 : 0,
@@ -109,7 +103,6 @@ export default function AboutUsSection() {
             </motion.div>
 
             <motion.div
-              key={`button-${isVisible}`}
               initial={{ opacity: 0, y: 30 }}
               animate={{
                 opacity: isVisible ? 1 : 0,
@@ -143,7 +136,6 @@ export default function AboutUsSection() {
           {/* Image Collage - Right Side */}
           <motion.div
             className="order-1 md:order-2"
-            key={`images-${isVisible}`}
             initial={{ opacity: 0, x: 100 }}
             animate={{
               opacity: isVisible ? 1 : 0,
@@ -155,7 +147,6 @@ export default function AboutUsSection() {
               {/* Decorative background */}
               <motion.div
                 className="absolute -inset-4 bg-gradient-to-r from-orange-100 to-green-100 rounded-3xl opacity-50 blur-lg"
-                key={`bg-${isVisible}`}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{
                   opacity: isVisible ? 0.5 : 0,
@@ -167,7 +158,6 @@ export default function AboutUsSection() {
               {/* Main large image - Left side */}
               <motion.div
                 className="absolute left-0 top-0 w-[60%] h-[100%] overflow-hidden rounded-3xl shadow-xl"
-                key={`main-img-${isVisible}`}
                 initial={{ opacity: 0, x: 80, scale: 0.8 }}
                 animate={{
                   opacity: isVisible ? 1 : 0,
@@ -191,7 +181,6 @@ export default function AboutUsSection() {
               {/* Top right image - Truck */}
               <motion.div
                 className="absolute right-0 top-0 w-[38%] h-[48%] overflow-hidden rounded-2xl shadow-lg"
-                key={`truck-img-${isVisible}`}
                 initial={{ opacity: 0, x: 120, y: -30, rotate: -15 }}
                 animate={{
                   opacity: isVisible ? 1 : 0,
@@ -214,7 +203,6 @@ export default function AboutUsSection() {
               {/* Bottom right image - Factory */}
               <motion.div
                 className="absolute right-0 bottom-0 w-[38%] h-[48%] overflow-hidden rounded-2xl shadow-lg"
-                key={`factory-img-${isVisible}`}
                 initial={{ opacity: 0, x: 120, y: 30, rotate: 15 }}
                 animate={{
                   opacity: isVisible ? 1 : 0,
