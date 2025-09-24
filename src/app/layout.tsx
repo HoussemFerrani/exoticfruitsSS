@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import ModalProvider from "@/components/providers/ModalProvider";
 import { Montserrat } from "next/font/google";
-import { AuthProvider } from "@/contexts/AuthContext";
 import { I18nProvider } from "@/contexts/I18nContext";
 import LanguageButton from "@/components/ui/LanguageButton";
 
@@ -93,14 +92,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={montserrat.variable}>
       <body className={`antialiased`}>
-        <AuthProvider>
-          <I18nProvider defaultLocale="en">
-            <ModalProvider>
-              {children}
-              <LanguageButton />
-            </ModalProvider>
-          </I18nProvider>
-        </AuthProvider>
+        <I18nProvider defaultLocale="en">
+          <ModalProvider>
+            {children}
+            <LanguageButton />
+          </ModalProvider>
+        </I18nProvider>
       </body>
     </html>
   );

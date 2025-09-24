@@ -17,7 +17,9 @@
       "Bash(grep:*)",
       "Bash(curl:*)",
       "WebFetch(domain:www.canadawidefruits.com)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(docker:*)",
+      "Bash(mongod:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,9 +1,8 @@
 "use client";
 
 import { createContext, useCallback, useContext, useMemo, useState } from "react";
-import AuthModal from "@/components/models/AuthModal";
 
-export type ModalType = "auth";
+export type ModalType = "service";
 
 type ModalContextValue = {
   openModal: (type: ModalType) => void;
@@ -27,7 +26,7 @@ export default function ModalProvider({
   children: React.ReactNode;
 }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [modalType, setModalType] = useState<ModalType>("auth");
+  const [modalType, setModalType] = useState<ModalType>("service");
 
   const openModal = useCallback((type: ModalType) => {
     setModalType(type);
@@ -44,9 +43,6 @@ export default function ModalProvider({
   return (
     <ModalContext.Provider value={value}>
       {children}
-      {modalType === "auth" && (
-        <AuthModal isOpen={isOpen} onClose={closeModal} />
-      )}
     </ModalContext.Provider>
   );
 }

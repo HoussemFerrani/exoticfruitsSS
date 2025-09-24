@@ -5,8 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useAuth } from "@/contexts/AuthContext";
-import { useModal } from "@/components/providers/ModalProvider";
 
 export type ServiceInfo = {
   id: string;
@@ -78,8 +76,7 @@ export default function ServiceModal({
 }: ServiceModalProps) {
   const service = SERVICE_DETAILS.find((s) => s.id === serviceId);
   const router = useRouter();
-  const { user } = useAuth();
-  const { openModal } = useModal();
+  const user = null; // Auth removed for frontend-only deployment
 
   // Service to checkout route mapping
   const getCheckoutRoute = (serviceId: string) => {
@@ -93,16 +90,7 @@ export default function ServiceModal({
   };
 
   const handleReservation = () => {
-    if (!user) {
-      // Close service modal first, then open auth modal
-      onClose();
-      setTimeout(() => {
-        openModal("auth");
-      }, 100);
-      return;
-    }
-
-    // User is authenticated, redirect to checkout
+    // Since auth is removed, directly redirect to checkout
     const checkoutRoute = getCheckoutRoute(serviceId!);
     onClose();
     router.push(checkoutRoute);

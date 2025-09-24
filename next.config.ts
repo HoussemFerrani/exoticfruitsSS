@@ -1,13 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // i18n configuration
-  i18n: {
-    locales: ['en', 'fr'],
-    defaultLocale: 'en',
-    localeDetection: false,
-  },
-
   // Allow specific external origins to access dev assets (e.g., /_next/*) during development
   // This prevents cross-origin warnings when testing from other devices on your LAN.
   allowedDevOrigins: [
@@ -16,7 +9,6 @@ const nextConfig: NextConfig = {
     "http://localhost:3000",
   ],
 
-
   // Disable source maps in development to prevent 404 errors
   productionBrowserSourceMaps: false,
 
@@ -24,30 +16,6 @@ const nextConfig: NextConfig = {
   experimental: {
     // Enable better error handling
     optimizePackageImports: ["framer-motion", "lucide-react"],
-  },
-
-  // Webpack configuration to handle node: URIs
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        crypto: require.resolve("crypto-browserify"),
-        stream: require.resolve("stream-browserify"),
-        assert: require.resolve("assert"),
-        buffer: require.resolve("buffer"),
-        process: require.resolve("process/browser"),
-        net: false,
-      };
-    }
-
-    // Handle node: URIs
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      "node:crypto": "crypto-browserify",
-      "node:net": false,
-    };
-
-    return config;
   },
 
   // Security headers

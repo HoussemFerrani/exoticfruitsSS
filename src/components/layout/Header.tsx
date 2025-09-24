@@ -6,8 +6,7 @@ import { usePathname } from "next/navigation";
 import React from "react";
 import { motion } from "framer-motion";
 import { useModal } from "@/components/providers/ModalProvider";
-import { useAuth } from "@/contexts/AuthContext";
-import { ChevronDown, Sparkles, LogOut } from "lucide-react";
+import { ChevronDown, Sparkles } from "lucide-react";
 import { Button as MovingButton } from "@/components/ui/moving-border";
 import { useI18n } from "@/contexts/I18nContext";
 
@@ -23,7 +22,7 @@ type NavItem = {
 export default function Header() {
   const pathname = usePathname();
   const { openModal } = useModal();
-  const { user, logout, isLoading } = useAuth();
+  const user = null; // Auth removed for frontend-only deployment
   const { t } = useI18n();
 
   const NAV_ITEMS: NavItem[] = [

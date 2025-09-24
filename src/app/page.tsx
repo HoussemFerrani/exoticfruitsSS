@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import Header from "@/components/layout/Header";
 import HeroSection from "../components/sections/HeroSection";
 import AboutUsSection from "@/components/sections/AboutUsSection";
@@ -11,22 +10,12 @@ import PartnersSection from "@/components/sections/PartnersSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import FAQSection from "@/components/sections/FAQSection";
 import Footer from "@/components/layout/Footer";
-import { useModal } from "@/components/providers/ModalProvider";
 import InfiniteSlider from "@/components/ui/InfiniteSlider";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-// Component that handles search params
+// Component that handles search params (auth removed for frontend-only deployment)
 function SearchParamsHandler() {
-  const searchParams = useSearchParams();
-  const { openModal } = useModal();
-
-  useEffect(() => {
-    if (searchParams?.get("auth") === "required") {
-      openModal("auth");
-    }
-  }, [searchParams, openModal]);
-
   return null;
 }
 
