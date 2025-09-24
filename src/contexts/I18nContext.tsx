@@ -77,6 +77,7 @@ export function I18nProvider({ children, defaultLocale = "en" }: I18nProviderPro
           setLocale(browserLang);
         }
       }
+      setIsHydrated(true);
     }
   }, []);
 

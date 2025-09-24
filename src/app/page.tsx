@@ -13,6 +13,9 @@ import Footer from "@/components/layout/Footer";
 import InfiniteSlider from "@/components/ui/InfiniteSlider";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useI18n } from "@/contexts/I18nContext";
+import TranslatedText from "@/components/ui/TranslatedText";
+import { useHydrationSafeTranslation } from "@/hooks/useHydrationSafeTranslation";
 
 // Component that handles search params (auth removed for frontend-only deployment)
 function SearchParamsHandler() {
@@ -20,8 +23,11 @@ function SearchParamsHandler() {
 }
 
 export default function Home() {
+  const { t, locale, isHydrated } = useI18n();
+  const { ht } = useHydrationSafeTranslation();
+
   return (
-    <main>
+    <main key={isHydrated ? locale : 'default'}>
       <Suspense fallback={null}>
         <SearchParamsHandler />
       </Suspense>
@@ -35,11 +41,11 @@ export default function Home() {
           {/* Header */}
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-green-800 mb-4">
-              Our Premium Exotic Fruits
+              {ht("products.sliderTitle", "Our Premium Exotic Fruits")}
             </h2>
             <div className="w-24 h-1 bg-orange-400 mx-auto mb-6 rounded-full"></div>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Discover the amazing variety of fresh exotic fruits we import directly from Colombia
+              {ht("products.sliderDescription", "Discover the amazing variety of fresh exotic fruits we import directly from Colombia")}
             </p>
           </div>
 
@@ -92,7 +98,7 @@ export default function Home() {
 
                 {/* Button content */}
                 <span className="relative z-10 flex items-center gap-3">
-                  View All Products
+                  {ht("common.exploreButton", "View All Products")}
                   <motion.svg
                     className="w-6 h-6"
                     fill="none"

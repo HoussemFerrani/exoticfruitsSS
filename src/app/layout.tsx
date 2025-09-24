@@ -98,16 +98,48 @@ export default function RootLayout({
               (function() {
                 // Remove browser extension attributes that cause hydration issues
                 if (typeof window !== 'undefined') {
+                  // Immediately clean existing attributes when the script runs
+                  function cleanExtensionAttributes(element) {
+                    if (!element || !element.attributes) return;
+                    const attributesToRemove = [];
+                    for (let i = 0; i < element.attributes.length; i++) {
+                      const attr = element.attributes[i];
+                      if (
+                        ['bis_register', 'bis_skin_checked', 'bis_size', 'bis_id'].includes(attr.name) ||
+                        (attr.name.startsWith('__processed_') && attr.name.endsWith('__')) ||
+                        attr.name.startsWith('data-new-gr-') ||
+                        attr.name.startsWith('data-gr-') ||
+                        attr.name.includes('extension') ||
+                        attr.name.includes('bis_') ||
+                        attr.name.match(/^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$/)
+                      ) {
+                        attributesToRemove.push(attr.name);
+                      }
+                    }
+                    attributesToRemove.forEach(attr => {
+                      try {
+                        element.removeAttribute(attr);
+                      } catch (e) {
+                        // Ignore errors
+                      }
+                    });
+                  }
+
+                  // Clean immediately and repeatedly to prevent hydration issues
+                  function cleanAll() {
+                    if (document.body) cleanExtensionAttributes(document.body);
+                    if (document.documentElement) cleanExtensionAttributes(document.documentElement);
+                  }
+
+                  cleanAll();
+
+                  // Clean again after a short delay in case extensions add attributes after initial load
+                  setTimeout(cleanAll, 100);
+                  setTimeout(cleanAll, 500);
                   const observer = new MutationObserver(function(mutations) {
                     mutations.forEach(function(mutation) {
                       if (mutation.type === 'attributes') {
-                        const target = mutation.target;
-                        // Remove common browser extension attributes
-                        ['bis_register', 'bis_skin_checked', 'bis_size', 'bis_id', '__processed_09b3c779-6358-48f4-876a-4aa3051b3a70__', '__processed_97949eaa-5632-4d9d-b71e-7f4dfc78ce55__'].forEach(attr => {
-                          if (target.hasAttribute && target.hasAttribute(attr)) {
-                            target.removeAttribute(attr);
-                          }
-                        });
+                        cleanExtensionAttributes(mutation.target);
                       }
                     });
                   });
@@ -118,16 +150,14 @@ export default function RootLayout({
                       observer.observe(document.body, {
                         attributes: true,
                         childList: true,
-                        subtree: true,
-                        attributeFilter: ['bis_register', 'bis_skin_checked', 'bis_size', 'bis_id', '__processed_09b3c779-6358-48f4-876a-4aa3051b3a70__', '__processed_97949eaa-5632-4d9d-b71e-7f4dfc78ce55__']
+                        subtree: true
                       });
                     });
                   } else {
                     observer.observe(document.body, {
                       attributes: true,
                       childList: true,
-                      subtree: true,
-                      attributeFilter: ['bis_register', 'bis_skin_checked', 'bis_size', 'bis_id', '__processed_09b3c779-6358-48f4-876a-4aa3051b3a70__', '__processed_97949eaa-5632-4d9d-b71e-7f4dfc78ce55__']
+                      subtree: true
                     });
                   }
                 }
