@@ -406,6 +406,7 @@ interface I18nContextType {
   locale: Locale;
   setLocale: (locale: Locale) => void;
   t: (key: TranslationKey) => string;
+  isHydrated: boolean;
 }
 
 const I18nContext = createContext<I18nContextType | undefined>(undefined);
@@ -417,6 +418,7 @@ interface I18nProviderProps {
 
 export function I18nProvider({ children, defaultLocale = "en" }: I18nProviderProps) {
   const [locale, setLocale] = useState<Locale>(defaultLocale);
+  const [isHydrated, setIsHydrated] = useState(false);
 
   // Load saved locale from localStorage on mount
   useEffect(() => {
@@ -431,6 +433,7 @@ export function I18nProvider({ children, defaultLocale = "en" }: I18nProviderPro
           setLocale(browserLang);
         }
       }
+      setIsHydrated(true);
     }
   }, []);
 
@@ -442,11 +445,15 @@ export function I18nProvider({ children, defaultLocale = "en" }: I18nProviderPro
   }, [locale]);
 
   const t = (key: TranslationKey): string => {
-    return translations[locale]?.[key] || translations.en[key] || key;
+    const translation = translations[locale]?.[key] || translations.en[key] || key;
+    if (typeof window !== "undefined" && window.location.search.includes("debug=translations")) {
+      console.log(`Translation for "${key}" in "${locale}": "${translation}"`);
+    }
+    return translation;
   };
 
   return (
-    <I18nContext.Provider value={{ locale, setLocale, t }}>
+    <I18nContext.Provider value={{ locale, setLocale, t, isHydrated }}>
       {children}
     </I18nContext.Provider>
   );
