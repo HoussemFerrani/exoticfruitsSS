@@ -9,12 +9,12 @@ import { useState, useEffect } from "react";
 import { ArrowRight, Tag } from "lucide-react";
 import { useI18n } from "@/contexts/I18nContext";
 
-// Mock blog data - replace with your actual blog data source
-const blogPosts = [
+// Blog articles with translations
+const getBlogPosts = (t: any) => [
   {
     id: 1,
-    title: "Les fruits exotiques, un atout pour votre santé au quotidien",
-    excerpt: "🥭🐉 Et si vos fruits devenaient vos alliés bien-être au quotidien ? Riches en vitamines, en fibres et en antioxydants, les fruits exotiques sont bien plus que de simples douceurs exotiques. Découvrez pourquoi ils méritent une place dans votre routine santé.",
+    title: t("blogArticles.1.title"),
+    excerpt: t("blogArticles.1.excerpt"),
     image: "/background1.jpg",
     category: "Health",
     tags: ["Fruits Exotiques", "Santé", "Bien-être", "Nutrition"],
@@ -22,31 +22,12 @@ const blogPosts = [
     author: "ExoticFruits Team",
     publishedDate: "2024-09-20",
     readTime: "5 min",
-    content: `🥭🐉 Et si vos fruits devenaient vos alliés bien-être au quotidien ?
-
-Riches en vitamines, en fibres et en antioxydants, les fruits exotiques sont bien plus que de simples douceurs exotiques 🌴
-
-Voici pourquoi ils méritent une place dans votre routine santé 👇
-
-✅ **Énergie naturelle**
-➡️ Le fruit de la passion ou le corossol vous apportent un vrai coup de boost sans sucre ajouté artificiel.
-
-✅ **Digestion facilitée**
-➡️ La papaye et le mangoustan contiennent des enzymes naturelles qui aident à bien digérer.
-
-✅ **Beauté de la peau**
-➡️ Le fruit du dragon est riche en eau et antioxydants, parfait pour une peau hydratée et lumineuse.
-
-✅ **Immunité renforcée**
-➡️ Le ramboutan et la curuba sont chargés en vitamine C : idéals pour affronter les petits coups de fatigue.
-
-💡 **Astuce bien-être :**
-Ajoutez 1 ou 2 fruits exotiques à vos petits-déjeuners, salades ou smoothies chaque jour et observez la différence !`
+    content: t("blogArticles.1.content")
   },
   {
     id: 2,
-    title: "Comment reconnaître un fruit exotique de qualité ?",
-    excerpt: "🥭🍍 Avant de déguster un fruit tropical, voici 5 astuces pour faire le bon choix au marché ou en ligne. Découvrez comment reconnaître un fruit mûr grâce à la couleur, le parfum, la texture et plus encore.",
+    title: t("blogArticles.2.title"),
+    excerpt: t("blogArticles.2.excerpt"),
     image: "/background2.jpg",
     category: "Tips & Guides",
     tags: ["Qualité", "Conseils", "Achat", "Fraîcheur"],
@@ -54,33 +35,12 @@ Ajoutez 1 ou 2 fruits exotiques à vos petits-déjeuners, salades ou smoothies c
     author: "ExoticFruits Team",
     publishedDate: "2024-09-18",
     readTime: "4 min",
-    content: `🥭🍍 Comment reconnaître un fruit exotique de qualité ?
-
-Avant de déguster un fruit tropical, voici 5 astuces pour faire le bon choix au marché ou en ligne ⬇️
-
-✅ **1. La couleur**
-Un fruit mûr a une couleur vive et uniforme.
-👉 Exemple : une mangue mûre est jaune/orangée, sans taches vertes dures.
-
-✅ **2. Le parfum**
-Un bon fruit exotique sent bon ! Sentez la base du fruit :
-💡 Une odeur sucrée = bon signe de maturité.
-
-✅ **3. La texture**
-La peau doit être souple sans être molle.
-🥥 Trop dur = pas encore mûr / Trop mou = trop mûr.
-
-✅ **4. Le poids**
-Un fruit lourd pour sa taille est souvent bien juteux.
-🍊 Plus de poids = plus de goût.
-
-✅ **5. L'origine & la fraîcheur**
-Privilégiez des fruits récoltés à maturité et importés par des spécialistes`
+    content: t("blogArticles.2.content")
   },
   {
     id: 3,
-    title: "Quel fruit exotique choisir selon vos envies ?",
-    excerpt: "🍍✨ Fruité, rafraîchissant, énergisant… chaque fruit exotique a sa personnalité ! Vous ne savez pas lequel choisir ? Découvrez notre guide rapide pour choisir le fruit parfait selon votre humeur ou vos besoins.",
+    title: t("blogArticles.3.title"),
+    excerpt: t("blogArticles.3.excerpt"),
     image: "/background3.jpg",
     category: "Tips & Guides",
     tags: ["Guide", "Choix", "Conseils", "Humeur"],
@@ -88,33 +48,12 @@ Privilégiez des fruits récoltés à maturité et importés par des spécialist
     author: "ExoticFruits Team",
     publishedDate: "2024-09-15",
     readTime: "3 min",
-    content: `🍍✨ Quel fruit exotique choisir selon vos envies ?
-
-Fruité, rafraîchissant, énergisant… chaque fruit exotique a sa personnalité !
-
-Vous ne savez pas lequel choisir ? Voici un guide rapide pour vous aider selon votre humeur ou vos besoins 👇
-
-💧 **Besoin d'hydratation ?**
-→ Fruit du dragon: riches en eau, parfaits après le sport ou par temps chaud !
-
-🍬 **Envie de douceur ?**
-→ Papaye ou corossol : texture fondante, goût sucré et réconfortant
-
-⚡ **Coup de boost naturel ?**
-→ fruit de la passion : riches en vitamine C et antioxydants, idéals pour faire le plein d'énergie
-
-🧘‍♀️ **Pause bien-être ?**
-→ Mangoustan ou feijoa : bons pour la digestion et le système immunitaire
-
-🎉 **Apéro ou moment festif ?**
-→ Mangoustan, curuba ou carambole : visuels étonnants, parfaits à partager ou à mettre en valeur dans vos recettes !
-
-🌴 **Faites confiance à votre palais… ou laissez-vous surprendre !**`
+    content: t("blogArticles.3.content")
   },
   {
     id: 4,
-    title: "Et si varier vos fruits exotiques devenait votre meilleure habitude santé ?",
-    excerpt: "Manger des fruits exotiques, c'est bon. Mais varier les espèces et les couleurs, c'est encore mieux pour votre santé ! Découvrez pourquoi la diversité est essentielle pour maximiser les bienfaits nutritionnels.",
+    title: t("blogArticles.4.title"),
+    excerpt: t("blogArticles.4.excerpt"),
     image: "/background1.jpg",
     category: "Health",
     tags: ["Variété", "Nutrition", "Santé", "Habitudes"],
@@ -122,29 +61,12 @@ Vous ne savez pas lequel choisir ? Voici un guide rapide pour vous aider selon v
     author: "ExoticFruits Team",
     publishedDate: "2024-09-12",
     readTime: "4 min",
-    content: `Et si varier vos fruits exotiques devenait votre meilleure habitude santé ?
-
-Manger des fruits exotiques, c'est bon. Mais varier les espèces et les couleurs, c'est encore mieux pour votre santé ! 💪🌿
-
-Voici pourquoi la diversité est essentielle :
-
-✅ **Chaque fruit a ses propres nutriments :**
-Le mangoustan est riche en xanthones antioxydantes
-La papaye soutient la digestion grâce à ses enzymes
-Le fruit du dragon (ou pitaya) est hydratant, riche en fibres et en antioxydants
-Le corossol est apaisant et riche en vitamines B
-Le ramboutan renforce l'immunité avec sa vitamine C
-
-✅ **Plus de couleurs = plus de bienfaits !**
-Les pigments naturels (orange, violet, vert, rose) sont aussi des protecteurs naturels pour vos cellules.
-
-✅ **Moins de monotonie = plus de plaisir !**
-Changer régulièrement vos fruits, c'est aussi garder l'envie de bien manger, sans frustration.`
+    content: t("blogArticles.4.content")
   },
   {
     id: 5,
-    title: "Les bienfaits des fruits exotiques sur le système immunitaire",
-    excerpt: "🍍🥭 Saviez-vous que certains fruits exotiques sont de véritables alliés pour renforcer vos défenses naturelles ? Découvrez 5 super-fruits à intégrer dans votre routine santé pour booster votre immunité.",
+    title: t("blogArticles.5.title"),
+    excerpt: t("blogArticles.5.excerpt"),
     image: "/background2.jpg",
     category: "Health",
     tags: ["Immunité", "Défenses naturelles", "Vitamine C", "Anti-inflammatoire"],
@@ -152,26 +74,12 @@ Changer régulièrement vos fruits, c'est aussi garder l'envie de bien manger, s
     author: "ExoticFruits Team",
     publishedDate: "2024-09-10",
     readTime: "4 min",
-    content: `🍍 Les bienfaits des fruits exotiques sur le système immunitaire 🥭
-
-Saviez-vous que certains fruits exotiques sont de véritables alliés pour renforcer vos défenses naturelles ? 💪
-
-Voici 5 super-fruits à intégrer dans votre routine santé :
-
-✅ **Fruit de la passion** – Source de vitamine C, il stimule la production de globules blancs.
-
-✅ **Papaye** – Contient une enzyme appelée papaïne et des vitamines C et E : un cocktail anti-inflammatoire.
-
-✅ **Corossol** – Connu pour ses propriétés antibactériennes et antivirales naturelles.
-
-💡 En plus d'être délicieux, ces fruits tropicaux vous aident à faire le plein d'énergie et à mieux résister aux infections, surtout en période de fatigue ou de changement de saison.
-
-🌱 **Astuce :** consommez-les frais, en smoothie, en salade ou sous forme de jus pressé pour conserver tous leurs bienfaits !`
+    content: t("blogArticles.5.content")
   },
   {
     id: 6,
-    title: "Pourquoi choisir des fruits exotiques issus de l'agriculture durable ?",
-    excerpt: "🌍 Chez FruitExotica.ca, on ne choisit pas les fruits au hasard. On les sélectionne avec respect pour la terre… et pour vous ! Découvrez 3 bonnes raisons de privilégier l'agriculture durable pour vos fruits exotiques.",
+    title: t("blogArticles.6.title"),
+    excerpt: t("blogArticles.6.excerpt"),
     image: "/background3.jpg",
     category: "Sustainability",
     tags: ["Agriculture durable", "Écologie", "Qualité", "Environnement"],
@@ -179,25 +87,12 @@ Voici 5 super-fruits à intégrer dans votre routine santé :
     author: "ExoticFruits Team",
     publishedDate: "2024-09-08",
     readTime: "3 min",
-    content: `🌍 Pourquoi choisir des fruits exotiques issus de l'agriculture durable ?
-
-Chez FruitExotica.ca, on ne choisit pas les fruits au hasard. On les sélectionne avec respect pour la terre… et pour vous 🍍💚
-
-Voici 3 bonnes raisons de privilégier l'agriculture durable 👇
-
-✅ **1. Respect des sols et de la biodiversité**
-Les plantations durables évitent les pesticides chimiques nocifs et préservent les écosystèmes tropicaux 🌿
-
-✅ **2. Moins de gaspillage, plus de qualité**
-Des méthodes de culture raisonnées = fruits cueillis à maturité, moins de pertes, plus de goût 😋
-
-✅ **3. Pour votre santé et celle de la planète**
-Moins de produits chimiques, plus de nutriments naturels 🌱 = un choix gagnant sur tous les plans`
+    content: t("blogArticles.6.content")
   },
   {
     id: 7,
-    title: "Notre engagement : une agriculture respectueuse de la terre et des hommes",
-    excerpt: "Nous croyons qu'un fruit savoureux commence par une terre respectée. Découvrez notre engagement quotidien pour une agriculture durable, en collaboration directe avec nos producteurs partenaires passionnés.",
+    title: t("blogArticles.7.title"),
+    excerpt: t("blogArticles.7.excerpt"),
     image: "/background1.jpg",
     category: "Behind the Scenes",
     tags: ["Engagement", "Partenaires", "Éthique", "Agriculture responsable"],
@@ -205,28 +100,15 @@ Moins de produits chimiques, plus de nutriments naturels 🌱 = un choix gagnant
     author: "ExoticFruits Team",
     publishedDate: "2024-09-05",
     readTime: "4 min",
-    content: `Notre engagement : une agriculture respectueuse de la terre et des hommes
-
-Nous croyons qu'un fruit savoureux commence par une terre respectée.
-
-C'est pourquoi nous nous engageons chaque jour pour une agriculture durable, en collaboration directe avec nos producteurs partenaires.
-
-✅ **Sans pesticides chimiques :** nos fruits poussent dans un environnement naturel, sans produits nocifs pour vous ou pour la planète.
-
-✅ **Méthodes agricoles responsables :** compostage, gestion de l'eau, rotation des cultures… chaque geste compte.
-
-✅ **Soutien aux communautés locales :** nous travaillons main dans la main avec des agriculteurs passionnés, pour une production éthique et équitable.
-
-🍍 Quand vous choisissez Fruit Exotica, vous choisissez des produits bons pour votre santé et pour la planète.
-
-**ET VOUS, QUELS GESTES FAITES-VOUS AU QUOTIDIEN POUR UNE ALIMENTATION PLUS RESPONSABLE ?**
-
-💚 **PARTAGEZ CE POST POUR SOUTENIR UNE AGRICULTURE PLUS HUMAINE.**`
+    content: t("blogArticles.7.content")
   }
 ];
 
 export default function BlogPage() {
   const { t, isLoading } = useI18n();
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedArticle, setSelectedArticle] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   if (isLoading) {
     return (
@@ -238,10 +120,8 @@ export default function BlogPage() {
       </div>
     );
   }
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [filteredPosts, setFilteredPosts] = useState(blogPosts);
-  const [selectedArticle, setSelectedArticle] = useState<any>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const blogPosts = getBlogPosts(t);
 
   const categories = [
     { key: "All", label: t("blogPage.categories.all") },
@@ -265,20 +145,9 @@ export default function BlogPage() {
     setSelectedArticle(null);
   };
 
-  useEffect(() => {
-    if (selectedCategory === "All") {
-      setFilteredPosts(blogPosts);
-    } else {
-      setFilteredPosts(blogPosts.filter(post => post.category === selectedCategory));
-    }
-  }, [selectedCategory]);
-
-  // Ensure filteredPosts is initialized on mount
-  useEffect(() => {
-    if (filteredPosts.length === 0) {
-      setFilteredPosts(blogPosts);
-    }
-  }, []);
+  const filteredPosts = selectedCategory === "All"
+    ? blogPosts
+    : blogPosts.filter(post => post.category === selectedCategory);
 
   const regularPosts = filteredPosts;
 
