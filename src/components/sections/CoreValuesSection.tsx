@@ -13,7 +13,7 @@ const coreValues = [
   {
     id: 2,
     titleKey: "coreValues.reliableLogistics.title",
-    image: "/truck.png"
+    image: "/fruit3.png"
   },
   {
     id: 3,
