@@ -225,14 +225,33 @@ C'est pourquoi nous nous engageons chaque jour pour une agriculture durable, en 
   }
 ];
 
-const categories = ["All", "Education", "Sustainability", "Tips & Guides", "Health", "Behind the Scenes", "Recipes"];
-
 export default function BlogPage() {
-  const { t } = useI18n();
+  const { t, isLoading } = useI18n();
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-orange-500 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading translations...</p>
+        </div>
+      </div>
+    );
+  }
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [filteredPosts, setFilteredPosts] = useState(blogPosts);
   const [selectedArticle, setSelectedArticle] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const categories = [
+    { key: "All", label: t("blogPage.categories.all") },
+    { key: "Education", label: t("blogPage.categories.education") },
+    { key: "Sustainability", label: t("blogPage.categories.sustainability") },
+    { key: "Tips & Guides", label: t("blogPage.categories.tipsGuides") },
+    { key: "Health", label: t("blogPage.categories.health") },
+    { key: "Behind the Scenes", label: t("blogPage.categories.behindScenes") },
+    { key: "Recipes", label: t("blogPage.categories.recipes") }
+  ];
 
   const handleReadMore = (e: React.MouseEvent, article: any) => {
     e.preventDefault();
@@ -291,15 +310,13 @@ export default function BlogPage() {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <p className="text-sm font-semibold uppercase tracking-wide mb-4 text-orange-600">
-                Insights & Stories
+                {t("blogPage.hero.subtitle")}
               </p>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 bg-gradient-to-r from-orange-600 via-amber-600 to-yellow-600 bg-clip-text text-transparent">
-                Our Blog
+                {t("blogPage.hero.title")}
               </h1>
               <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-gray-700">
-                Discover the fascinating world of exotic fruits through expert insights,
-                sustainability stories, and culinary adventures. Join us on a journey
-                of flavor, knowledge, and inspiration.
+                {t("blogPage.hero.description")}
               </p>
             </motion.div>
           </div>
@@ -318,15 +335,15 @@ export default function BlogPage() {
           >
             {categories.map((category) => (
               <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
+                key={category.key}
+                onClick={() => setSelectedCategory(category.key)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 ${
-                  selectedCategory === category
+                  selectedCategory === category.key
                     ? "bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg"
                     : "bg-white text-gray-700 hover:bg-orange-50 border border-gray-200"
                 }`}
               >
-                {category}
+                {category.label}
               </button>
             ))}
           </motion.div>
@@ -375,7 +392,7 @@ export default function BlogPage() {
                       onClick={(e) => handleReadMore(e, post)}
                       className="inline-flex items-center gap-1 text-orange-600 hover:text-orange-700 font-medium text-sm group-hover:gap-2 transition-all cursor-pointer"
                     >
-                      Read More
+                      {t("blogPage.readMore")}
                       <ArrowRight className="w-4 h-4" />
                     </button>
                   </div>

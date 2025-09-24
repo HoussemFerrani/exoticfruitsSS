@@ -3,11 +3,25 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ProductsGrid from "@/components/sections/ProductsGrid";
+import { useI18n } from "@/contexts/I18nContext";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function ProductsPage() {
+  const { t, isLoading } = useI18n();
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-orange-500 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading translations...</p>
+        </div>
+      </div>
+    );
+  }
+  
   // Background images for sliding effect - using fruit images
   const backgroundImages = [
     "/background1.jpg",
@@ -82,21 +96,18 @@ export default function ProductsPage() {
                 className="text-sm font-semibold uppercase tracking-wide mb-4 drop-shadow-lg"
                 style={{ color: "#FAB12F" }}
               >
-                Premium Quality
+                {t("productsPage.hero.subtitle")}
               </p>
               <h1
                 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg"
               >
-                Our Products
+                {t("productsPage.hero.title")}
               </h1>
               <p
                 className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed drop-shadow-md"
                 style={{ color: "#FAB12F" }}
               >
-                Discover our premium selection of exotic and tropical fruits,
-                carefully sourced from the finest farms around the world. From
-                classic tropicals to rare varieties, we bring you the freshest
-                and most flavorful fruits.
+                {t("productsPage.hero.description")}
               </p>
             </motion.div>
           </div>

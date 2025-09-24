@@ -1,10 +1,60 @@
 {
+  "general": {
+    "selectLanguage": "Select Language",
+    "changeLanguage": "Change website language"
+  },
   "nav": {
     "home": "Home",
     "about": "About",
-    "products": "Products",
+    "services": "Services",
+    "contact": "Contact Us",
     "blog": "Blog",
-    "contact": "Contact Us"
+    "partners": "Partners",
+    "products": "Products"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "brand": {
+      "tagline": "Premium exotic fruits from the heart of Colombia. Quality harvested with care, delivered with passion."
+    },
+    "trustBadges": {
+      "freshGuarantee": "Fresh Guarantee",
+      "fastDelivery": "Fast Delivery"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "home": "Home",
+      "fruits": "Our Fruits",
+      "about": "About Us",
+      "contact": "Contact",
+      "shipping": "Shipping Info"
+    },
+    "products": {
+      "title": "Our Products",
+      "tropical": "Tropical Fruits",
+      "exotic": "Exotic Varieties",
+      "citrus": "Citrus Fruits",
+      "berries": "Premium Berries",
+      "seasonal": "Seasonal Selection"
+    },
+    "contact": {
+      "title": "Get In Touch",
+      "location": "Medellín, Colombia",
+      "phone": "+57 123 456 7890",
+      "email": "info@fruitexotic.com"
+    },
+    "social": {
+      "title": "Follow Our Journey",
+      "subtitle": "Stay connected with us for fresh updates, tropical vibes, and the latest from Colombia"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "exploreButton": "Explore Our Fruits",
+    "discoverMore": "Discover More",
+    "language": "Language"
   },
   "hero": {
     "title": "Premium Exotic Fruits",
@@ -31,34 +81,251 @@
     "description1": "We serve premium retailers, specialty grocery stores, high-end restaurants, and wholesale distributors who demand the finest exotic fruits. From boutique markets seeking rare varieties to established chains wanting consistent quality, we cater to businesses that value excellence.",
     "description2": "Whether you're in New York, London, or Tokyo, Fruit Exotic International ensures your customers experience the authentic taste of tropical paradise, delivered fresh to your doorstep."
   },
-  "productRange": {
-    "title": "Product Range"
+  "coreValues": {
+    "title": "Our Core Values",
+    "qualityFirst": {
+      "title": "Quality First",
+      "description": "We prioritize excellence in every aspect of our business, from sourcing the finest fruits to delivering premium products that exceed expectations."
+    },
+    "reliableLogistics": {
+      "title": "Reliable Logistics",
+      "description": "Our advanced transportation network ensures timely delivery worldwide, maintaining freshness from farm to destination through air and sea freight."
+    },
+    "sustainability": {
+      "title": "Sustainability",
+      "description": "We are committed to environmental responsibility and ethical sourcing, supporting sustainable farming practices and fair compensation for growers."
+    },
+    "strongPartnerships": {
+      "title": "Strong Partnerships",
+      "description": "Building lasting relationships with trusted growers, distributors, and retailers to create a reliable network that benefits everyone in the supply chain."
+    }
   },
   "partners": {
     "title": "Our Partners",
     "subtitle": "We collaborate with trusted partners worldwide to bring you the finest exotic fruits and ensure excellence throughout our supply chain.",
+    "description": "We collaborate with trusted partners worldwide to bring you the finest exotic fruits and ensure excellence throughout our supply chain.",
     "specialties": "Specialties",
     "learnMore": "Learn More",
+    "cta": {
+      "title": "Interested in Partnership?",
+      "description": "Join our network of trusted partners and help us deliver the finest exotic fruits to markets worldwide.",
+      "button": "Contact Us"
+    },
     "ctaTitle": "Interested in Partnership?",
     "ctaDescription": "Join our network of trusted partners and help us deliver the finest exotic fruits to markets worldwide.",
     "ctaButton": "Contact Us"
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "company": "Exotic Fruits International",
+    "description1": "is your trusted source for premium exotic and tropical fruits, carefully harvested from Colombia's most fertile regions.",
+    "description2": "Through strong partnerships with local growers, we ensure every shipment delivers unmatched freshness and quality — bringing the rich biodiversity of Colombia straight to your market.",
+    "learnMore": "Learn More About Us"
+  },
+  "specialties": {
+    "nationwideDistribution": "Nationwide Distribution",
+    "freshDelivery": "Fresh Delivery",
+    "qualityAssurance": "Quality Assurance",
+    "premiumQuality": "Premium Quality",
+    "europeanDistribution": "European Distribution",
+    "exoticSpecialties": "Exotic Specialties",
+    "gourmetSelection": "Gourmet Selection",
+    "premiumService": "Premium Service",
+    "fineFoodDistribution": "Fine Food Distribution",
+    "freshProduce": "Fresh Produce",
+    "canadianMarket": "Canadian Market",
+    "qualityDistribution": "Quality Distribution",
+    "retailExcellence": "Retail Excellence",
+    "freshGroceries": "Fresh Groceries",
+    "communityFocus": "Community Focus",
+    "foodService": "Food Service",
+    "professionalDistribution": "Professional Distribution",
+    "restaurantSupply": "Restaurant Supply"
   },
   "faq": {
     "title": "Frequently Asked Questions",
     "stillHaveQuestions": "Still Have Questions?",
     "contactDescription": "Our expert team is here to help you find the perfect exotic fruits for your needs.",
-    "contactExperts": "Contact Our Experts"
+    "contactExperts": "Contact Our Experts",
+    "cta": {
+      "title": "Still Have Questions?",
+      "description": "Our expert team is here to help you find the perfect exotic fruits for your needs.",
+      "button": "Contact Our Experts"
+    },
+    "questions": {
+      "1": {
+        "question": "What makes your exotic fruits premium quality?",
+        "answer": "Our fruits are sourced directly from certified organic farms in Colombia's most fertile regions. We maintain strict quality control standards, ensuring optimal freshness through our advanced cold-chain logistics and deliver only the finest specimens that meet our rigorous criteria for taste, appearance, and nutritional value."
+      },
+      "2": {
+        "question": "How do you ensure freshness during international shipping?",
+        "answer": "We utilize state-of-the-art cold-chain distribution systems that maintain precise temperature and humidity levels throughout the entire journey. Our fruits are harvested at peak ripeness and immediately processed through our temperature-controlled facilities, ensuring they arrive at your destination with maximum freshness and flavor."
+      },
+      "3": {
+        "question": "What exotic fruits do you specialize in importing?",
+        "answer": "We specialize in a diverse range of premium exotic fruits including dragon fruit, physalis, mangosteen, tamarillo, passion fruit, and many rare Colombian varieties. Our selection varies seasonally to ensure we're always offering the freshest, highest-quality fruits available from our trusted farming partners."
+      },
+      "4": {
+        "question": "Do you offer wholesale pricing for businesses?",
+        "answer": "Yes, we provide competitive wholesale pricing for restaurants, grocery stores, distributors, and other businesses. Our wholesale program includes volume discounts, flexible delivery schedules, and dedicated account management to ensure your business receives consistent, high-quality exotic fruits."
+      },
+      "5": {
+        "question": "What certifications do your fruits have?",
+        "answer": "Our fruits come with comprehensive certifications including organic certification, fair trade compliance, and international food safety standards. We work exclusively with certified farms that follow sustainable farming practices and meet strict environmental and social responsibility criteria."
+      },
+      "6": {
+        "question": "How can I place an order and what are the minimum quantities?",
+        "answer": "You can place orders through our website or by contacting our sales team directly. Minimum order quantities vary by fruit type and destination, but we accommodate both small specialty orders and large commercial shipments. Our team will work with you to find the best solution for your specific needs."
+      }
+    }
   },
   "products": {
     "title": "Our Products",
     "subtitle": "Premium Quality",
     "description": "Discover our premium selection of exotic and tropical fruits, carefully sourced from the finest farms around the world. From classic tropicals to rare varieties, we bring you the freshest and most flavorful fruits.",
     "sliderTitle": "Our Premium Exotic Fruits",
-    "sliderDescription": "Discover the amazing variety of fresh exotic fruits we import directly from Colombia"
+    "sliderDescription": "Discover the amazing variety of fresh exotic fruits we import directly from Colombia",
+    "search": {
+      "placeholder": "Search fruits...",
+      "label": "Search"
+    },
+    "categories": {
+      "all": "All",
+      "tropical": "Tropical",
+      "exotic": "Exotic",
+      "citrus": "Citrus",
+      "stoneFruits": "Stone Fruits",
+      "berries": "Berries",
+      "seasonal": "Seasonal"
+    },
+    "actions": {
+      "moreInfo": "More Info",
+      "buyNow": "Buy Now",
+      "addToFavorites": "Add to Favorites",
+      "removeFromFavorites": "Remove from Favorites"
+    },
+    "messages": {
+      "noResults": "No products found",
+      "noResultsDescription": "Try adjusting your search or filter criteria.",
+      "outOfStock": "Out of Stock",
+      "inStock": "In Stock"
+    }
   },
-  "common": {
-    "exploreButton": "Explore Our Fruits",
-    "discoverMore": "Discover More",
-    "language": "Language"
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "What our partners say about our premium exotic fruits.",
+    "thomasFruits": {
+      "quote": "Product quality: Very good, fruits well ripened, little loss upon reception.",
+      "author": "Thomas Fruits",
+      "meta": "Partner - Canada"
+    },
+    "iga": {
+      "quote": "Consistent product quality: 5/5 – The fruits are fresh, well-calibrated, with excellent presentation and ideal ripeness for sale.",
+      "author": "IGA",
+      "meta": "Partner - Canada"
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "title": "About Us",
+      "subtitle": "More than fruit - we deliver trust, authenticity, and the taste of Colombia",
+      "description": "More than fruit - we deliver trust, authenticity, and the taste of Colombia"
+    },
+    "story": {
+      "title": "Our Story",
+      "description1": "At Fruit Exotic International Inc by I Defense, every fruit begins with a story of passion and tradition.",
+      "description2": "Our journey started in Colombia over seven years ago, with one mission in mind: to share the country's tropical treasures with the world.",
+      "description3": "Behind each mango, lime, or mangosteen are farmers who rise with the sun, working the soil with dedication and care. Their knowledge, passed down through generations, ensures that every fruit is grown naturally, harvested by hand, and nurtured with love for the land.",
+      "description4": "From these orchards, we continue the journey - carefully washing, sorting, and packing each fruit to meet the highest standards of quality. Today, our exports reach partners across Canada, Europe, and the Middle East, delivering freshness and authenticity in every box.",
+      "finalDescription": "Our story is one of hard work, trust, and connection - from the fields of Colombia to tables around the world."
+    },
+    "whatWeOffer": {
+      "title": "What We Offer",
+      "premiumFruits": {
+        "title": "Premium Exotic Fruits",
+        "subtitle": "from Colombia's finest harvests",
+        "description": "From baby mangoes and Palmer mangoes to limes, avocados, and mangosteens — we deliver Colombia's finest harvests, grown with care and picked at peak ripeness."
+      },
+      "customPackaging": {
+        "title": "Custom Packaging Solutions",
+        "subtitle": "tailored to your market",
+        "description": "Your market is unique — and so is your packaging. We provide tailored formats, branding, and designs to match your exact needs."
+      },
+      "exportLogistics": {
+        "title": "Reliable Export Logistics",
+        "subtitle": "worldwide delivery guaranteed",
+        "description": "Whether by weekly air cargo or full container loads, we ensure fast, flexible, and secure delivery worldwide."
+      },
+      "globalReach": {
+        "title": "Global Reach & Partnerships",
+        "subtitle": "connecting markets worldwide",
+        "description": "With trusted clients across Canada, Europe, and the Middle East, we connect Colombia's agricultural treasures to markets around the globe."
+      },
+      "checkProducts": "Check Our Products"
+    },
+    "certifications": {
+      "title": "Quality Certifications",
+      "description": "Each export shipment from Fruits Exotics International Inc. By I Defense is accompanied by an official phytosanitary certificate. This ensures that every fruit we deliver strictly complies with international food safety standards, giving our clients confidence in the quality, safety, and authenticity of our products."
+    },
+    "companyValues": {
+      "qualityFirst": {
+        "title": "Quality First",
+        "description": "Advanced technology evaluates every fruit's maturity, firmness, density, and sugar content before export."
+      },
+      "traceability": {
+        "title": "Full Traceability",
+        "description": "Each shipment receives a unique code, ensuring complete transparency from Colombian farm to your market."
+      },
+      "certifiedExcellence": {
+        "title": "Certified Excellence",
+        "description": "Official phytosanitary certificates guarantee compliance with international food safety standards."
+      },
+      "sustainablePartnership": {
+        "title": "Sustainable Partnership",
+        "description": "Direct relationships with Colombian growers support sustainable farming practices and fair trade."
+      }
+    },
+    "timeline": {
+      "2018": {
+        "title": "Foundation in Montreal",
+        "description": "Established our distribution center at 9600 Meilleur Street, creating a strategic hub for Canadian markets."
+      },
+      "2019": {
+        "title": "Colombian Partnerships",
+        "description": "Built direct relationships with premium fruit growers across Colombia's diverse agricultural regions."
+      },
+      "2021": {
+        "title": "Technology Integration",
+        "description": "Implemented advanced quality control systems for precise fruit evaluation and certification."
+      },
+      "2024": {
+        "title": "Market Expansion",
+        "description": "Serving specialized markets across Canada with consistent, high-quality exotic fruit distribution."
+      }
+    }
+  },
+  "productsPage": {
+    "hero": {
+      "subtitle": "Premium Quality",
+      "title": "Our Products",
+      "description": "Discover our premium selection of exotic and tropical fruits, carefully sourced from the finest farms around the world. From classic tropicals to rare varieties, we bring you the freshest and most flavorful fruits."
+    }
+  },
+  "blogPage": {
+    "hero": {
+      "subtitle": "Insights & Stories",
+      "title": "Our Blog",
+      "description": "Discover the fascinating world of exotic fruits through expert insights, sustainability stories, and culinary adventures. Join us on a journey of flavor, knowledge, and inspiration."
+    },
+    "categories": {
+      "all": "All",
+      "education": "Education",
+      "sustainability": "Sustainability",
+      "tipsGuides": "Tips & Guides",
+      "health": "Health",
+      "behindScenes": "Behind the Scenes",
+      "recipes": "Recipes"
+    },
+    "readMore": "Read More"
   }
 }

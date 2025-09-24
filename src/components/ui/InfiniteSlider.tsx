@@ -74,6 +74,7 @@ export default function InfiniteSlider({
   return (
     <div
       ref={containerRef}
+      dir="ltr"
       className={
         `infinite-slider relative w-full select-none ` + className
       }

@@ -2,6 +2,7 @@
 
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import { useI18n } from "@/contexts/I18nContext";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -9,33 +10,42 @@ import { motion } from "framer-motion";
 import { Award, Shield, Truck, MapPin, Calendar, Users, Heart, Leaf } from "lucide-react";
 
 export default function AboutPage() {
+  const { t, isLoading } = useI18n();
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-orange-500 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading translations...</p>
+        </div>
+      </div>
+    );
+  }
+  
   const COMPANY_VALUES = [
     {
       id: "01",
-      title: "Quality First",
-      description:
-        "Advanced technology evaluates every fruit's maturity, firmness, density, and sugar content before export.",
+      title: t("aboutPage.companyValues.qualityFirst.title"),
+      description: t("aboutPage.companyValues.qualityFirst.description"),
       icon: Award
     },
     {
       id: "02",
-      title: "Full Traceability",
-      description:
-        "Each shipment receives a unique code, ensuring complete transparency from Colombian farm to your market.",
+      title: t("aboutPage.companyValues.traceability.title"),
+      description: t("aboutPage.companyValues.traceability.description"),
       icon: Shield
     },
     {
       id: "03",
-      title: "Certified Excellence",
-      description:
-        "Official phytosanitary certificates guarantee compliance with international food safety standards.",
+      title: t("aboutPage.companyValues.certifiedExcellence.title"),
+      description: t("aboutPage.companyValues.certifiedExcellence.description"),
       icon: Truck
     },
     {
       id: "04",
-      title: "Sustainable Partnership",
-      description:
-        "Direct relationships with Colombian growers support sustainable farming practices and fair trade.",
+      title: t("aboutPage.companyValues.sustainablePartnership.title"),
+      description: t("aboutPage.companyValues.sustainablePartnership.description"),
       icon: Heart
     },
   ];
@@ -43,23 +53,23 @@ export default function AboutPage() {
   const TIMELINE = [
     {
       year: "2018",
-      title: "Foundation in Montreal",
-      description: "Established our distribution center at 9600 Meilleur Street, creating a strategic hub for Canadian markets."
+      title: t("aboutPage.timeline.2018.title"),
+      description: t("aboutPage.timeline.2018.description")
     },
     {
       year: "2019",
-      title: "Colombian Partnerships",
-      description: "Built direct relationships with premium fruit growers across Colombia's diverse agricultural regions."
+      title: t("aboutPage.timeline.2019.title"),
+      description: t("aboutPage.timeline.2019.description")
     },
     {
       year: "2021",
-      title: "Technology Integration",
-      description: "Implemented advanced quality control systems for precise fruit evaluation and certification."
+      title: t("aboutPage.timeline.2021.title"),
+      description: t("aboutPage.timeline.2021.description")
     },
     {
       year: "2024",
-      title: "Market Expansion",
-      description: "Serving specialized markets across Canada with consistent, high-quality exotic fruit distribution."
+      title: t("aboutPage.timeline.2024.title"),
+      description: t("aboutPage.timeline.2024.description")
     }
   ];
 
@@ -97,7 +107,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            About Us
+            {t("aboutPage.hero.title")}
           </motion.h1>
 
           <motion.p
@@ -107,7 +117,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            More than fruit - we deliver trust, authenticity, and the taste of Colombia
+            {t("aboutPage.hero.subtitle")}
           </motion.p>
 
           <motion.div
@@ -151,7 +161,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             >
-              Our Story
+              {t("aboutPage.story.title")}
             </motion.h2>
             <motion.div
               className="w-24 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto rounded-full"
@@ -237,7 +247,7 @@ export default function AboutPage() {
                     viewport={{ once: false, amount: 0.2 }}
                     transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
                   >
-                    At Fruit Exotic International Inc by I Defense, every fruit begins with a story of passion and tradition.
+                    {t("aboutPage.story.description1")}
                   </motion.p>
 
                   <motion.div
@@ -248,15 +258,15 @@ export default function AboutPage() {
                     transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
                   >
                     <p className="text-lg">
-                      Our journey started in Colombia over seven years ago, with one mission in mind: to share the country's tropical treasures with the world.
+                      {t("aboutPage.story.description2")}
                     </p>
 
                     <p className="text-lg">
-                      Behind each mango, lime, or mangosteen are farmers who rise with the sun, working the soil with dedication and care. Their knowledge, passed down through generations, ensures that every fruit is grown naturally, harvested by hand, and nurtured with love for the land.
+                      {t("aboutPage.story.description3")}
                     </p>
 
                     <p className="text-lg">
-                      From these orchards, we continue the journey - carefully washing, sorting, and packing each fruit to meet the highest standards of quality. Today, our exports reach partners across Canada, Europe, and the Middle East, delivering freshness and authenticity in every box.
+                      {t("aboutPage.story.description4")}
                     </p>
                   </motion.div>
 
@@ -267,7 +277,7 @@ export default function AboutPage() {
                     viewport={{ once: false, amount: 0.2 }}
                     transition={{ duration: 0.6, delay: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
                   >
-                    Our story is one of hard work, trust, and connection - from the fields of Colombia to tables around the world.
+                    {t("aboutPage.story.finalDescription")}
                   </motion.p>
                 </motion.div>
 
@@ -309,7 +319,7 @@ export default function AboutPage() {
               viewport={{ once: false }}
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             >
-              What We Offer
+              {t("aboutPage.whatWeOffer.title")}
             </motion.h2>
             <motion.div
               className="w-24 h-1 bg-gradient-to-r from-orange-400 to-amber-500 mx-auto rounded-full"
@@ -324,30 +334,30 @@ export default function AboutPage() {
           <div className="relative space-y-10 md:space-y-14">
             {[
               {
-                title: "Premium Exotic Fruits",
-                subtitle: "from Colombia's finest harvests",
-                description: "From baby mangoes and Palmer mangoes to limes, avocados, and mangosteens — we deliver Colombia's finest harvests, grown with care and picked at peak ripeness.",
+                title: t("aboutPage.whatWeOffer.premiumFruits.title"),
+                subtitle: t("aboutPage.whatWeOffer.premiumFruits.subtitle"),
+                description: t("aboutPage.whatWeOffer.premiumFruits.description"),
                 imagePlaceholder: "🥭",
                 align: "right"
               },
               {
-                title: "Custom Packaging Solutions",
-                subtitle: "tailored to your market",
-                description: "Your market is unique — and so is your packaging. We provide tailored formats, branding, and designs to match your exact needs.",
+                title: t("aboutPage.whatWeOffer.customPackaging.title"),
+                subtitle: t("aboutPage.whatWeOffer.customPackaging.subtitle"),
+                description: t("aboutPage.whatWeOffer.customPackaging.description"),
                 imagePlaceholder: "📦",
                 align: "left"
               },
               {
-                title: "Reliable Export Logistics",
-                subtitle: "worldwide delivery guaranteed",
-                description: "Whether by weekly air cargo or full container loads, we ensure fast, flexible, and secure delivery worldwide.",
+                title: t("aboutPage.whatWeOffer.exportLogistics.title"),
+                subtitle: t("aboutPage.whatWeOffer.exportLogistics.subtitle"),
+                description: t("aboutPage.whatWeOffer.exportLogistics.description"),
                 imagePlaceholder: "✈️",
                 align: "right"
               },
               {
-                title: "Global Reach & Partnerships",
-                subtitle: "connecting markets worldwide",
-                description: "With trusted clients across Canada, Europe, and the Middle East, we connect Colombia's agricultural treasures to markets around the globe.",
+                title: t("aboutPage.whatWeOffer.globalReach.title"),
+                subtitle: t("aboutPage.whatWeOffer.globalReach.subtitle"),
+                description: t("aboutPage.whatWeOffer.globalReach.description"),
                 imagePlaceholder: "🌍",
                 align: "left"
               }
@@ -392,7 +402,7 @@ export default function AboutPage() {
                               href="/products"
                               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-600 text-white font-semibold rounded-lg shadow-lg hover:from-orange-600 hover:to-amber-700 transform hover:scale-105 transition-all duration-300"
                             >
-                              Check Our Products
+                              {t("aboutPage.whatWeOffer.checkProducts")}
                               <svg
                                 className="ml-2 w-4 h-4"
                                 fill="none"
@@ -632,7 +642,7 @@ export default function AboutPage() {
               viewport={{ once: false }}
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             >
-              Quality Certifications
+              {t("aboutPage.certifications.title")}
             </motion.h2>
             <motion.div
               className="w-24 h-1 bg-white mx-auto rounded-full shadow-lg"
@@ -654,7 +664,7 @@ export default function AboutPage() {
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             >
-              Each export shipment from <span className="font-bold">Fruits Exotics International Inc. By I Defense</span> is accompanied by an official phytosanitary certificate. This ensures that every fruit we deliver strictly complies with international food safety standards, giving our clients confidence in the quality, safety, and authenticity of our products.
+              {t("aboutPage.certifications.description")}
             </motion.p>
           </div>
         </div>

@@ -45,7 +45,7 @@ export default function Home() {
 
           {/* Infinite Slider */}
           <div className="mb-12">
-            <InfiniteSlider
+            <InfiniteSlider className=""
               images={[
                 "/papaya.png",
                 "/dragon-fruit.png",

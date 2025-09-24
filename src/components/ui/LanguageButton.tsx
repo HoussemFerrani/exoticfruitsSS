@@ -8,6 +8,9 @@ import { motion, AnimatePresence } from "framer-motion";
 const LANGUAGE_OPTIONS: Array<{ code: Locale; name: string; flag: string }> = [
   { code: "en", name: "English", flag: "EN" },
   { code: "fr", name: "Français", flag: "FR" },
+  { code: "es", name: "Español", flag: "ES" },
+  { code: "ar", name: "العربية", flag: "AR" },
+  { code: "ru", name: "Русский", flag: "RU" },
 ];
 
 export default function LanguageButton() {
@@ -99,7 +102,7 @@ export default function LanguageButton() {
             exit={{ opacity: 0, scale: 0.95, y: 10 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
             style={{ bottom: `${76 + bannerOffset}px` }}
-            className="fixed right-4 z-40 w-48 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden"
+            className="fixed right-4 z-40 w-52 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden"
           >
             {/* Header */}
             <div className="bg-[var(--color-brand)] text-white px-3 py-2">
@@ -110,12 +113,12 @@ export default function LanguageButton() {
             </div>
 
             {/* Language Options */}
-            <div className="p-1">
+            <div className="p-2">
               {LANGUAGE_OPTIONS.map((language) => (
                 <motion.button
                   key={language.code}
                   onClick={() => selectLanguage(language.code)}
-                  className={`w-full flex items-center gap-2 px-2 py-1.5 rounded-md transition-all duration-150 ${
+                  className={`w-full flex items-center gap-3 px-3 py-2 rounded-md transition-all duration-150 ${
                     locale === language.code
                       ? "bg-[var(--color-brand)] text-white"
                       : "text-gray-700 hover:bg-gray-50"
@@ -126,7 +129,9 @@ export default function LanguageButton() {
                   <span className={`text-xs font-bold px-1.5 py-0.5 rounded ${
                     locale === language.code ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-800'
                   }`}>{language.flag}</span>
-                  <span className="flex-1 text-left font-medium text-xs">
+                  <span className={`flex-1 font-medium text-sm ${
+                    language.code === 'ar' ? 'text-right' : 'text-left'
+                  }`}>
                     {language.name}
                   </span>
                   {locale === language.code && (

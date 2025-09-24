@@ -1,10 +1,60 @@
 {
+  "general": {
+    "selectLanguage": "Choisir la langue",
+    "changeLanguage": "Changer la langue du site"
+  },
   "nav": {
     "home": "Accueil",
-    "about": "À Propos",
-    "products": "Produits",
+    "about": "À propos",
+    "services": "Services",
+    "contact": "Contactez-nous",
     "blog": "Blog",
-    "contact": "Contactez-nous"
+    "partners": "Partenaires",
+    "products": "Produits"
+  },
+  "footer": {
+    "rights": "Tous droits réservés",
+    "brand": {
+      "tagline": "Fruits exotiques premium du cœur de la Colombie. Qualité récoltée avec soin, livrée avec passion."
+    },
+    "trustBadges": {
+      "freshGuarantee": "Garantie Fraîcheur",
+      "fastDelivery": "Livraison Rapide"
+    },
+    "quickLinks": {
+      "title": "Liens Rapides",
+      "home": "Accueil",
+      "fruits": "Nos Fruits",
+      "about": "À Propos",
+      "contact": "Contact",
+      "shipping": "Info Livraison"
+    },
+    "products": {
+      "title": "Nos Produits",
+      "tropical": "Fruits Tropicaux",
+      "exotic": "Variétés Exotiques",
+      "citrus": "Agrumes",
+      "berries": "Baies Premium",
+      "seasonal": "Sélection Saisonnière"
+    },
+    "contact": {
+      "title": "Contactez-nous",
+      "location": "Medellín, Colombie",
+      "phone": "+57 123 456 7890",
+      "email": "info@fruitexotic.com"
+    },
+    "social": {
+      "title": "Suivez Notre Parcours",
+      "subtitle": "Restez connecté avec nous pour des mises à jour fraîches, des vibrations tropicales, et les dernières nouvelles de Colombie"
+    }
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "exploreButton": "Explorez Nos Fruits",
+    "discoverMore": "Découvrir Plus",
+    "language": "Langue"
   },
   "hero": {
     "title": "Fruits Exotiques Premium",
@@ -31,34 +81,251 @@
     "description1": "Nous servons des détaillants premium, des épiceries spécialisées, des restaurants haut de gamme et des distributeurs en gros qui exigent les meilleurs fruits exotiques. Des marchés boutiques recherchant des variétés rares aux chaînes établies voulant une qualité constante, nous répondons aux entreprises qui valorisent l'excellence.",
     "description2": "Que vous soyez à New York, Londres ou Tokyo, Fruit Exotic International garantit que vos clients vivent le goût authentique du paradis tropical, livré frais à votre porte."
   },
-  "productRange": {
-    "title": "Gamme de Produits"
+  "coreValues": {
+    "title": "Nos Valeurs Fondamentales",
+    "qualityFirst": {
+      "title": "Qualité Avant Tout",
+      "description": "Nous priorisons l'excellence dans chaque aspect de notre entreprise, du sourcing des meilleurs fruits à la livraison de produits premium qui dépassent les attentes."
+    },
+    "reliableLogistics": {
+      "title": "Logistique Fiable",
+      "description": "Notre réseau de transport avancé assure une livraison ponctuelle mondiale, maintenant la fraîcheur de la ferme à destination par fret aérien et maritime."
+    },
+    "sustainability": {
+      "title": "Durabilité",
+      "description": "Nous nous engageons pour la responsabilité environnementale et l'approvisionnement éthique, soutenant les pratiques agricoles durables et une rémunération équitable pour les producteurs."
+    },
+    "strongPartnerships": {
+      "title": "Partenariats Solides",
+      "description": "Construire des relations durables avec des producteurs, distributeurs et détaillants de confiance pour créer un réseau fiable qui profite à tous dans la chaîne d'approvisionnement."
+    }
   },
   "partners": {
     "title": "Nos Partenaires",
     "subtitle": "Nous collaborons avec des partenaires de confiance dans le monde entier pour vous apporter les meilleurs fruits exotiques et assurer l'excellence dans toute notre chaîne d'approvisionnement.",
+    "description": "Nous collaborons avec des partenaires de confiance dans le monde entier pour vous apporter les meilleurs fruits exotiques et assurer l'excellence dans toute notre chaîne d'approvisionnement.",
     "specialties": "Spécialités",
     "learnMore": "En Savoir Plus",
+    "cta": {
+      "title": "Intéressé par un Partenariat ?",
+      "description": "Rejoignez notre réseau de partenaires de confiance et aidez-nous à livrer les meilleurs fruits exotiques sur les marchés du monde entier.",
+      "button": "Contactez-nous"
+    },
     "ctaTitle": "Intéressé par un Partenariat ?",
     "ctaDescription": "Rejoignez notre réseau de partenaires de confiance et aidez-nous à livrer les meilleurs fruits exotiques sur les marchés du monde entier.",
     "ctaButton": "Contactez-nous"
+  },
+  "aboutUs": {
+    "title": "À Propos de Nous",
+    "company": "Exotic Fruits International",
+    "description1": "est votre source de confiance pour les fruits exotiques et tropicaux premium, soigneusement récoltés des régions les plus fertiles de Colombie.",
+    "description2": "Grâce à des partenariats solides avec les producteurs locaux, nous garantissons que chaque expédition offre une fraîcheur et une qualité inégalées — apportant la riche biodiversité de la Colombie directement à votre marché.",
+    "learnMore": "En Savoir Plus sur Nous"
+  },
+  "specialties": {
+    "nationwideDistribution": "Distribution à l'Échelle Nationale",
+    "freshDelivery": "Livraison de Produits Frais",
+    "qualityAssurance": "Garantie de Qualité",
+    "premiumQuality": "Qualité Premium",
+    "europeanDistribution": "Distribution Européenne",
+    "exoticSpecialties": "Spécialités Exotiques",
+    "gourmetSelection": "Sélection Gourmet",
+    "premiumService": "Service Premium",
+    "fineFoodDistribution": "Distribution Alimentaire Fine",
+    "freshProduce": "Produits Frais",
+    "canadianMarket": "Marché Canadien",
+    "qualityDistribution": "Distribution de Qualité",
+    "retailExcellence": "Excellence de Détail",
+    "freshGroceries": "Épiceries Fraîches",
+    "communityFocus": "Focus Communautaire",
+    "foodService": "Service Alimentaire",
+    "professionalDistribution": "Distribution Professionnelle",
+    "restaurantSupply": "Approvisionnement Restaurant"
   },
   "faq": {
     "title": "Questions Fréquemment Posées",
     "stillHaveQuestions": "Avez-vous Encore des Questions ?",
     "contactDescription": "Notre équipe d'experts est là pour vous aider à trouver les fruits exotiques parfaits pour vos besoins.",
-    "contactExperts": "Contactez Nos Experts"
+    "contactExperts": "Contactez Nos Experts",
+    "cta": {
+      "title": "Avez-vous Encore des Questions ?",
+      "description": "Notre équipe d'experts est là pour vous aider à trouver les fruits exotiques parfaits pour vos besoins.",
+      "button": "Contactez Nos Experts"
+    },
+    "questions": {
+      "1": {
+        "question": "Qu'est-ce qui rend vos fruits exotiques de qualité premium ?",
+        "answer": "Nos fruits sont sourcés directement de fermes biologiques certifiées dans les régions les plus fertiles de Colombie. Nous maintenons des standards de contrôle qualité stricts, assurant une fraîcheur optimale grâce à notre logistique avancée de chaîne du froid et livrons seulement les meilleurs spécimens qui répondent à nos critères rigoureux de goût, apparence et valeur nutritionnelle."
+      },
+      "2": {
+        "question": "Comment assurez-vous la fraîcheur pendant l'expédition internationale ?",
+        "answer": "Nous utilisons des systèmes de distribution de chaîne du froid à la pointe de la technologie qui maintiennent des niveaux précis de température et d'humidité tout au long du voyage. Nos fruits sont récoltés à maturité optimale et immédiatement traités dans nos installations à température contrôlée, garantissant qu'ils arrivent à destination avec une fraîcheur et une saveur maximales."
+      },
+      "3": {
+        "question": "En quels fruits exotiques vous spécialisez-vous ?",
+        "answer": "Nous nous spécialisons dans une gamme diversifiée de fruits exotiques premium incluant le fruit du dragon, la physalis, le mangoustan, le tamarillo, le fruit de la passion, et de nombreuses variétés colombiennes rares. Notre sélection varie selon les saisons pour s'assurer que nous offrons toujours les fruits les plus frais et de la plus haute qualité disponibles de nos partenaires agricoles de confiance."
+      },
+      "4": {
+        "question": "Offrez-vous des prix de gros pour les entreprises ?",
+        "answer": "Oui, nous fournissons des prix de gros compétitifs pour les restaurants, épiceries, distributeurs et autres entreprises. Notre programme de gros inclut des remises sur volume, des horaires de livraison flexibles, et une gestion de compte dédiée pour s'assurer que votre entreprise reçoive des fruits exotiques de haute qualité de manière cohérente."
+      },
+      "5": {
+        "question": "Quelles certifications ont vos fruits ?",
+        "answer": "Nos fruits viennent avec des certifications complètes incluant la certification biologique, la conformité au commerce équitable, et les standards internationaux de sécurité alimentaire. Nous travaillons exclusivement avec des fermes certifiées qui suivent des pratiques agricoles durables et répondent à des critères stricts de responsabilité environnementale et sociale."
+      },
+      "6": {
+        "question": "Comment puis-je passer une commande et quelles sont les quantités minimales ?",
+        "answer": "Vous pouvez passer des commandes par notre site web ou en contactant directement notre équipe de ventes. Les quantités minimales de commande varient selon le type de fruit et la destination, mais nous accommodons aussi bien les petites commandes spécialisées que les grands envois commerciaux. Notre équipe travaillera avec vous pour trouver la meilleure solution pour vos besoins spécifiques."
+      }
+    }
   },
   "products": {
     "title": "Nos Produits",
     "subtitle": "Qualité Premium",
     "description": "Découvrez notre sélection premium de fruits exotiques et tropicaux, soigneusement sourcés des meilleures fermes du monde. Des tropicaux classiques aux variétés rares, nous vous apportons les fruits les plus frais et les plus savoureux.",
     "sliderTitle": "Nos Fruits Exotiques Premium",
-    "sliderDescription": "Découvrez l'incroyable variété de fruits exotiques frais que nous importons directement de Colombie"
+    "sliderDescription": "Découvrez l'incroyable variété de fruits exotiques frais que nous importons directement de Colombie",
+    "search": {
+      "placeholder": "Rechercher des fruits...",
+      "label": "Rechercher"
+    },
+    "categories": {
+      "all": "Tous",
+      "tropical": "Tropicaux",
+      "exotic": "Exotiques",
+      "citrus": "Agrumes",
+      "stoneFruits": "Fruits à Noyau",
+      "berries": "Baies",
+      "seasonal": "Saisonniers"
+    },
+    "actions": {
+      "moreInfo": "Plus d'Infos",
+      "buyNow": "Acheter Maintenant",
+      "addToFavorites": "Ajouter aux Favoris",
+      "removeFromFavorites": "Retirer des Favoris"
+    },
+    "messages": {
+      "noResults": "Aucun produit trouvé",
+      "noResultsDescription": "Essayez d'ajuster vos critères de recherche ou de filtre.",
+      "outOfStock": "Rupture de Stock",
+      "inStock": "En Stock"
+    }
   },
-  "common": {
-    "exploreButton": "Explorez Nos Fruits",
-    "discoverMore": "Découvrir Plus",
-    "language": "Langue"
+  "testimonials": {
+    "title": "Témoignages",
+    "subtitle": "Ce que nos partenaires disent de nos fruits exotiques premium.",
+    "thomasFruits": {
+      "quote": "Qualité du produit : Très bonne, fruits bien mûrs, peu de pertes à la réception.",
+      "author": "Thomas Fruits",
+      "meta": "Partenaire - Canada"
+    },
+    "iga": {
+      "quote": "Qualité constante du produit : 5/5 – Les fruits sont frais, bien calibrés, avec une excellente présentation et une maturité idéale pour la vente.",
+      "author": "IGA",
+      "meta": "Partenaire - Canada"
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "title": "À Propos de Nous",
+      "subtitle": "Plus que des fruits - nous livrons la confiance, l'authenticité et le goût de la Colombie",
+      "description": "Plus que des fruits - nous livrons la confiance, l'authenticité et le goût de la Colombie"
+    },
+    "story": {
+      "title": "Notre Histoire",
+      "description1": "Chez Fruit Exotic International Inc par I Defense, chaque fruit commence par une histoire de passion et de tradition.",
+      "description2": "Notre voyage a commencé en Colombie il y a plus de sept ans, avec une mission en tête : partager les trésors tropicaux du pays avec le monde.",
+      "description3": "Derrière chaque mangue, citron vert ou mangoustan se trouvent des agriculteurs qui se lèvent avec le soleil, travaillant la terre avec dévouement et soin. Leur savoir, transmis de génération en génération, garantit que chaque fruit est cultivé naturellement, récolté à la main et nourri avec amour pour la terre.",
+      "description4": "De ces vergers, nous continuons le voyage - lavant, triant et emballant soigneusement chaque fruit pour répondre aux plus hauts standards de qualité. Aujourd'hui, nos exportations atteignent des partenaires au Canada, en Europe et au Moyen-Orient, livrant fraîcheur et authenticité dans chaque boîte.",
+      "finalDescription": "Notre histoire est une histoire de travail acharné, de confiance et de connexion - des champs de Colombie aux tables du monde entier."
+    },
+    "whatWeOffer": {
+      "title": "Ce Que Nous Offrons",
+      "premiumFruits": {
+        "title": "Fruits Exotiques Premium",
+        "subtitle": "des meilleures récoltes de Colombie",
+        "description": "Des mangues bébé et mangues Palmer aux citrons verts, avocats et mangoustans — nous livrons les meilleures récoltes de Colombie, cultivées avec soin et cueillies à maturité optimale."
+      },
+      "customPackaging": {
+        "title": "Solutions d'Emballage Personnalisées",
+        "subtitle": "adaptées à votre marché",
+        "description": "Votre marché est unique — et votre emballage aussi. Nous fournissons des formats, marques et designs sur mesure pour correspondre à vos besoins exacts."
+      },
+      "exportLogistics": {
+        "title": "Logistique d'Exportation Fiable",
+        "subtitle": "livraison mondiale garantie",
+        "description": "Que ce soit par fret aérien hebdomadaire ou par conteneurs complets, nous assurons une livraison rapide, flexible et sécurisée dans le monde entier."
+      },
+      "globalReach": {
+        "title": "Portée Mondiale et Partenariats",
+        "subtitle": "connectant les marchés mondiaux",
+        "description": "Avec des clients de confiance au Canada, en Europe et au Moyen-Orient, nous connectons les trésors agricoles de la Colombie aux marchés du monde entier."
+      },
+      "checkProducts": "Découvrez Nos Produits"
+    },
+    "certifications": {
+      "title": "Certifications de Qualité",
+      "description": "Chaque expédition d'exportation de Fruits Exotics International Inc. Par I Defense est accompagnée d'un certificat phytosanitaire officiel. Cela garantit que chaque fruit que nous livrons respecte strictement les normes internationales de sécurité alimentaire, donnant à nos clients confiance dans la qualité, la sécurité et l'authenticité de nos produits."
+    },
+    "companyValues": {
+      "qualityFirst": {
+        "title": "Qualité Avant Tout",
+        "description": "Une technologie avancée évalue la maturité, la fermeté, la densité et la teneur en sucre de chaque fruit avant l'exportation."
+      },
+      "traceability": {
+        "title": "Traçabilité Complète",
+        "description": "Chaque expédition reçoit un code unique, garantissant une transparence complète de la ferme colombienne à votre marché."
+      },
+      "certifiedExcellence": {
+        "title": "Excellence Certifiée",
+        "description": "Les certificats phytosanitaires officiels garantissent la conformité aux normes internationales de sécurité alimentaire."
+      },
+      "sustainablePartnership": {
+        "title": "Partenariat Durable",
+        "description": "Les relations directes avec les producteurs colombiens soutiennent les pratiques agricoles durables et le commerce équitable."
+      }
+    },
+    "timeline": {
+      "2018": {
+        "title": "Fondation à Montréal",
+        "description": "Établi notre centre de distribution au 9600 rue Meilleur, créant un hub stratégique pour les marchés canadiens."
+      },
+      "2019": {
+        "title": "Partenariats Colombiens",
+        "description": "Construit des relations directes avec des producteurs de fruits premium à travers les diverses régions agricoles de la Colombie."
+      },
+      "2021": {
+        "title": "Intégration Technologique",
+        "description": "Implémenté des systèmes de contrôle qualité avancés pour l'évaluation et la certification précises des fruits."
+      },
+      "2024": {
+        "title": "Expansion du Marché",
+        "description": "Servir les marchés spécialisés à travers le Canada avec une distribution de fruits exotiques cohérente et de haute qualité."
+      }
+    }
+  },
+  "productsPage": {
+    "hero": {
+      "subtitle": "Qualité Premium",
+      "title": "Nos Produits",
+      "description": "Découvrez notre sélection premium de fruits exotiques et tropicaux, soigneusement sourcés des meilleures fermes du monde. Des tropicaux classiques aux variétés rares, nous vous apportons les fruits les plus frais et les plus savoureux."
+    }
+  },
+  "blogPage": {
+    "hero": {
+      "subtitle": "Insights et Histoires",
+      "title": "Notre Blog",
+      "description": "Découvrez le monde fascinant des fruits exotiques à travers les insights d'experts, les histoires de durabilité et les aventures culinaires. Rejoignez-nous dans un voyage de saveur, de connaissance et d'inspiration."
+    },
+    "categories": {
+      "all": "Tous",
+      "education": "Éducation",
+      "sustainability": "Durabilité",
+      "tipsGuides": "Conseils et Guides",
+      "health": "Santé",
+      "behindScenes": "Dans les Coulisses",
+      "recipes": "Recettes"
+    },
+    "readMore": "Lire Plus"
   }
 }
