@@ -15,6 +15,7 @@ interface I18nContextType {
   isLoading: boolean;
   isRTL: boolean;
   dir: "ltr" | "rtl";
+  isHydrated: boolean;
 }
 
 const I18nContext = createContext<I18nContextType | undefined>(undefined);
@@ -34,6 +35,7 @@ export function I18nProvider({ children, defaultLocale = "en" }: I18nProviderPro
     ru: {}
   });
   const [isLoading, setIsLoading] = useState(true);
+  const [isHydrated, setIsHydrated] = useState(false);
 
   // RTL languages
   const rtlLanguages: Locale[] = ["ar"];
@@ -141,7 +143,7 @@ export function I18nProvider({ children, defaultLocale = "en" }: I18nProviderPro
   }, [locale, dir]);
 
   return (
-    <I18nContext.Provider value={{ locale, setLocale, t, isLoading, isRTL, dir }}>
+    <I18nContext.Provider value={{ locale, setLocale, t, isLoading, isRTL, dir, isHydrated }}>
       {children}
     </I18nContext.Provider>
   );
