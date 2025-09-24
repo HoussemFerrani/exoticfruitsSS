@@ -57,7 +57,7 @@ export default function HeroSection() {
 
           {/* Call-to-Action Buttons */}
           <motion.div
-            className="mt-10 flex flex-row flex-wrap gap-3 md:gap-4"
+            className="mt-10 flex flex-col sm:flex-row gap-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20% 0px -20% 0px" }}
@@ -66,7 +66,7 @@ export default function HeroSection() {
             {/* Primary CTA - Explore Fruits */}
             <Link href="/products">
               <motion.button
-                className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold text-lg rounded-2xl shadow-lg overflow-hidden transition-all duration-300"
+                className="group relative w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold text-lg rounded-2xl shadow-lg overflow-hidden transition-all duration-300"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 20px 40px rgba(0,0,0,0.2)"

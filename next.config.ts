@@ -51,6 +51,26 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        // No cache for HTML files
+        source: "/(.*).html",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "no-cache, no-store, must-revalidate",
+          },
+        ],
+      },
+      {
+        // Cache static assets for 1 hour but allow revalidation
+        source: "/_next/static/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=3600, must-revalidate",
+          },
+        ],
+      },
     ];
   },
 
