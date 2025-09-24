@@ -203,7 +203,7 @@ export default function AboutUsSection() {
                 whileHover={{ scale: 1.05, rotate: 1, transition: { duration: 0.3 } }}
               >
                 <Image
-                  src="/truck.jpeg"
+                  src="/truck.png"
                   alt="Truck delivering fruits"
                   fill
                   className="object-cover"
