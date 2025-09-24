@@ -12,7 +12,6 @@ import FAQSection from "@/components/sections/FAQSection";
 import Footer from "@/components/layout/Footer";
 import InfiniteSlider from "@/components/ui/InfiniteSlider";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { useI18n } from "@/contexts/I18nContext";
 import TranslatedText from "@/components/ui/TranslatedText";
 import { useHydrationSafeTranslation } from "@/hooks/useHydrationSafeTranslation";
@@ -76,42 +75,20 @@ export default function Home() {
           {/* View All Products Button */}
           <div className="text-center">
             <Link href="/products">
-              <motion.button
-                className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold text-lg rounded-2xl shadow-lg overflow-hidden transition-all duration-300"
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.2)"
-                }}
-                whileTap={{ scale: 0.98 }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-              >
-                {/* Background animation */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-600"
-                  initial={{ x: "-100%" }}
-                  whileHover={{ x: "0%" }}
-                  transition={{ duration: 0.3 }}
-                />
-
+              <button className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold text-lg rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                 {/* Button content */}
                 <span className="relative z-10 flex items-center gap-3">
                   {ht("common.exploreButton", "View All Products")}
-                  <motion.svg
-                    className="w-6 h-6"
+                  <svg
+                    className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    initial={{ x: 0 }}
-                    whileHover={{ x: 4 }}
-                    transition={{ duration: 0.3 }}
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </motion.svg>
+                  </svg>
                 </span>
-              </motion.button>
+              </button>
             </Link>
           </div>
         </div>
