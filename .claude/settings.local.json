@@ -16,7 +16,8 @@
       "Bash(npx tsc:*)",
       "Bash(grep:*)",
       "Bash(curl:*)",
-      "WebFetch(domain:www.canadawidefruits.com)"
+      "WebFetch(domain:www.canadawidefruits.com)",
+      "Bash(rm:*)"
     ],
     "deny": [],
     "ask": []

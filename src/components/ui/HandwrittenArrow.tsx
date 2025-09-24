@@ -60,8 +60,8 @@ export default function HandwrittenArrow({
       opacity: 1,
       transition: {
         pathLength: {
-          duration: 0.8,
-          ease: "easeInOut",
+            duration: 0.8,
+            ease: [0.42, 0, 0.58, 1] as any,
           delay: delay
         },
         opacity: {
@@ -82,8 +82,8 @@ export default function HandwrittenArrow({
       opacity: 1,
       transition: {
         pathLength: {
-          duration: 0.4,
-          ease: "easeInOut",
+            duration: 0.4,
+            ease: [0.42, 0, 0.58, 1] as any,
           delay: delay + 0.6
         },
         opacity: {
