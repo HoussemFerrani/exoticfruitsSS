@@ -91,6 +91,51 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={montserrat.variable}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                // Remove browser extension attributes that cause hydration issues
+                if (typeof window !== 'undefined') {
+                  const observer = new MutationObserver(function(mutations) {
+                    mutations.forEach(function(mutation) {
+                      if (mutation.type === 'attributes') {
+                        const target = mutation.target;
+                        // Remove common browser extension attributes
+                        ['bis_register', 'bis_skin_checked', 'bis_size', 'bis_id', '__processed_09b3c779-6358-48f4-876a-4aa3051b3a70__', '__processed_97949eaa-5632-4d9d-b71e-7f4dfc78ce55__'].forEach(attr => {
+                          if (target.hasAttribute && target.hasAttribute(attr)) {
+                            target.removeAttribute(attr);
+                          }
+                        });
+                      }
+                    });
+                  });
+
+                  // Start observing once DOM is ready
+                  if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', function() {
+                      observer.observe(document.body, {
+                        attributes: true,
+                        childList: true,
+                        subtree: true,
+                        attributeFilter: ['bis_register', 'bis_skin_checked', 'bis_size', 'bis_id', '__processed_09b3c779-6358-48f4-876a-4aa3051b3a70__', '__processed_97949eaa-5632-4d9d-b71e-7f4dfc78ce55__']
+                      });
+                    });
+                  } else {
+                    observer.observe(document.body, {
+                      attributes: true,
+                      childList: true,
+                      subtree: true,
+                      attributeFilter: ['bis_register', 'bis_skin_checked', 'bis_size', 'bis_id', '__processed_09b3c779-6358-48f4-876a-4aa3051b3a70__', '__processed_97949eaa-5632-4d9d-b71e-7f4dfc78ce55__']
+                    });
+                  }
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className={`antialiased`}>
         <I18nProvider defaultLocale="en">
           <ModalProvider>
