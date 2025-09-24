@@ -20,6 +20,9 @@ interface I18nContextType {
 
 const I18nContext = createContext<I18nContextType | undefined>(undefined);
 
+// Module-level in-memory cache so translations persist across renders and route changes
+const translationsCache: Partial<Record<Locale, Translations>> = {};
+
 interface I18nProviderProps {
   children: React.ReactNode;
   defaultLocale?: Locale;
@@ -44,22 +47,31 @@ export function I18nProvider({ children, defaultLocale = "en" }: I18nProviderPro
 
   // Load translations from JSON files
   const loadTranslations = async (lang: Locale) => {
+    // Serve from cache if available
+    if (translationsCache[lang]) {
+      setTranslations(prev => ({
+        ...prev,
+        [lang]: translationsCache[lang] as Translations
+      }));
+      return true;
+    }
+
     try {
-      const response = await fetch(`/locales/${lang}/common.json?t=${Date.now()}`);
-      if (response.ok) {
-        const data = await response.json();
-        setTranslations(prev => {
-          const newTranslations = {
-            ...prev,
-            [lang]: data
-          };
-          return newTranslations;
-        });
-        return true;
-      } else {
+      const response = await fetch(`/locales/${lang}/common.json`, {
+        // Allow the browser to cache these static assets
+        cache: "force-cache"
+      });
+      if (!response.ok) {
         console.warn(`Failed to load translations for ${lang}`);
         return false;
       }
+      const data = (await response.json()) as Translations;
+      translationsCache[lang] = data;
+      setTranslations(prev => ({
+        ...prev,
+        [lang]: data
+      }));
+      return true;
     } catch (error) {
       console.error(`Error loading translations for ${lang}:`, error);
       return false;
@@ -83,23 +95,23 @@ export function I18nProvider({ children, defaultLocale = "en" }: I18nProviderPro
     }
   }, []);
 
-  // Load translations when locale changes
+  // Load translations when locale changes (parallelized, cached)
   useEffect(() => {
-    const loadInitialTranslations = async () => {
+    let isActive = true;
+
+    const loadForLocale = async () => {
       setIsLoading(true);
-      
-      // Always load English as fallback first
-      await loadTranslations("en");
-      
-      // Load the selected locale if it's not English
-      if (locale !== "en") {
-        await loadTranslations(locale);
-      }
-      
-      setIsLoading(false);
+
+      const langsToLoad: Locale[] = locale === "en" ? ["en"] : ["en", locale];
+      await Promise.all(langsToLoad.map(loadTranslations));
+
+      if (isActive) setIsLoading(false);
     };
 
-    loadInitialTranslations();
+    loadForLocale();
+    return () => {
+      isActive = false;
+    };
   }, [locale]);
 
   // Save locale to localStorage when it changes
