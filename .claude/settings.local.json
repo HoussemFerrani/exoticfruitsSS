@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//mnt/c/Users/hp/Desktop/**)",
+      "Bash(npm install:*)",
+      "Bash(find:*)",
+      "Read(//mnt/c/Users/hp/Pictures/Screenshots/**)",
+      "WebFetch(domain:fruitexotica.ca)",
+      "WebFetch(domain:selectfruits.ro)",
+      "Bash(npm run dev:*)",
+      "Bash(pkill:*)",
+      "Bash(npx next:*)",
+      "Bash(node:*)",
+      "Bash(npm --version)",
+      "Bash(npm run build:*)",
+      "Bash(npx tsc:*)",
+      "Bash(grep:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:www.canadawidefruits.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

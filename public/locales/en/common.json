@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "blog": "Blog",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "title": "Premium Exotic Fruits",
+    "subtitle": "From the heart of Colombia to your hands — freshness you can trust, quality you can taste.",
+    "cta": "Explore Our Fruits"
+  },
+  "about": {
+    "company": "Fruit Exotic International",
+    "title": "From Farm to Market",
+    "story": "Our Story",
+    "network": "Global Network",
+    "description": "Founded by passionate fruit specialists, Fruit Exotic International bridges the gap between tropical fruit growers and premium retailers worldwide. After years of traveling through tropical regions, we discovered the incredible diversity and quality of exotic fruits that rarely reach global markets. This inspired us to create a network that brings these treasures directly to discerning customers."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "heading": "Premium Quality",
+    "description1": "We connect the world to Colombia's finest agricultural treasures, delivering premium exotic fruits to wholesalers, distributors, and retailers globally.",
+    "description2": "To be the right hand for our international partners, bringing you the best of Colombia with top quality products, competitive prices, and reliable logistics.",
+    "description3": "From Canada to Europe to the Middle East — we support your business with products you can trust and service you can count on."
+  },
+  "whoWeServe": {
+    "title": "Who We Serve?",
+    "heading": "Global Partners",
+    "description1": "We serve premium retailers, specialty grocery stores, high-end restaurants, and wholesale distributors who demand the finest exotic fruits. From boutique markets seeking rare varieties to established chains wanting consistent quality, we cater to businesses that value excellence.",
+    "description2": "Whether you're in New York, London, or Tokyo, Fruit Exotic International ensures your customers experience the authentic taste of tropical paradise, delivered fresh to your doorstep."
+  },
+  "productRange": {
+    "title": "Product Range"
+  },
+  "partners": {
+    "title": "Our Partners",
+    "subtitle": "We collaborate with trusted partners worldwide to bring you the finest exotic fruits and ensure excellence throughout our supply chain.",
+    "specialties": "Specialties",
+    "learnMore": "Learn More",
+    "ctaTitle": "Interested in Partnership?",
+    "ctaDescription": "Join our network of trusted partners and help us deliver the finest exotic fruits to markets worldwide.",
+    "ctaButton": "Contact Us"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "stillHaveQuestions": "Still Have Questions?",
+    "contactDescription": "Our expert team is here to help you find the perfect exotic fruits for your needs.",
+    "contactExperts": "Contact Our Experts"
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Premium Quality",
+    "description": "Discover our premium selection of exotic and tropical fruits, carefully sourced from the finest farms around the world. From classic tropicals to rare varieties, we bring you the freshest and most flavorful fruits.",
+    "sliderTitle": "Our Premium Exotic Fruits",
+    "sliderDescription": "Discover the amazing variety of fresh exotic fruits we import directly from Colombia"
+  },
+  "common": {
+    "exploreButton": "Explore Our Fruits",
+    "discoverMore": "Discover More",
+    "language": "Language"
+  }
+}
