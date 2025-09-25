@@ -49,7 +49,7 @@ export default function Home() {
   }, [isHydrated, isLoading, windowLoaded]);
 
   if (showLoader) {
-    return <LoadingScreen message={isLoading ? "Loading..." : (t("common.loading") || undefined)} />;
+    return <LoadingScreen message={isHydrated && !isLoading ? t("common.loading") : "Loading..."} />;
   }
 
   return (

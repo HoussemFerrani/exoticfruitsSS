@@ -11,6 +11,15 @@ import { useState, useEffect } from "react";
 export default function ProductsPage() {
   const { t, isLoading } = useI18n();
 
+  // Background images for sliding effect - using fruit images
+  const backgroundImages = [
+    "/background1.jpg",
+    "/background2.jpg",
+    "/background3.jpg",
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -21,15 +30,6 @@ export default function ProductsPage() {
       </div>
     );
   }
-  
-  // Background images for sliding effect - using fruit images
-  const backgroundImages = [
-    "/background1.jpg",
-    "/background2.jpg",
-    "/background3.jpg",
-  ];
-
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
