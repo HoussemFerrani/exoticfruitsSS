@@ -253,6 +253,7 @@ export default function PartnersSection() {
                                 width={180}
                                 height={80}
                                 className="max-w-full max-h-full object-contain filter hover:brightness-110 transition-all duration-300"
+                                style={{ width: "auto", height: "auto" }}
                                 priority
                               />
                             </motion.div>

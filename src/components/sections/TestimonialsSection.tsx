@@ -187,6 +187,7 @@ export default function TestimonialsSection() {
                     width={64}
                     height={40}
                     className="object-contain max-w-full max-h-full"
+                    style={{ width: "auto", height: "auto" }}
                     sizes="64px"
                   />
                 </motion.div>
