@@ -185,9 +185,12 @@
     "description": "Découvrez notre sélection premium de fruits exotiques et tropicaux, soigneusement sourcés des meilleures fermes du monde. Des tropicaux classiques aux variétés rares, nous vous apportons les fruits les plus frais et les plus savoureux.",
     "sliderTitle": "Nos Fruits Exotiques Premium",
     "sliderDescription": "Découvrez l'incroyable variété de fruits exotiques frais que nous importons directement de Colombie",
+    "quote": "Qualité récoltée avec soin, livrée avec passion",
     "search": {
-      "placeholder": "Rechercher des fruits...",
-      "label": "Rechercher"
+      "placeholder": "Rechercher des fruits par nom...",
+      "label": "Rechercher",
+      "clearSearch": "Effacer la Recherche",
+      "resultsCount": "{count} résultat{plural} trouvé{plural}"
     },
     "categories": {
       "all": "Tous",
@@ -207,6 +210,10 @@
     "messages": {
       "noResults": "Aucun produit trouvé",
       "noResultsDescription": "Essayez d'ajuster vos critères de recherche ou de filtre.",
+      "noResultsSearch": "Aucun fruit trouvé pour \"{query}\"",
+      "noResultsSearchDescription": "Essayez de rechercher des mots-clés différents ou parcourez nos catégories ci-dessus.",
+      "noResultsCategory": "Aucun produit trouvé dans cette catégorie",
+      "noResultsCategoryDescription": "Essayez de sélectionner une catégorie différente ou recherchez des fruits spécifiques.",
       "outOfStock": "Rupture de Stock",
       "inStock": "En Stock"
     }
@@ -327,6 +334,120 @@
       "recipes": "Recettes"
     },
     "readMore": "Lire Plus"
+  },
+  "productDetails": {
+    "mango": {
+      "name": "Papaye",
+      "category": "Tropical",
+      "ediblePart": "Chair",
+      "consumption": "Frais, smoothies, desserts",
+      "healthBenefits": ["Riche en vitamine C", "Riche en fibres", "Antioxydants"]
+    },
+    "dragon-fruit": {
+      "name": "Fruit du Dragon",
+      "category": "Exotique",
+      "ediblePart": "Chair avec graines",
+      "consumption": "Frais, salades de fruits, bols smoothie",
+      "healthBenefits": ["Faible en calories", "Riche en fer", "Vitamine C"]
+    },
+    "passion-fruit": {
+      "name": "Physalis",
+      "category": "Tropical",
+      "ediblePart": "Pulpe et graines",
+      "consumption": "Frais, jus, garniture dessert",
+      "healthBenefits": ["Riche en fibres", "Vitamine A", "Potassium"]
+    },
+    "rambutan": {
+      "name": "Fruit de la Passion",
+      "category": "Exotique",
+      "ediblePart": "Chair translucide",
+      "consumption": "Frais, salades de fruits",
+      "healthBenefits": ["Vitamine C", "Cuivre", "Manganèse"]
+    },
+    "lychee": {
+      "name": "Mangoustan",
+      "category": "Tropical",
+      "ediblePart": "Chair sucrée",
+      "consumption": "Frais, cocktails, desserts",
+      "healthBenefits": ["Vitamine C", "Cuivre", "Vitamine B6"]
+    },
+    "star-fruit": {
+      "name": "Banane",
+      "category": "Tropical",
+      "ediblePart": "Fruit entier",
+      "consumption": "Frais, garniture, salades",
+      "healthBenefits": ["Faible en calories", "Vitamine C", "Fibres"]
+    },
+    "papaya": {
+      "name": "Melon Cantaloup",
+      "category": "Tropical",
+      "ediblePart": "Chair orange",
+      "consumption": "Frais, smoothies, salades",
+      "healthBenefits": ["Enzymes digestives", "Vitamine C", "Folate"]
+    },
+    "jackfruit": {
+      "name": "Feijoa",
+      "category": "Exotique",
+      "ediblePart": "Gousses jaunes",
+      "consumption": "Frais, currys, desserts",
+      "healthBenefits": ["Riche en fibres", "Vitamine A", "Potassium"]
+    },
+    "durian": {
+      "name": "Corossol",
+      "category": "Exotique",
+      "ediblePart": "Chair crémeuse",
+      "consumption": "Frais, desserts, glace",
+      "healthBenefits": ["Riche en énergie", "Vitamine B", "Potassium"]
+    },
+    "kiwi": {
+      "name": "Citron Vert",
+      "category": "Tropical",
+      "ediblePart": "Chair verte avec graines",
+      "consumption": "Frais, smoothies, salades de fruits",
+      "healthBenefits": ["Vitamine C", "Fibres", "Antioxydants"]
+    },
+    "guava": {
+      "name": "Avocat",
+      "category": "Tropical",
+      "ediblePart": "Chair rose/blanche",
+      "consumption": "Frais, jus, confitures",
+      "healthBenefits": ["Vitamine C", "Fibres", "Folate"]
+    },
+    "pomegranate": {
+      "name": "Pomme Verte",
+      "category": "Fruits à Noyau",
+      "ediblePart": "Graines rouges (arilles)",
+      "consumption": "Frais, jus, salades",
+      "healthBenefits": ["Antioxydants", "Vitamine C", "Fibres"]
+    },
+    "persimmon": {
+      "name": "Curuba",
+      "category": "Fruits à Noyau",
+      "ediblePart": "Chair orange",
+      "consumption": "Frais, séché, desserts",
+      "healthBenefits": ["Vitamine A", "Fibres", "Manganèse"]
+    },
+    "blueberries": {
+      "name": "Figue de Barbarie",
+      "category": "Baies",
+      "ediblePart": "Baie entière",
+      "consumption": "Frais, smoothies, pâtisserie",
+      "healthBenefits": ["Antioxydants", "Vitamine K", "Fibres"]
+    },
+    "blackberries": {
+      "name": "Tamarillo",
+      "category": "Baies",
+      "ediblePart": "Baie entière",
+      "consumption": "Frais, confitures, desserts",
+      "healthBenefits": ["Vitamine C", "Fibres", "Antioxydants"]
+    },
+    "blood-orange": {
+      "name": "Aloe Vera",
+      "category": "Agrumes",
+      "ediblePart": "Segments de chair rouge",
+      "consumption": "Frais, jus, cocktails",
+      "healthBenefits": ["Vitamine C", "Anthocyanes", "Folate"]
+    }
   },
   "blogArticles": {
     "1": {

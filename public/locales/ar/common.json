@@ -185,9 +185,12 @@
     "description": "اكتشف مجموعتنا المميزة من الفواكه الاستوائية والغريبة، المختارة بعناية من أجود المزارع حول العالم. من الاستوائية الكلاسيكية إلى الأصناف النادرة، نقدم لك أطازج وألذ الفواكه.",
     "sliderTitle": "فواكهنا الاستوائية المميزة",
     "sliderDescription": "اكتشف التنوع المذهل للفواكه الاستوائية الطازجة التي نستوردها مباشرة من كولومبيا",
+    "quote": "جودة محصودة بعناية، مُسلمة بشغف",
     "search": {
-      "placeholder": "ابحث عن الفواكه...",
-      "label": "البحث"
+      "placeholder": "ابحث عن الفواكه بالاسم...",
+      "label": "البحث",
+      "clearSearch": "مسح البحث",
+      "resultsCount": "تم العثور على {count} نتيجة"
     },
     "categories": {
       "all": "الكل",
@@ -207,6 +210,10 @@
     "messages": {
       "noResults": "لم يتم العثور على منتجات",
       "noResultsDescription": "جرب تعديل معايير البحث أو التصفية.",
+      "noResultsSearch": "لم يتم العثور على فواكه لـ \"{query}\"",
+      "noResultsSearchDescription": "جرب البحث بكلمات مفتاحية مختلفة أو تصفح فئاتنا أعلاه.",
+      "noResultsCategory": "لم يتم العثور على منتجات في هذه الفئة",
+      "noResultsCategoryDescription": "جرب اختيار فئة مختلفة أو ابحث عن فواكه محددة.",
       "outOfStock": "غير متوفر",
       "inStock": "متوفر"
     }
@@ -327,6 +334,120 @@
       "recipes": "الوصفات"
     },
     "readMore": "اقرأ المزيد"
+  },
+  "productDetails": {
+    "mango": {
+      "name": "البابايا",
+      "category": "استوائية",
+      "ediblePart": "اللحم",
+      "consumption": "طازج، عصائر، حلويات",
+      "healthBenefits": ["غني بفيتامين C", "غني بالألياف", "مضادات الأكسدة"]
+    },
+    "dragon-fruit": {
+      "name": "فاكهة التنين",
+      "category": "غريبة",
+      "ediblePart": "اللحم مع البذور",
+      "consumption": "طازج، سلطات الفواكه، أطباق العصائر",
+      "healthBenefits": ["قليل السعرات", "غني بالحديد", "فيتامين C"]
+    },
+    "passion-fruit": {
+      "name": "الفيزاليس",
+      "category": "استوائية",
+      "ediblePart": "اللب والبذور",
+      "consumption": "طازج، عصائر، تزيين الحلويات",
+      "healthBenefits": ["غني بالألياف", "فيتامين A", "البوتاسيوم"]
+    },
+    "rambutan": {
+      "name": "فاكهة العاطفة",
+      "category": "غريبة",
+      "ediblePart": "لحم شفاف",
+      "consumption": "طازج، سلطات الفواكه",
+      "healthBenefits": ["فيتامين C", "النحاس", "المنغنيز"]
+    },
+    "lychee": {
+      "name": "المانجوستين",
+      "category": "استوائية",
+      "ediblePart": "لحم حلو",
+      "consumption": "طازج، كوكتيلات، حلويات",
+      "healthBenefits": ["فيتامين C", "النحاس", "فيتامين B6"]
+    },
+    "star-fruit": {
+      "name": "الموز",
+      "category": "استوائية",
+      "ediblePart": "الفاكهة كاملة",
+      "consumption": "طازج، تزيين، سلطات",
+      "healthBenefits": ["قليل السعرات", "فيتامين C", "ألياف"]
+    },
+    "papaya": {
+      "name": "شمام الكنتالوب",
+      "category": "استوائية",
+      "ediblePart": "لحم برتقالي",
+      "consumption": "طازج، عصائر، سلطات",
+      "healthBenefits": ["إنزيمات هضمية", "فيتامين C", "حمض الفوليك"]
+    },
+    "jackfruit": {
+      "name": "الفيجوا",
+      "category": "غريبة",
+      "ediblePart": "قرون صفراء",
+      "consumption": "طازج، كاري، حلويات",
+      "healthBenefits": ["غني بالألياف", "فيتامين A", "البوتاسيوم"]
+    },
+    "durian": {
+      "name": "القشطة",
+      "category": "غريبة",
+      "ediblePart": "لحم كريمي",
+      "consumption": "طازج، حلويات، آيس كريم",
+      "healthBenefits": ["غني بالطاقة", "فيتامين B", "البوتاسيوم"]
+    },
+    "kiwi": {
+      "name": "الليمون الأخضر",
+      "category": "استوائية",
+      "ediblePart": "لحم أخضر مع بذور",
+      "consumption": "طازج، عصائر، سلطات الفواكه",
+      "healthBenefits": ["فيتامين C", "ألياف", "مضادات الأكسدة"]
+    },
+    "guava": {
+      "name": "الأفوكادو",
+      "category": "استوائية",
+      "ediblePart": "لحم وردي/أبيض",
+      "consumption": "طازج، عصائر، مربى",
+      "healthBenefits": ["فيتامين C", "ألياف", "حمض الفوليك"]
+    },
+    "pomegranate": {
+      "name": "التفاح الأخضر",
+      "category": "فواكه ذات نواة",
+      "ediblePart": "بذور حمراء (أريلز)",
+      "consumption": "طازج، عصائر، سلطات",
+      "healthBenefits": ["مضادات الأكسدة", "فيتامين C", "ألياف"]
+    },
+    "persimmon": {
+      "name": "الكوروبا",
+      "category": "فواكه ذات نواة",
+      "ediblePart": "لحم برتقالي",
+      "consumption": "طازج، مجفف، حلويات",
+      "healthBenefits": ["فيتامين A", "ألياف", "المنغنيز"]
+    },
+    "blueberries": {
+      "name": "تين البربري",
+      "category": "التوت",
+      "ediblePart": "التوت كاملاً",
+      "consumption": "طازج، عصائر، خبز",
+      "healthBenefits": ["مضادات الأكسدة", "فيتامين K", "ألياف"]
+    },
+    "blackberries": {
+      "name": "التاماريلو",
+      "category": "التوت",
+      "ediblePart": "التوت كاملاً",
+      "consumption": "طازج، مربى، حلويات",
+      "healthBenefits": ["فيتامين C", "ألياف", "مضادات الأكسدة"]
+    },
+    "blood-orange": {
+      "name": "الألوفيرا",
+      "category": "حمضيات",
+      "ediblePart": "شرائح لحم أحمر",
+      "consumption": "طازج، عصائر، كوكتيلات",
+      "healthBenefits": ["فيتامين C", "أنثوسيانين", "حمض الفوليك"]
+    }
   },
   "blogArticles": {
     "1": {

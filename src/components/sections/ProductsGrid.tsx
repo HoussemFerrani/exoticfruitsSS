@@ -3,9 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ShoppingCart, Heart, Star, Search, X } from "lucide-react";
 import FruitInfoModal from "../ui/FruitInfoModal";
+import { useI18n } from "@/contexts/I18nContext";
 
 type Product = {
   id: string;
@@ -20,221 +21,133 @@ type Product = {
   inStock: boolean;
 };
 
-const PRODUCTS: Product[] = [
-  {
-    id: "mango",
-    name: "Papaya",
-    category: "Tropical",
-    ediblePart: "Flesh",
-    consumption: "Fresh, smoothies, desserts",
-    healthBenefits: ["Rich in Vitamin C", "High in fiber", "Antioxidants"],
-    price: "$3.99",
-    image: "/papaya.png",
-    rating: 4.8,
-    inStock: true,
-  },
-  {
-    id: "dragon-fruit",
-    name: "Dragon Fruit",
-    category: "Exotic",
-    ediblePart: "Flesh with seeds",
-    consumption: "Fresh, fruit salads, smoothie bowls",
-    healthBenefits: ["Low in calories", "Rich in iron", "Vitamin C"],
-    price: "$7.99",
-    image: "/dragon-fruit.png",
-    rating: 4.6,
-    inStock: true,
-  },
-  {
-    id: "passion-fruit",
-    name: "Physalis",
-    category: "Tropical",
-    ediblePart: "Pulp and seeds",
-    consumption: "Fresh, juices, dessert topping",
-    healthBenefits: ["High in fiber", "Vitamin A", "Potassium"],
-    price: "$2.49",
-    image: "/physalis.png",
-    rating: 4.7,
-    inStock: true,
-  },
-  {
-    id: "rambutan",
-    name: "Passion Fruit",
-    category: "Exotic",
-    ediblePart: "Translucent flesh",
-    consumption: "Fresh, fruit salads",
-    healthBenefits: ["Vitamin C", "Copper", "Manganese"],
-    price: "$6.99",
-    image: "/Exotische.png",
-    rating: 4.5,
-    inStock: false,
-  },
-  {
-    id: "lychee",
-    name: "Mangosteen",
-    category: "Tropical",
-    ediblePart: "Sweet flesh",
-    consumption: "Fresh, cocktails, desserts",
-    healthBenefits: ["Vitamin C", "Copper", "Vitamin B6"],
-    price: "$5.99",
-    image: "/Mangosteen.png",
-    rating: 4.9,
-    inStock: true,
-  },
-  {
-    id: "star-fruit",
-    name: "Banana",
-    category: "Tropical",
-    ediblePart: "Entire fruit",
-    consumption: "Fresh, garnish, salads",
-    healthBenefits: ["Low calories", "Vitamin C", "Fiber"],
-    price: "$4.49",
-    image: "/banana.png",
-    rating: 4.3,
-    inStock: true,
-  },
-  {
-    id: "papaya",
-    name: "Cantaloupe Melon",
-    category: "Tropical",
-    ediblePart: "Orange flesh",
-    consumption: "Fresh, smoothies, salads",
-    healthBenefits: ["Digestive enzymes", "Vitamin C", "Folate"],
-    price: "$3.49",
-    image: "/poire.png",
-    rating: 4.6,
-    inStock: true,
-  },
-  {
-    id: "jackfruit",
-    name: "Feijoa",
-    category: "Exotic",
-    ediblePart: "Yellow pods",
-    consumption: "Fresh, curries, desserts",
-    healthBenefits: ["High in fiber", "Vitamin A", "Potassium"],
-    price: "$12.99",
-    image: "/Feijoa.png",
-    rating: 4.4,
-    inStock: true,
-  },
-  {
-    id: "durian",
-    name: "Soursop",
-    category: "Exotic",
-    ediblePart: "Custard-like flesh",
-    consumption: "Fresh, desserts, ice cream",
-    healthBenefits: ["High in energy", "Vitamin B", "Potassium"],
-    price: "$18.99",
-    image: "/COROSSOL.png",
-    rating: 3.8,
-    inStock: true,
-  },
-  {
-    id: "kiwi",
-    name: "Lime",
-    category: "Tropical",
-    ediblePart: "Green flesh with seeds",
-    consumption: "Fresh, smoothies, fruit salads",
-    healthBenefits: ["Vitamin C", "Fiber", "Antioxidants"],
-    price: "$4.99",
-    image: "/lime.png",
-    rating: 4.7,
-    inStock: true,
-  },
-  {
-    id: "guava",
-    name: "Avocado",
-    category: "Tropical",
-    ediblePart: "Pink/white flesh",
-    consumption: "Fresh, juices, jams",
-    healthBenefits: ["Vitamin C", "Fiber", "Folate"],
-    price: "$3.99",
-    image: "/avocado.png",
-    rating: 4.5,
-    inStock: true,
-  },
-  {
-    id: "pomegranate",
-    name: "Green Apple",
-    category: "Stone Fruits",
-    ediblePart: "Red seeds (arils)",
-    consumption: "Fresh, juices, salads",
-    healthBenefits: ["Antioxidants", "Vitamin C", "Fiber"],
-    price: "$6.49",
-    image: "/apple.png",
-    rating: 4.8,
-    inStock: true,
-  },
-  {
-    id: "persimmon",
-    name: "Curuba",
-    category: "Stone Fruits",
-    ediblePart: "Orange flesh",
-    consumption: "Fresh, dried, desserts",
-    healthBenefits: ["Vitamin A", "Fiber", "Manganese"],
-    price: "$5.99",
-    image: "/Curuba.png",
-    rating: 4.3,
-    inStock: false,
-  },
-  {
-    id: "blueberries",
-    name: "Figue de la Barbarie",
-    category: "Berries",
-    ediblePart: "Entire berry",
-    consumption: "Fresh, smoothies, baking",
-    healthBenefits: ["Antioxidants", "Vitamin K", "Fiber"],
-    price: "$7.99",
-    image: "/hendi.png",
-    rating: 4.9,
-    inStock: true,
-  },
-  {
-    id: "blackberries",
-    name: "Tamarillo",
-    category: "Berries",
-    ediblePart: "Entire berry",
-    consumption: "Fresh, jams, desserts",
-    healthBenefits: ["Vitamin C", "Fiber", "Antioxidants"],
-    price: "$8.49",
-    image: "/tamarillo.png",
-    rating: 4.6,
-    inStock: true,
-  },
-  {
-    id: "blood-orange",
-    name: "Aloe Vera",
-    category: "Citrus",
-    ediblePart: "Red flesh segments",
-    consumption: "Fresh, juices, cocktails",
-    healthBenefits: ["Vitamin C", "Anthocyanins", "Folate"],
-    price: "$5.49",
-    image: "/Aloe vera.png",
-    rating: 4.7,
-    inStock: true,
-  },
+const PRODUCT_IDS = [
+  "mango", "dragon-fruit", "passion-fruit", "rambutan", "lychee", "star-fruit",
+  "papaya", "jackfruit", "durian", "kiwi", "guava", "pomegranate",
+  "persimmon", "blueberries", "blackberries", "blood-orange"
 ];
 
+const PRODUCT_IMAGES = {
+  "mango": "/papaya.png",
+  "dragon-fruit": "/dragon-fruit.png",
+  "passion-fruit": "/physalis.png",
+  "rambutan": "/Exotische.png",
+  "lychee": "/Mangosteen.png",
+  "star-fruit": "/banana.png",
+  "papaya": "/poire.png",
+  "jackfruit": "/Feijoa.png",
+  "durian": "/COROSSOL.png",
+  "kiwi": "/lime.png",
+  "guava": "/avocado.png",
+  "pomegranate": "/apple.png",
+  "persimmon": "/Curuba.png",
+  "blueberries": "/hendi.png",
+  "blackberries": "/tamarillo.png",
+  "blood-orange": "/Aloe vera.png"
+};
+
+const PRODUCT_PRICES = {
+  "mango": "$3.99",
+  "dragon-fruit": "$7.99",
+  "passion-fruit": "$2.49",
+  "rambutan": "$6.99",
+  "lychee": "$5.99",
+  "star-fruit": "$4.49",
+  "papaya": "$3.49",
+  "jackfruit": "$12.99",
+  "durian": "$18.99",
+  "kiwi": "$4.99",
+  "guava": "$3.99",
+  "pomegranate": "$6.49",
+  "persimmon": "$5.99",
+  "blueberries": "$7.99",
+  "blackberries": "$8.49",
+  "blood-orange": "$5.49"
+};
+
+const PRODUCT_RATINGS = {
+  "mango": 4.8,
+  "dragon-fruit": 4.6,
+  "passion-fruit": 4.7,
+  "rambutan": 4.5,
+  "lychee": 4.9,
+  "star-fruit": 4.3,
+  "papaya": 4.6,
+  "jackfruit": 4.4,
+  "durian": 3.8,
+  "kiwi": 4.7,
+  "guava": 4.5,
+  "pomegranate": 4.8,
+  "persimmon": 4.3,
+  "blueberries": 4.9,
+  "blackberries": 4.6,
+  "blood-orange": 4.7
+};
+
+const PRODUCT_STOCK = {
+  "mango": true,
+  "dragon-fruit": true,
+  "passion-fruit": true,
+  "rambutan": false,
+  "lychee": true,
+  "star-fruit": true,
+  "papaya": true,
+  "jackfruit": true,
+  "durian": true,
+  "kiwi": true,
+  "guava": true,
+  "pomegranate": true,
+  "persimmon": false,
+  "blueberries": true,
+  "blackberries": true,
+  "blood-orange": true
+};
+
 export default function ProductsGrid() {
+  const { t } = useI18n();
   const [favorites, setFavorites] = useState<Set<string>>(new Set());
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [selectedCategory, setSelectedCategory] = useState<string>("");
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [isSearchFocused, setIsSearchFocused] = useState(false);
 
+  // Initialize selectedCategory with translated "All" label
+  useEffect(() => {
+    if (!selectedCategory) {
+      setSelectedCategory(t("products.categories.all"));
+    }
+  }, [t, selectedCategory]);
+
+  // Create products dynamically using translations
+  const PRODUCTS: Product[] = PRODUCT_IDS.map(id => {
+    const productDetails = t(`productDetails.${id}`);
+    return {
+      id,
+      name: productDetails.name || id,
+      category: productDetails.category || "Tropical",
+      ediblePart: productDetails.ediblePart || "Flesh",
+      consumption: productDetails.consumption || "Fresh",
+      healthBenefits: productDetails.healthBenefits || ["Healthy"],
+      price: PRODUCT_PRICES[id],
+      image: PRODUCT_IMAGES[id],
+      rating: PRODUCT_RATINGS[id],
+      inStock: PRODUCT_STOCK[id],
+    };
+  });
+
   const categories = [
-    "All",
-    "Tropical",
-    "Exotic",
-    "Citrus",
-    "Stone Fruits",
-    "Berries",
-    "Seasonal"
+    { key: "all", label: t("products.categories.all") },
+    { key: "tropical", label: t("products.categories.tropical") },
+    { key: "exotic", label: t("products.categories.exotic") },
+    { key: "citrus", label: t("products.categories.citrus") },
+    { key: "stoneFruits", label: t("products.categories.stoneFruits") },
+    { key: "berries", label: t("products.categories.berries") },
+    { key: "seasonal", label: t("products.categories.seasonal") }
   ];
 
   const filteredProducts = PRODUCTS.filter(product => {
-    const matchesCategory = selectedCategory === "All" || product.category === selectedCategory;
+    const matchesCategory = selectedCategory === t("products.categories.all") || product.category === selectedCategory;
     const matchesSearch = searchQuery === "" ||
       product.name.toLowerCase().includes(searchQuery.toLowerCase());
 
@@ -310,7 +223,7 @@ export default function ProductsGrid() {
                     transition={{ duration: 0.6, delay: 0.6 }}
                     className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 italic leading-relaxed text-center"
                   >
-                    Quality harvested with care, delivered with passion
+                    {t("products.quote")}
                   </motion.p>
 
                   {/* Decorative line */}
@@ -357,7 +270,7 @@ export default function ProductsGrid() {
                 </div>
                 <input
                   type="text"
-                  placeholder="Search fruits by name..."
+                  placeholder={t("products.search.placeholder")}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   onFocus={() => setIsSearchFocused(true)}
@@ -394,7 +307,10 @@ export default function ProductsGrid() {
                 animate={{ opacity: 1, y: 0 }}
                 className="absolute top-full mt-2 left-4 text-sm text-gray-600"
               >
-                {filteredProducts.length} result{filteredProducts.length !== 1 ? 's' : ''} found
+                {t("products.search.resultsCount", { 
+                  count: filteredProducts.length, 
+                  plural: filteredProducts.length !== 1 ? 's' : '' 
+                })}
               </motion.div>
             )}
           </motion.div>
@@ -405,17 +321,17 @@ export default function ProductsGrid() {
           <div className="relative flex flex-wrap gap-2 bg-white rounded-2xl p-3 shadow-lg border border-gray-100 max-w-4xl">
             {categories.map((category) => (
               <motion.button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
+                key={category.key}
+                onClick={() => setSelectedCategory(category.label)}
                 className={`relative px-8 py-3 rounded-xl text-sm font-bold transition-all duration-300 ${
-                  selectedCategory === category
+                  selectedCategory === category.label
                     ? "text-white"
                     : "text-gray-600 hover:text-gray-800"
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {selectedCategory === category && (
+                {selectedCategory === category.label && (
                   <motion.div
                     layoutId="activeCategory"
                     className="absolute inset-0 rounded-xl"
@@ -429,7 +345,7 @@ export default function ProductsGrid() {
                     }}
                   />
                 )}
-                <span className="relative z-10">{category}</span>
+                <span className="relative z-10">{category.label}</span>
               </motion.button>
             ))}
           </div>
@@ -485,7 +401,7 @@ export default function ProductsGrid() {
                     onClick={() => openModal(product)}
                     className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-300 text-gray-700 hover:border-gray-400 hover:text-gray-800 transition-all duration-200"
                   >
-                    More Info
+                    {t("products.actions.moreInfo")}
                   </motion.button>
 
                   <Link href="/contact">
@@ -503,7 +419,7 @@ export default function ProductsGrid() {
                         e.currentTarget.style.backgroundColor = "var(--color-cta)";
                       }}
                     >
-                      Buy Now
+                      {t("products.actions.buyNow")}
                     </motion.button>
                   </Link>
                 </div>
@@ -526,10 +442,10 @@ export default function ProductsGrid() {
               {searchQuery ? (
                 <>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                    No fruits found for "{searchQuery}"
+                    {t("products.messages.noResultsSearch", { query: searchQuery })}
                   </h3>
                   <p className="text-gray-500 mb-4">
-                    Try searching for different keywords or browse our categories above.
+                    {t("products.messages.noResultsSearchDescription")}
                   </p>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
@@ -537,16 +453,16 @@ export default function ProductsGrid() {
                     onClick={() => setSearchQuery("")}
                     className="px-6 py-3 bg-blue-500 text-white rounded-xl font-medium hover:bg-blue-600 transition-colors duration-200"
                   >
-                    Clear Search
+                    {t("products.search.clearSearch")}
                   </motion.button>
                 </>
               ) : (
                 <>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                    No products found in this category
+                    {t("products.messages.noResultsCategory")}
                   </h3>
                   <p className="text-gray-500">
-                    Try selecting a different category or search for specific fruits.
+                    {t("products.messages.noResultsCategoryDescription")}
                   </p>
                 </>
               )}

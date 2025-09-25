@@ -185,9 +185,12 @@
     "description": "Descubre nuestra selección premium de frutas exóticas y tropicales, cuidadosamente obtenidas de las mejores granjas del mundo. Desde tropicales clásicas hasta variedades raras, te traemos las frutas más frescas y sabrosas.",
     "sliderTitle": "Nuestras Frutas Exóticas Premium",
     "sliderDescription": "Descubre la increíble variedad de frutas exóticas frescas que importamos directamente de Colombia",
+    "quote": "Calidad cosechada con cuidado, entregada con pasión",
     "search": {
-      "placeholder": "Buscar frutas...",
-      "label": "Buscar"
+      "placeholder": "Buscar frutas por nombre...",
+      "label": "Buscar",
+      "clearSearch": "Limpiar Búsqueda",
+      "resultsCount": "{count} resultado{plural} encontrado{plural}"
     },
     "categories": {
       "all": "Todos",
@@ -207,6 +210,10 @@
     "messages": {
       "noResults": "No se encontraron productos",
       "noResultsDescription": "Intenta ajustar tus criterios de búsqueda o filtro.",
+      "noResultsSearch": "No se encontraron frutas para \"{query}\"",
+      "noResultsSearchDescription": "Intenta buscar con palabras clave diferentes o navega por nuestras categorías arriba.",
+      "noResultsCategory": "No se encontraron productos en esta categoría",
+      "noResultsCategoryDescription": "Intenta seleccionar una categoría diferente o buscar frutas específicas.",
       "outOfStock": "Agotado",
       "inStock": "En Stock"
     }
@@ -327,6 +334,120 @@
       "recipes": "Recetas"
     },
     "readMore": "Leer Más"
+  },
+  "productDetails": {
+    "mango": {
+      "name": "Papaya",
+      "category": "Tropical",
+      "ediblePart": "Pulpa",
+      "consumption": "Fresco, batidos, postres",
+      "healthBenefits": ["Rico en vitamina C", "Alto en fibra", "Antioxidantes"]
+    },
+    "dragon-fruit": {
+      "name": "Fruta del Dragón",
+      "category": "Exótica",
+      "ediblePart": "Pulpa con semillas",
+      "consumption": "Fresco, ensaladas de frutas, bowls de batidos",
+      "healthBenefits": ["Bajo en calorías", "Rico en hierro", "Vitamina C"]
+    },
+    "passion-fruit": {
+      "name": "Physalis",
+      "category": "Tropical",
+      "ediblePart": "Pulpa y semillas",
+      "consumption": "Fresco, jugos, cobertura de postres",
+      "healthBenefits": ["Alto en fibra", "Vitamina A", "Potasio"]
+    },
+    "rambutan": {
+      "name": "Fruta de la Pasión",
+      "category": "Exótica",
+      "ediblePart": "Pulpa translúcida",
+      "consumption": "Fresco, ensaladas de frutas",
+      "healthBenefits": ["Vitamina C", "Cobre", "Manganeso"]
+    },
+    "lychee": {
+      "name": "Mangostán",
+      "category": "Tropical",
+      "ediblePart": "Pulpa dulce",
+      "consumption": "Fresco, cócteles, postres",
+      "healthBenefits": ["Vitamina C", "Cobre", "Vitamina B6"]
+    },
+    "star-fruit": {
+      "name": "Plátano",
+      "category": "Tropical",
+      "ediblePart": "Fruta entera",
+      "consumption": "Fresco, guarnición, ensaladas",
+      "healthBenefits": ["Bajo en calorías", "Vitamina C", "Fibra"]
+    },
+    "papaya": {
+      "name": "Melón Cantalupo",
+      "category": "Tropical",
+      "ediblePart": "Pulpa naranja",
+      "consumption": "Fresco, batidos, ensaladas",
+      "healthBenefits": ["Enzimas digestivas", "Vitamina C", "Folato"]
+    },
+    "jackfruit": {
+      "name": "Feijoa",
+      "category": "Exótica",
+      "ediblePart": "Vainas amarillas",
+      "consumption": "Fresco, curris, postres",
+      "healthBenefits": ["Alto en fibra", "Vitamina A", "Potasio"]
+    },
+    "durian": {
+      "name": "Guanábana",
+      "category": "Exótica",
+      "ediblePart": "Pulpa cremosa",
+      "consumption": "Fresco, postres, helado",
+      "healthBenefits": ["Alto en energía", "Vitamina B", "Potasio"]
+    },
+    "kiwi": {
+      "name": "Lima",
+      "category": "Tropical",
+      "ediblePart": "Pulpa verde con semillas",
+      "consumption": "Fresco, batidos, ensaladas de frutas",
+      "healthBenefits": ["Vitamina C", "Fibra", "Antioxidantes"]
+    },
+    "guava": {
+      "name": "Aguacate",
+      "category": "Tropical",
+      "ediblePart": "Pulpa rosa/blanca",
+      "consumption": "Fresco, jugos, mermeladas",
+      "healthBenefits": ["Vitamina C", "Fibra", "Folato"]
+    },
+    "pomegranate": {
+      "name": "Manzana Verde",
+      "category": "Frutas de Hueso",
+      "ediblePart": "Semillas rojas (arilos)",
+      "consumption": "Fresco, jugos, ensaladas",
+      "healthBenefits": ["Antioxidantes", "Vitamina C", "Fibra"]
+    },
+    "persimmon": {
+      "name": "Curuba",
+      "category": "Frutas de Hueso",
+      "ediblePart": "Pulpa naranja",
+      "consumption": "Fresco, seco, postres",
+      "healthBenefits": ["Vitamina A", "Fibra", "Manganeso"]
+    },
+    "blueberries": {
+      "name": "Higo de la Barbarie",
+      "category": "Bayas",
+      "ediblePart": "Baya entera",
+      "consumption": "Fresco, batidos, horneado",
+      "healthBenefits": ["Antioxidantes", "Vitamina K", "Fibra"]
+    },
+    "blackberries": {
+      "name": "Tamarillo",
+      "category": "Bayas",
+      "ediblePart": "Baya entera",
+      "consumption": "Fresco, mermeladas, postres",
+      "healthBenefits": ["Vitamina C", "Fibra", "Antioxidantes"]
+    },
+    "blood-orange": {
+      "name": "Aloe Vera",
+      "category": "Cítricos",
+      "ediblePart": "Segmentos de pulpa roja",
+      "consumption": "Fresco, jugos, cócteles",
+      "healthBenefits": ["Vitamina C", "Antocianinas", "Folato"]
+    }
   },
   "blogArticles": {
     "1": {

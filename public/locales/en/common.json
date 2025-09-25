@@ -185,9 +185,12 @@
     "description": "Discover our premium selection of exotic and tropical fruits, carefully sourced from the finest farms around the world. From classic tropicals to rare varieties, we bring you the freshest and most flavorful fruits.",
     "sliderTitle": "Our Premium Exotic Fruits",
     "sliderDescription": "Discover the amazing variety of fresh exotic fruits we import directly from Colombia",
+    "quote": "Quality harvested with care, delivered with passion",
     "search": {
-      "placeholder": "Search fruits...",
-      "label": "Search"
+      "placeholder": "Search fruits by name...",
+      "label": "Search",
+      "clearSearch": "Clear Search",
+      "resultsCount": "{count} result{plural} found"
     },
     "categories": {
       "all": "All",
@@ -207,6 +210,10 @@
     "messages": {
       "noResults": "No products found",
       "noResultsDescription": "Try adjusting your search or filter criteria.",
+      "noResultsSearch": "No fruits found for \"{query}\"",
+      "noResultsSearchDescription": "Try searching for different keywords or browse our categories above.",
+      "noResultsCategory": "No products found in this category",
+      "noResultsCategoryDescription": "Try selecting a different category or search for specific fruits.",
       "outOfStock": "Out of Stock",
       "inStock": "In Stock"
     }
@@ -327,6 +334,120 @@
       "recipes": "Recipes"
     },
     "readMore": "Read More"
+  },
+  "productDetails": {
+    "mango": {
+      "name": "Papaya",
+      "category": "Tropical",
+      "ediblePart": "Flesh",
+      "consumption": "Fresh, smoothies, desserts",
+      "healthBenefits": ["Rich in Vitamin C", "High in fiber", "Antioxidants"]
+    },
+    "dragon-fruit": {
+      "name": "Dragon Fruit",
+      "category": "Exotic",
+      "ediblePart": "Flesh with seeds",
+      "consumption": "Fresh, fruit salads, smoothie bowls",
+      "healthBenefits": ["Low in calories", "Rich in iron", "Vitamin C"]
+    },
+    "passion-fruit": {
+      "name": "Physalis",
+      "category": "Tropical",
+      "ediblePart": "Pulp and seeds",
+      "consumption": "Fresh, juices, dessert topping",
+      "healthBenefits": ["High in fiber", "Vitamin A", "Potassium"]
+    },
+    "rambutan": {
+      "name": "Passion Fruit",
+      "category": "Exotic",
+      "ediblePart": "Translucent flesh",
+      "consumption": "Fresh, fruit salads",
+      "healthBenefits": ["Vitamin C", "Copper", "Manganese"]
+    },
+    "lychee": {
+      "name": "Mangosteen",
+      "category": "Tropical",
+      "ediblePart": "Sweet flesh",
+      "consumption": "Fresh, cocktails, desserts",
+      "healthBenefits": ["Vitamin C", "Copper", "Vitamin B6"]
+    },
+    "star-fruit": {
+      "name": "Banana",
+      "category": "Tropical",
+      "ediblePart": "Entire fruit",
+      "consumption": "Fresh, garnish, salads",
+      "healthBenefits": ["Low calories", "Vitamin C", "Fiber"]
+    },
+    "papaya": {
+      "name": "Cantaloupe Melon",
+      "category": "Tropical",
+      "ediblePart": "Orange flesh",
+      "consumption": "Fresh, smoothies, salads",
+      "healthBenefits": ["Digestive enzymes", "Vitamin C", "Folate"]
+    },
+    "jackfruit": {
+      "name": "Feijoa",
+      "category": "Exotic",
+      "ediblePart": "Yellow pods",
+      "consumption": "Fresh, curries, desserts",
+      "healthBenefits": ["High in fiber", "Vitamin A", "Potassium"]
+    },
+    "durian": {
+      "name": "Soursop",
+      "category": "Exotic",
+      "ediblePart": "Custard-like flesh",
+      "consumption": "Fresh, desserts, ice cream",
+      "healthBenefits": ["High in energy", "Vitamin B", "Potassium"]
+    },
+    "kiwi": {
+      "name": "Lime",
+      "category": "Tropical",
+      "ediblePart": "Green flesh with seeds",
+      "consumption": "Fresh, smoothies, fruit salads",
+      "healthBenefits": ["Vitamin C", "Fiber", "Antioxidants"]
+    },
+    "guava": {
+      "name": "Avocado",
+      "category": "Tropical",
+      "ediblePart": "Pink/white flesh",
+      "consumption": "Fresh, juices, jams",
+      "healthBenefits": ["Vitamin C", "Fiber", "Folate"]
+    },
+    "pomegranate": {
+      "name": "Green Apple",
+      "category": "Stone Fruits",
+      "ediblePart": "Red seeds (arils)",
+      "consumption": "Fresh, juices, salads",
+      "healthBenefits": ["Antioxidants", "Vitamin C", "Fiber"]
+    },
+    "persimmon": {
+      "name": "Curuba",
+      "category": "Stone Fruits",
+      "ediblePart": "Orange flesh",
+      "consumption": "Fresh, dried, desserts",
+      "healthBenefits": ["Vitamin A", "Fiber", "Manganese"]
+    },
+    "blueberries": {
+      "name": "Figue de la Barbarie",
+      "category": "Berries",
+      "ediblePart": "Entire berry",
+      "consumption": "Fresh, smoothies, baking",
+      "healthBenefits": ["Antioxidants", "Vitamin K", "Fiber"]
+    },
+    "blackberries": {
+      "name": "Tamarillo",
+      "category": "Berries",
+      "ediblePart": "Entire berry",
+      "consumption": "Fresh, jams, desserts",
+      "healthBenefits": ["Vitamin C", "Fiber", "Antioxidants"]
+    },
+    "blood-orange": {
+      "name": "Aloe Vera",
+      "category": "Citrus",
+      "ediblePart": "Red flesh segments",
+      "consumption": "Fresh, juices, cocktails",
+      "healthBenefits": ["Vitamin C", "Anthocyanins", "Folate"]
+    }
   },
   "blogArticles": {
     "1": {
