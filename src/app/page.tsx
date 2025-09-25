@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Header from "@/components/layout/Header";
 import HeroSection from "../components/sections/HeroSection";
 import AboutUsSection from "@/components/sections/AboutUsSection";
@@ -15,6 +15,7 @@ import Link from "next/link";
 import { useI18n } from "@/contexts/I18nContext";
 import TranslatedText from "@/components/ui/TranslatedText";
 import { useHydrationSafeTranslation } from "@/hooks/useHydrationSafeTranslation";
+import LoadingScreen from "@/components/ui/LoadingScreen";
 
 // Component that handles search params (auth removed for frontend-only deployment)
 function SearchParamsHandler() {
@@ -22,8 +23,34 @@ function SearchParamsHandler() {
 }
 
 export default function Home() {
-  const { t, locale, isHydrated } = useI18n();
+  const { t, locale, isHydrated, isLoading } = useI18n();
   const { ht } = useHydrationSafeTranslation();
+  const [windowLoaded, setWindowLoaded] = useState<boolean>(false);
+  const [showLoader, setShowLoader] = useState<boolean>(true);
+
+  // Track window load (fonts, images, etc.)
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const onLoad = () => setWindowLoaded(true);
+    if (document.readyState === "complete") {
+      setWindowLoaded(true);
+    } else {
+      window.addEventListener("load", onLoad, { once: true });
+    }
+    return () => window.removeEventListener("load", onLoad);
+  }, []);
+
+  // Hide loader once hydrated, translations ready, and window loaded
+  useEffect(() => {
+    if (isHydrated && !isLoading && windowLoaded) {
+      const timeout = setTimeout(() => setShowLoader(false), 400);
+      return () => clearTimeout(timeout);
+    }
+  }, [isHydrated, isLoading, windowLoaded]);
+
+  if (showLoader) {
+    return <LoadingScreen message={t("common.loading") || undefined} />;
+  }
 
   return (
     <main key={isHydrated ? locale : 'default'}>

@@ -1,13 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import ModalProvider from "@/components/providers/ModalProvider";
-import { Montserrat } from "next/font/google";
+import { Manrope } from "next/font/google";
 import { I18nProvider } from "@/contexts/I18nContext";
 import LanguageButton from "@/components/ui/LanguageButton";
 
-const montserrat = Montserrat({
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-montserrat",
+  variable: "--font-manrope",
 });
 
 export const metadata: Metadata = {
@@ -90,7 +90,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={montserrat.variable}>
+    <html lang="en" className={manrope.variable}>
       <head>
         <script
           dangerouslySetInnerHTML={{

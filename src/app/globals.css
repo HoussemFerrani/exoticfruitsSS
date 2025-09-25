@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 /* Single, fixed theme (light) */
@@ -49,7 +48,7 @@
     /* sage green */
 
   /* Fonts */
-    --font-family-base: 'Montserrat', sans-serif;
+    --font-family-base: var(--font-manrope), sans-serif;
 }
 
 body {
@@ -60,6 +59,38 @@ body {
     color: var(--color-text);
     font-family: var(--font-family-base);
     scroll-behavior: smooth;
+}
+
+/* Branded loading bar */
+@keyframes loading-bar-sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  60% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.loading-bar-track {
+  position: relative;
+  height: 6px;
+  width: 100%;
+  border-radius: 9999px;
+  background: linear-gradient(to right, rgba(34,197,94,0.15), rgba(251,146,60,0.15));
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
+}
+
+.loading-bar-fill {
+  position: absolute;
+  inset: 0 0 0 0;
+  width: 40%;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, var(--color-brand), var(--color-cta), #ef4444);
+  animation: loading-bar-sweep 1.6s ease-in-out infinite;
 }
 
 /* Prevent horizontal overflow that can visually shift the page to the left */

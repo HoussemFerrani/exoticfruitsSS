@@ -513,13 +513,15 @@ export default function Header() {
                         )}
                       </div>
                     ) : (
-                      <Link
+                      <MotionLink
                         href={item.href}
-                        className="block rounded-md px-3 py-2 text-base"
+                        className={[
+                          "relative block rounded-full px-12 py-4 text-base overflow-hidden text-center",
+                          isActive(item.href) ? "font-semibold" : "",
+                        ].join(" ")}
                         style={{
-                          color: isActive(item.href)
-                            ? "var(--color-brand)"
-                            : "var(--color-brand)",
+                          color: isActive(item.href) ? "#FAB12F" : "var(--color-muted)",
+                          backgroundColor: "transparent",
                         }}
                         onClick={() => {
                           setMobileOpen(false);
@@ -530,52 +532,81 @@ export default function Header() {
                             setActiveSectionId(id);
                           }
                         }}
+                        whileHover={{ scale: 1.005 }}
+                        whileTap={{ scale: 0.995 }}
+                        transition={{ type: "spring", stiffness: 300, damping: 18 }}
                       >
-                        {item.label}
-                      </Link>
+                        {/* Oval border to match desktop active indicator */}
+                        <svg
+                          className="absolute inset-0 w-full h-full"
+                          style={{
+                            transform: isActive(item.href) ? "scale(1)" : "scale(0)",
+                            opacity: isActive(item.href) ? 1 : 0,
+                          }}
+                        >
+                          <ellipse
+                            cx="50%"
+                            cy="50%"
+                            rx="45%"
+                            ry="40%"
+                            fill="none"
+                            stroke="#FAB12F"
+                            strokeWidth="2"
+                            strokeDasharray="300"
+                            strokeDashoffset="300"
+                            pathLength="300"
+                            transform="rotate(-90 50 50)"
+                            style={{ transition: "all 0.2s ease-out" }}
+                          />
+                        </svg>
+
+                        <span className="relative z-10">{item.label}</span>
+                      </MotionLink>
                     )}
                   </li>
                 ))}
                 <li className="pt-1">
-                  <MovingButton
-                    borderRadius="0.5rem"
-                    containerClassName="w-full"
-                    duration={3000}
-                  >
+                  <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ duration: 0.2 }}>
                     <Link
                       href="/contact"
                       onClick={() => setMobileOpen(false)}
-                      className="relative w-full inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold overflow-hidden group transition-all duration-200"
+                      className="relative w-full inline-flex items-center justify-center rounded-xl px-8 py-3 text-sm font-bold overflow-hidden group transition-all duration-300 hover:shadow-2xl border border-orange-200/30"
                       style={{
-                        color: "var(--color-brand)",
-                        backgroundColor: "transparent",
+                        background: "linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%)",
+                        backdropFilter: "blur(8px)",
+                        color: "white",
+                        letterSpacing: "0.5px",
                       }}
                     >
-                      {/* Water fluid animation background */}
                       <div
-                        className="absolute inset-0 rounded-lg transition-all duration-700 ease-out transform scale-x-0 group-hover:scale-x-100 origin-left"
+                        className="absolute inset-0 rounded-xl transition-all duration-500 opacity-0 group-hover:opacity-100"
                         style={{
-                          background: "linear-gradient(135deg, var(--color-cta), var(--color-emphasis))",
+                          background: "rgba(255, 255, 255, 0.1)",
+                          backdropFilter: "blur(20px)",
                         }}
                       />
 
-                      {/* Ripple effect */}
-                      <div
-                        className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500"
+                      <motion.div
+                        className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100"
                         style={{
-                          background: "radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, transparent 70%)",
-                          animation: "ripple 1.5s ease-out infinite"
+                          background: "linear-gradient(45deg, transparent 30%, rgba(255,215,0,0.3) 50%, transparent 70%)",
                         }}
+                        animate={{ x: ["-100%", "100%"] }}
+                        transition={{ duration: 2, repeat: Infinity, repeatType: "loop", ease: "linear" }}
                       />
 
-                      <span
-                        className="relative z-10 transition-colors duration-300 group-hover:text-white"
-                        style={{ color: "var(--color-brand)" }}
-                      >
-                        {t("nav.contact")}
-                      </span>
+                      <motion.div
+                        className="absolute -inset-1 rounded-xl opacity-0 group-hover:opacity-60 blur-sm transition-opacity duration-500"
+                        style={{
+                          background: "linear-gradient(135deg, #fbbf24, #f59e0b, #d97706)",
+                        }}
+                        animate={{ scale: [1, 1.02, 1] }}
+                        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                      />
+
+                      <span className="relative z-10">{t("nav.contact")}</span>
                     </Link>
-                  </MovingButton>
+                  </motion.div>
                 </li>
               </ul>
             </nav>
@@ -588,5 +619,6 @@ export default function Header() {
     </>
   );
 }
+
 
 
