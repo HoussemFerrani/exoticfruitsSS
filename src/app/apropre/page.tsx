@@ -88,7 +88,7 @@ export default function AboutPage() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/mango-video.mp4" type="video/mp4" />
+            <source src="https://storage.googleapis.com/works23/ExoticFruits/2.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           {/* Video Overlay */}
