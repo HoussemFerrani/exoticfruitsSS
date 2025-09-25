@@ -46,7 +46,7 @@ export default function ProductsPage() {
       <Header />
 
       {/* Hero Section for Products Page */}
-      <section className="relative pt-20 pb-24 min-h-screen overflow-hidden">
+      <section className="relative min-h-screen overflow-hidden flex items-center justify-center">
         {/* Background Image Slider */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           {backgroundImages.map((imageSrc, index) => {
@@ -83,9 +83,9 @@ export default function ProductsPage() {
         </div>
 
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -104,7 +104,7 @@ export default function ProductsPage() {
                 {t("productsPage.hero.title")}
               </h1>
               <p
-                className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed drop-shadow-md"
+                className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed drop-shadow-md backdrop-blur-sm bg-black/20 rounded-2xl p-6"
                 style={{ color: "#FAB12F" }}
               >
                 {t("productsPage.hero.description")}

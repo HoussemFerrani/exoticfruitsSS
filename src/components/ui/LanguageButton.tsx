@@ -17,19 +17,19 @@ export default function LanguageButton() {
   const { locale, setLocale, t, isLoading, isHydrated } = useI18n();
   const [isOpen, setIsOpen] = useState(false);
   const [bannerOffset, setBannerOffset] = useState(0);
+  const [isMounted, setIsMounted] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
 
   const currentLanguage = LANGUAGE_OPTIONS.find(lang => lang.code === locale);
 
-  // Don't render on server to avoid hydration mismatch
-  if (!isHydrated) {
-    return null;
-  }
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   // Observe promotional banner for positioning
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (!isMounted) return;
 
     const banner = document.getElementById("promotional-banner");
 
@@ -54,7 +54,7 @@ export default function LanguageButton() {
       resizeObserver.disconnect();
       mutationObserver.disconnect();
     };
-  }, []);
+  }, [isMounted]);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -76,6 +76,11 @@ export default function LanguageButton() {
   function selectLanguage(languageCode: Locale) {
     setLocale(languageCode);
     setIsOpen(false);
+  }
+
+  // Don't render on server to avoid hydration mismatch
+  if (!isMounted) {
+    return null;
   }
 
   return (
