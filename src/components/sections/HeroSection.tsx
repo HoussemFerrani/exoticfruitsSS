@@ -60,24 +60,6 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
-          <div
-            className="flex flex-col items-center cursor-pointer group hover:-translate-y-1 transition-transform duration-300"
-            onClick={() => {
-              document.getElementById("about")?.scrollIntoView({
-                behavior: "smooth"
-              });
-            }}
-          >
-            <span className="text-white/80 text-sm font-medium mb-2 group-hover:text-white transition-colors">
-              {t("common.discoverMore")}
-            </span>
-            <div className="p-3 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 group-hover:bg-white/30 transition-all duration-300">
-              <ChevronDown className="w-6 h-6 text-white" />
-            </div>
-          </div>
-        </div>
 
       </div>
     </section>
