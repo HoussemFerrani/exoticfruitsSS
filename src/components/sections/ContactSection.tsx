@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { Phone, Mail, MapPin, ShoppingCart, Truck, Heart, Star } from "lucide-react";
-import { motion } from "framer-motion";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type ContactType = "buy" | "partnership" | "general";
 
@@ -158,29 +158,29 @@ export default function ContactSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14 md:mb-16">
-          <motion.p
+          <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
             className="text-sm font-semibold text-orange-600 uppercase tracking-wide"
           >
             Get in Touch
           </motion.p>
-          <motion.h2
+          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-2 text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-gray-900"
           >
             Contact Us
           </motion.h2>
-          <motion.p
+          <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-600"
           >
             Whether you want to order fresh fruits, explore partnerships, or have questions about our products, we're here to help.
@@ -189,7 +189,7 @@ export default function ContactSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14 items-center">
           {/* Contact Information */}
-          <motion.div
+          <motion.div 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -201,12 +201,7 @@ export default function ContactSection() {
             </h3>
 
             <div className="space-y-6">
-              <motion.a
-                href="tel:+5712345678"
-                className="block"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}
-              >
+              <a href="tel:+5712345678" className="block">
                 <div className="group flex items-center gap-4 p-6 rounded-2xl bg-white shadow-lg transition-all hover:shadow-xl">
                   <div className="w-12 h-12 rounded-2xl bg-orange-500 grid place-items-center">
                     <Phone className="w-6 h-6 text-white" />
@@ -218,14 +213,9 @@ export default function ContactSection() {
                     </p>
                   </div>
                 </div>
-              </motion.a>
+              </a>
 
-              <motion.a
-                href="mailto:info@fruitexotic.com"
-                className="block"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}
-              >
+              <a href="mailto:info@fruitexotic.com" className="block">
                 <div className="group flex items-center gap-4 p-6 rounded-2xl bg-white shadow-lg transition-all hover:shadow-xl">
                   <div className="w-12 h-12 rounded-2xl bg-gray-600 grid place-items-center">
                     <Mail className="w-6 h-6 text-white" />
@@ -237,15 +227,13 @@ export default function ContactSection() {
                     </p>
                   </div>
                 </div>
-              </motion.a>
+              </a>
 
-              <motion.a
+              <a
                 href="https://www.google.com/maps/search/?api=1&query=Medellín+Colombia"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}
               >
                 <div className="group flex items-center gap-4 p-6 rounded-2xl bg-white shadow-lg transition-all hover:shadow-xl">
                   <div className="w-12 h-12 rounded-2xl bg-orange-500 grid place-items-center">
@@ -258,11 +246,11 @@ export default function ContactSection() {
                     </p>
                   </div>
                 </div>
-              </motion.a>
+              </a>
             </div>
 
             {/* Trust Badges */}
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -285,7 +273,7 @@ export default function ContactSection() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6 }}
           >
             <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-200">
               {/* Contact Type Selector */}
@@ -297,7 +285,6 @@ export default function ContactSection() {
                   <motion.button
                     onClick={() => handleContactTypeChange("buy")}
                     whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
                     className={`p-4 rounded-xl border-2 transition-all duration-300 ${
                       contactType === "buy"
                         ? "border-orange-500 bg-orange-50 shadow-lg"
@@ -308,9 +295,9 @@ export default function ContactSection() {
                       initial={false}
                       animate={{
                         scale: contactType === "buy" ? 1.1 : 1,
-                        rotate: contactType === "buy" ? [0, -5, 5, 0] : 0
+                        rotate: contactType === "buy" ? 5 : 0
                       }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ duration: 0.2 }}
                     >
                       <ShoppingCart className={`w-6 h-6 mx-auto mb-2 transition-colors ${contactType === "buy" ? "text-orange-600" : "text-gray-600"}`} />
                     </motion.div>
@@ -321,7 +308,6 @@ export default function ContactSection() {
                   <motion.button
                     onClick={() => handleContactTypeChange("partnership")}
                     whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
                     className={`p-4 rounded-xl border-2 transition-all duration-300 ${
                       contactType === "partnership"
                         ? "border-orange-500 bg-orange-50 shadow-lg"
@@ -332,9 +318,9 @@ export default function ContactSection() {
                       initial={false}
                       animate={{
                         scale: contactType === "partnership" ? 1.1 : 1,
-                        rotate: contactType === "partnership" ? [0, -5, 5, 0] : 0
+                        rotate: contactType === "partnership" ? 5 : 0
                       }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ duration: 0.2 }}
                     >
                       <Heart className={`w-6 h-6 mx-auto mb-2 transition-colors ${contactType === "partnership" ? "text-orange-600" : "text-gray-600"}`} />
                     </motion.div>
@@ -345,7 +331,6 @@ export default function ContactSection() {
                   <motion.button
                     onClick={() => handleContactTypeChange("general")}
                     whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
                     className={`p-4 rounded-xl border-2 transition-all duration-300 ${
                       contactType === "general"
                         ? "border-orange-500 bg-orange-50 shadow-lg"
@@ -356,9 +341,9 @@ export default function ContactSection() {
                       initial={false}
                       animate={{
                         scale: contactType === "general" ? 1.1 : 1,
-                        rotate: contactType === "general" ? [0, -5, 5, 0] : 0
+                        rotate: contactType === "general" ? 5 : 0
                       }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ duration: 0.2 }}
                     >
                       <Mail className={`w-6 h-6 mx-auto mb-2 transition-colors ${contactType === "general" ? "text-orange-600" : "text-gray-600"}`} />
                     </motion.div>
@@ -369,11 +354,7 @@ export default function ContactSection() {
               </div>
 
               {isSubmitted ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-8"
-                >
+                <div className="text-center py-8">
                   <div className="w-16 h-16 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center">
                     <Star className="w-8 h-8 text-orange-600" />
                   </div>
@@ -381,15 +362,16 @@ export default function ContactSection() {
                   <p className="text-gray-600">
                     Thank you! We'll get back to you soon with all the information you need.
                   </p>
-                </motion.div>
+                </div>
               ) : (
                 <motion.form
                   onSubmit={handleSubmit}
                   className="space-y-4"
                   key={contactType}
                   initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
                 >
                   {/* Basic Information */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -410,13 +392,9 @@ export default function ContactSection() {
                         placeholder="Your name"
                       />
                       {errors.name && (
-                        <motion.p
-                          initial={{ opacity: 0, y: -5 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          className="text-red-500 text-xs mt-1"
-                        >
+                        <p className="text-red-500 text-xs mt-1">
                           {errors.name}
-                        </motion.p>
+                        </p>
                       )}
                     </div>
                     <div>
@@ -436,13 +414,9 @@ export default function ContactSection() {
                         placeholder="your@email.com"
                       />
                       {errors.email && (
-                        <motion.p
-                          initial={{ opacity: 0, y: -5 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          className="text-red-500 text-xs mt-1"
-                        >
+                        <p className="text-red-500 text-xs mt-1">
                           {errors.email}
-                        </motion.p>
+                        </p>
                       )}
                     </div>
                   </div>
@@ -572,8 +546,7 @@ export default function ContactSection() {
                   <motion.button
                     type="submit"
                     disabled={isSubmitting}
-                    whileHover={!isSubmitting ? { scale: 1.02 } : {}}
-                    whileTap={!isSubmitting ? { scale: 0.98 } : {}}
+                    whileHover={{ scale: 1.02 }}
                     className={`w-full font-bold py-4 px-6 rounded-xl shadow-lg transition-all duration-300 ${
                       isSubmitting
                         ? "bg-gray-400 cursor-not-allowed"
@@ -583,11 +556,7 @@ export default function ContactSection() {
                     <span className="flex items-center justify-center gap-2">
                       {isSubmitting ? (
                         <>
-                          <motion.div
-                            className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
-                            animate={{ rotate: 360 }}
-                            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                          />
+                          <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full" />
                           Sending...
                         </>
                       ) : contactType === "buy" ? (

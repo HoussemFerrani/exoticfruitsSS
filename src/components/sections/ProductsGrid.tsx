@@ -119,20 +119,28 @@ export default function ProductsGrid() {
     }
   }, [t, selectedCategory]);
 
+  // Helper function to get nested translation values
+  const getTranslation = (key: string) => {
+    try {
+      return t(key);
+    } catch {
+      return key;
+    }
+  };
+
   // Create products dynamically using translations
   const PRODUCTS: Product[] = PRODUCT_IDS.map(id => {
-    const productDetails = t(`productDetails.${id}`);
     return {
       id,
-      name: productDetails.name || id,
-      category: productDetails.category || "Tropical",
-      ediblePart: productDetails.ediblePart || "Flesh",
-      consumption: productDetails.consumption || "Fresh",
-      healthBenefits: productDetails.healthBenefits || ["Healthy"],
-      price: PRODUCT_PRICES[id],
-      image: PRODUCT_IMAGES[id],
-      rating: PRODUCT_RATINGS[id],
-      inStock: PRODUCT_STOCK[id],
+      name: getTranslation(`productDetails.${id}.name`) || id,
+      category: getTranslation(`productDetails.${id}.category`) || "Tropical",
+      ediblePart: getTranslation(`productDetails.${id}.ediblePart`) || "Flesh",
+      consumption: getTranslation(`productDetails.${id}.consumption`) || "Fresh",
+      healthBenefits: [getTranslation(`productDetails.${id}.healthBenefits.0`) || "Healthy"],
+      price: PRODUCT_PRICES[id as keyof typeof PRODUCT_PRICES],
+      image: PRODUCT_IMAGES[id as keyof typeof PRODUCT_IMAGES],
+      rating: PRODUCT_RATINGS[id as keyof typeof PRODUCT_RATINGS],
+      inStock: PRODUCT_STOCK[id as keyof typeof PRODUCT_STOCK],
     };
   });
 
@@ -307,10 +315,7 @@ export default function ProductsGrid() {
                 animate={{ opacity: 1, y: 0 }}
                 className="absolute top-full mt-2 left-4 text-sm text-gray-600"
               >
-                {t("products.search.resultsCount", { 
-                  count: filteredProducts.length, 
-                  plural: filteredProducts.length !== 1 ? 's' : '' 
-                })}
+                {t("products.search.resultsCount").replace('{count}', filteredProducts.length.toString()).replace('{plural}', filteredProducts.length !== 1 ? 's' : '')}
               </motion.div>
             )}
           </motion.div>
@@ -442,7 +447,7 @@ export default function ProductsGrid() {
               {searchQuery ? (
                 <>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                    {t("products.messages.noResultsSearch", { query: searchQuery })}
+                    {t("products.messages.noResultsSearch").replace('{query}', searchQuery)}
                   </h3>
                   <p className="text-gray-500 mb-4">
                     {t("products.messages.noResultsSearchDescription")}
