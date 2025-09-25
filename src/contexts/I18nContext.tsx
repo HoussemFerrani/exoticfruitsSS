@@ -37,7 +37,7 @@ export function I18nProvider({ children, defaultLocale = "en" }: I18nProviderPro
     ar: {},
     ru: {}
   });
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [isHydrated, setIsHydrated] = useState(false);
 
   // RTL languages
@@ -78,7 +78,7 @@ export function I18nProvider({ children, defaultLocale = "en" }: I18nProviderPro
     }
   };
 
-  // Load saved locale from localStorage on mount
+  // Load saved locale from localStorage on mount and preload English
   useEffect(() => {
     if (typeof window !== "undefined") {
       const savedLocale = localStorage.getItem("exoticfruits-locale") as Locale;
@@ -91,6 +91,12 @@ export function I18nProvider({ children, defaultLocale = "en" }: I18nProviderPro
           setLocale(browserLang);
         }
       }
+
+      // Preload English translations immediately
+      if (!translationsCache.en) {
+        loadTranslations("en");
+      }
+
       setIsHydrated(true);
     }
   }, []);
@@ -100,7 +106,13 @@ export function I18nProvider({ children, defaultLocale = "en" }: I18nProviderPro
     let isActive = true;
 
     const loadForLocale = async () => {
-      setIsLoading(true);
+      // Only show loading if we don't have any translations cached
+      const hasCurrentLocale = translationsCache[locale];
+      const hasEnglish = translationsCache.en;
+
+      if (!hasCurrentLocale && !hasEnglish) {
+        setIsLoading(true);
+      }
 
       const langsToLoad: Locale[] = locale === "en" ? ["en"] : ["en", locale];
       await Promise.all(langsToLoad.map(loadTranslations));
