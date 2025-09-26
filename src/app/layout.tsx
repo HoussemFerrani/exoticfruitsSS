@@ -92,6 +92,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={manrope.variable}>
       <head>
+        <link rel="preload" href="/Logo.png" as="image" type="image/png" />
+        <link rel="preload" href="/papaya.png" as="image" type="image/png" />
+        <link rel="preload" href="/dragon-fruit.png" as="image" type="image/png" />
+        <link rel="preload" href="/physalis.png" as="image" type="image/png" />
+        <link rel="preload" href="/Exotische.png" as="image" type="image/png" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
