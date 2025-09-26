@@ -85,10 +85,12 @@ export default function Header() {
 
     elements.forEach((el) => observer.observe(el));
 
-    // Initialize from current hash if present
-    if (typeof window !== "undefined" && window.location.hash) {
-      setActiveSectionId(window.location.hash.replace("#", ""));
-    }
+    // Initialize from current hash if present (defer to avoid hydration mismatch)
+    setTimeout(() => {
+      if (typeof window !== "undefined" && window.location.hash) {
+        setActiveSectionId(window.location.hash.replace("#", ""));
+      }
+    }, 0);
 
     return () => observer.disconnect();
   }, [pathname, sectionIds]);

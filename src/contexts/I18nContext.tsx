@@ -81,23 +81,26 @@ export function I18nProvider({ children, defaultLocale = "en" }: I18nProviderPro
   // Load saved locale from localStorage on mount and preload English
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const savedLocale = localStorage.getItem("exoticfruits-locale") as Locale;
-      if (savedLocale && ["en", "fr", "es", "ar", "ru"].includes(savedLocale)) {
-        setLocale(savedLocale);
-      } else {
-        // Try to detect browser language
-        const browserLang = navigator.language.split("-")[0] as Locale;
-        if (["en", "fr", "es", "ar", "ru"].includes(browserLang)) {
-          setLocale(browserLang);
+      setIsHydrated(true);
+
+      // Use setTimeout to defer locale detection to avoid hydration mismatch
+      setTimeout(() => {
+        const savedLocale = localStorage.getItem("exoticfruits-locale") as Locale;
+        if (savedLocale && ["en", "fr", "es", "ar", "ru"].includes(savedLocale)) {
+          setLocale(savedLocale);
+        } else {
+          // Try to detect browser language
+          const browserLang = navigator.language.split("-")[0] as Locale;
+          if (["en", "fr", "es", "ar", "ru"].includes(browserLang)) {
+            setLocale(browserLang);
+          }
         }
-      }
+      }, 0);
 
       // Preload English translations immediately
       if (!translationsCache.en) {
         loadTranslations("en");
       }
-
-      setIsHydrated(true);
     }
   }, []);
 
@@ -158,13 +161,13 @@ export function I18nProvider({ children, defaultLocale = "en" }: I18nProviderPro
     return key;
   };
 
-  // Update document direction when locale changes
+  // Update document direction when locale changes (only after hydration)
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== "undefined" && isHydrated) {
       document.documentElement.dir = dir;
       document.documentElement.lang = locale;
     }
-  }, [locale, dir]);
+  }, [locale, dir, isHydrated]);
 
   return (
     <I18nContext.Provider value={{ locale, setLocale, t, isLoading, isRTL, dir, isHydrated }}>

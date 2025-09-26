@@ -25,7 +25,10 @@
       "Bash(echo:*)",
       "Bash(done)",
       "Bash(for img in logistic.jpeg sustainbility.jpeg)",
-      "Bash(do echo \"Checking $img:\")"
+      "Bash(do echo \"Checking $img:\")",
+      "Bash(next dev:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm cache clean:*)"
     ],
     "deny": [],
     "ask": []

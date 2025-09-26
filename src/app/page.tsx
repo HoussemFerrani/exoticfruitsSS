@@ -31,12 +31,18 @@ export default function Home() {
   // Track window load (fonts, images, etc.)
   useEffect(() => {
     if (typeof window === "undefined") return;
+
     const onLoad = () => setWindowLoaded(true);
-    if (document.readyState === "complete") {
-      setWindowLoaded(true);
-    } else {
-      window.addEventListener("load", onLoad, { once: true });
-    }
+
+    // Use setTimeout to defer check to avoid hydration mismatch
+    setTimeout(() => {
+      if (document.readyState === "complete") {
+        setWindowLoaded(true);
+      } else {
+        window.addEventListener("load", onLoad, { once: true });
+      }
+    }, 0);
+
     return () => window.removeEventListener("load", onLoad);
   }, []);
 
