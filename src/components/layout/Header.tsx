@@ -7,7 +7,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useModal } from "@/components/providers/ModalProvider";
 import { ChevronDown, Sparkles } from "lucide-react";
-import { Button as MovingButton } from "@/components/ui/moving-border";
 import { useI18n } from "@/contexts/I18nContext";
 
 const MotionLink = motion.create(Link);

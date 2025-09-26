@@ -6,7 +6,7 @@ import BlogArticleModal from "@/components/ui/BlogArticleModal";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { ArrowRight, Tag } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useI18n } from "@/contexts/I18nContext";
 
 // Blog articles with translations

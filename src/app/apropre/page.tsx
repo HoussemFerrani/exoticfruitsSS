@@ -7,7 +7,7 @@ import { useI18n } from "@/contexts/I18nContext";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Award, Shield, Truck, MapPin, Calendar, Users, Heart, Leaf } from "lucide-react";
+import { Award, Shield, Truck, Heart } from "lucide-react";
 
 export default function AboutPage() {
   const { t, isLoading } = useI18n();

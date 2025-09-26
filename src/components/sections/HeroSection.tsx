@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useModal } from "@/components/providers/ModalProvider";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useI18n } from "@/contexts/I18nContext";
 
 export default function HeroSection() {

@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Heart, Truck, Shield, Star } from "lucide-react";
+import { MapPin, Phone, Mail, Truck, Shield } from "lucide-react";
 import { useI18n } from "@/contexts/I18nContext";
 
 function FooterLink({
@@ -142,9 +142,8 @@ export default function Footer() {
               <nav className="space-y-3">
                 <FooterLink href="/">{t("footer.quickLinks.home")}</FooterLink>
                 <FooterLink href="/products">{t("footer.quickLinks.fruits")}</FooterLink>
-                <FooterLink href="/about">{t("footer.quickLinks.about")}</FooterLink>
+                <FooterLink href="/apropre">{t("footer.quickLinks.about")}</FooterLink>
                 <FooterLink href="/contact">{t("footer.quickLinks.contact")}</FooterLink>
-                <FooterLink href="/shipping">{t("footer.quickLinks.shipping")}</FooterLink>
               </nav>
             </motion.div>
           </div>
