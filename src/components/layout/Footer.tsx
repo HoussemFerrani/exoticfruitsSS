@@ -222,10 +222,21 @@ export default function Footer() {
           whileInView={{ opacity: 1, scaleX: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-8 pt-6 border-t border-white/20 text-center"
+          className="mt-8 pt-6 border-t border-white/20 flex flex-col sm:flex-row justify-between items-center gap-4"
         >
           <p className="text-white/60 text-sm">
             © Fruit Exotic International. {t("footer.rights")}.
+          </p>
+          <p className="text-white/60 text-sm">
+            Created by{" "}
+            <Link
+              href="https://www.progix.pro/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orange-400 hover:text-orange-300 transition-colors underline"
+            >
+              Progix
+            </Link>
           </p>
         </motion.div>
       </div>
