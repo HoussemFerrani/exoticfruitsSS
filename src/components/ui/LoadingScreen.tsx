@@ -20,12 +20,12 @@ export default function LoadingScreen({ message }: LoadingScreenProps) {
       <div className="w-full max-w-sm px-8">
         <div className="flex flex-col items-center gap-6">
           <Image
-            src="/Logo.png"
+            src="/logo  fruit exotic.png"
             alt="Fruit Exotic International Logo"
             width={160}
             height={160}
             priority
-            className="h-24 w-auto drop-shadow-sm"
+            className="h-32 w-auto drop-shadow-sm"
           />
 
           <div className="w-full">

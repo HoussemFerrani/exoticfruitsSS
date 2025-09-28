@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: "Exotic Fruits International",
     images: [
       {
-        url: "/Logo.png",
+        url: "/logo  fruit exotic.png",
         width: 1200,
         height: 630,
         alt: "Exotic Fruits International - Premium Colombian Fruits",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: "Exotic Fruits International - Premium Colombian Exotic Fruits",
     description:
       "Discover premium exotic and tropical fruits directly imported from Colombia's most fertile regions.",
-    images: ["/Logo.png"],
+    images: ["/logo  fruit exotic.png"],
   },
   robots: {
     index: true,
@@ -72,9 +72,34 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/LogoFavIcon.png",
-    shortcut: "/LogoFavIcon.png",
-    apple: "/LogoFavIcon.png",
+    icon: [
+      {
+        url: "/logo  fruit exotic.png",
+        sizes: "64x64",
+        type: "image/png",
+      },
+      {
+        url: "/logo  fruit exotic.png",
+        sizes: "48x48",
+        type: "image/png",
+      },
+      {
+        url: "/logo  fruit exotic.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: "/logo  fruit exotic.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/logo  fruit exotic.png",
+    apple: {
+      url: "/logo  fruit exotic.png",
+      sizes: "180x180",
+      type: "image/png",
+    },
   },
 };
 
@@ -92,11 +117,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={manrope.variable}>
       <head>
-        <link rel="preload" href="/Logo.png" as="image" type="image/png" />
+        <link rel="preload" href="/logo  fruit exotic.png" as="image" type="image/png" />
         <link rel="preload" href="/papaya.png" as="image" type="image/png" />
         <link rel="preload" href="/dragon-fruit.png" as="image" type="image/png" />
         <link rel="preload" href="/physalis.png" as="image" type="image/png" />
         <link rel="preload" href="/Exotische.png" as="image" type="image/png" />
+        <link rel="icon" type="image/png" sizes="64x64" href="/logo  fruit exotic.png" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/logo  fruit exotic.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/logo  fruit exotic.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/logo  fruit exotic.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo  fruit exotic.png" />
+        <link rel="shortcut icon" href="/logo  fruit exotic.png" />
+        <link rel="icon" href="/logo  fruit exotic.png" />
         <script
           dangerouslySetInnerHTML={{
             __html: `

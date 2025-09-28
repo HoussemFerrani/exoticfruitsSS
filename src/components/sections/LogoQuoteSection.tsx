@@ -22,11 +22,11 @@ export default function LogoQuoteSection() {
               className="mb-8"
             >
               <Image
-                src="/Logo.png"
+                src="/logo  fruit exotic.png"
                 alt="Fruit Exotic International Logo"
                 width={200}
                 height={200}
-                className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain drop-shadow-2xl"
+                className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 object-contain drop-shadow-2xl"
               />
             </motion.div>
 

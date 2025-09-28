@@ -94,11 +94,11 @@ export default function Footer() {
             >
               <div className="flex items-center gap-3 mb-6">
                 <Image
-                  src="/Logo.png"
+                  src="/logo  fruit exotic.png"
                   alt="Fruit Exotic International Logo"
                   width={200}
                   height={200}
-                  className="h-12 w-12 object-contain drop-shadow-lg"
+                  className="h-16 w-16 object-contain drop-shadow-lg"
                 />
                 <div>
                   <h3 className="text-xl font-bold text-white">Fruit Exotic</h3>
