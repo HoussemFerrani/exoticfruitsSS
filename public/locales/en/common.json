@@ -9,7 +9,6 @@
     "services": "Services",
     "contact": "Contact Us",
     "blog": "Blog",
-    "partners": "Partners",
     "products": "Products"
   },
   "footer": {
@@ -99,21 +98,6 @@
       "title": "Strong Partnerships",
       "description": "Building lasting relationships with trusted growers, distributors, and retailers to create a reliable network that benefits everyone in the supply chain."
     }
-  },
-  "partners": {
-    "title": "Our Partners",
-    "subtitle": "We collaborate with trusted partners worldwide to bring you the finest exotic fruits and ensure excellence throughout our supply chain.",
-    "description": "We collaborate with trusted partners worldwide to bring you the finest exotic fruits and ensure excellence throughout our supply chain.",
-    "specialties": "Specialties",
-    "learnMore": "Learn More",
-    "cta": {
-      "title": "Interested in Partnership?",
-      "description": "Join our network of trusted partners and help us deliver the finest exotic fruits to markets worldwide.",
-      "button": "Contact Us"
-    },
-    "ctaTitle": "Interested in Partnership?",
-    "ctaDescription": "Join our network of trusted partners and help us deliver the finest exotic fruits to markets worldwide.",
-    "ctaButton": "Contact Us"
   },
   "aboutUs": {
     "title": "About Us",

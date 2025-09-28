@@ -6,7 +6,6 @@ import HeroSection from "../components/sections/HeroSection";
 import AboutUsSection from "@/components/sections/AboutUsSection";
 import WhyWhoSection from "@/components/sections/WhyWhoSection";
 import CoreValuesSection from "@/components/sections/CoreValuesSection";
-import PartnersSection from "@/components/sections/PartnersSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import FAQSection from "@/components/sections/FAQSection";
 import Footer from "@/components/layout/Footer";
@@ -129,7 +128,6 @@ export default function Home() {
 
       <WhyWhoSection />
       <CoreValuesSection />
-      <PartnersSection />
       <TestimonialsSection />
       <FAQSection />
       <Footer />

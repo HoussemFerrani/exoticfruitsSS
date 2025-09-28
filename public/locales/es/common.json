@@ -9,7 +9,6 @@
     "services": "Servicios",
     "contact": "Contáctanos",
     "blog": "Blog",
-    "partners": "Socios",
     "products": "Productos"
   },
   "footer": {
@@ -99,21 +98,6 @@
       "title": "Asociaciones Sólidas",
       "description": "Construir relaciones duraderas con productores, distribuidores y minoristas de confianza para crear una red confiable que beneficie a todos en la cadena de suministro."
     }
-  },
-  "partners": {
-    "title": "Nuestros Socios",
-    "subtitle": "Colaboramos con socios de confianza en todo el mundo para traerle las mejores frutas exóticas y asegurar la excelencia en toda nuestra cadena de suministro.",
-    "description": "Colaboramos con socios de confianza en todo el mundo para traerle las mejores frutas exóticas y asegurar la excelencia en toda nuestra cadena de suministro.",
-    "specialties": "Especialidades",
-    "learnMore": "Saber Más",
-    "cta": {
-      "title": "¿Interesado en Asociarse?",
-      "description": "Únete a nuestra red de socios de confianza y ayúdanos a entregar las mejores frutas exóticas a mercados de todo el mundo.",
-      "button": "Contáctanos"
-    },
-    "ctaTitle": "¿Interesado en Asociarse?",
-    "ctaDescription": "Únete a nuestra red de socios de confianza y ayúdanos a entregar las mejores frutas exóticas a mercados de todo el mundo.",
-    "ctaButton": "Contáctanos"
   },
   "aboutUs": {
     "title": "Acerca de Nosotros",

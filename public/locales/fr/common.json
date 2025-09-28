@@ -9,7 +9,6 @@
     "services": "Services",
     "contact": "Contactez-nous",
     "blog": "Blog",
-    "partners": "Partenaires",
     "products": "Produits"
   },
   "footer": {
@@ -99,21 +98,6 @@
       "title": "Partenariats Solides",
       "description": "Construire des relations durables avec des producteurs, distributeurs et détaillants de confiance pour créer un réseau fiable qui profite à tous dans la chaîne d'approvisionnement."
     }
-  },
-  "partners": {
-    "title": "Nos Partenaires",
-    "subtitle": "Nous collaborons avec des partenaires de confiance dans le monde entier pour vous apporter les meilleurs fruits exotiques et assurer l'excellence dans toute notre chaîne d'approvisionnement.",
-    "description": "Nous collaborons avec des partenaires de confiance dans le monde entier pour vous apporter les meilleurs fruits exotiques et assurer l'excellence dans toute notre chaîne d'approvisionnement.",
-    "specialties": "Spécialités",
-    "learnMore": "En Savoir Plus",
-    "cta": {
-      "title": "Intéressé par un Partenariat ?",
-      "description": "Rejoignez notre réseau de partenaires de confiance et aidez-nous à livrer les meilleurs fruits exotiques sur les marchés du monde entier.",
-      "button": "Contactez-nous"
-    },
-    "ctaTitle": "Intéressé par un Partenariat ?",
-    "ctaDescription": "Rejoignez notre réseau de partenaires de confiance et aidez-nous à livrer les meilleurs fruits exotiques sur les marchés du monde entier.",
-    "ctaButton": "Contactez-nous"
   },
   "aboutUs": {
     "title": "À Propos de Nous",

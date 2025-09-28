@@ -9,7 +9,6 @@
     "services": "Serviços",
     "contact": "Contato",
     "blog": "Blog",
-    "partners": "Parceiros",
     "products": "Produtos"
   },
   "footer": {
@@ -99,21 +98,6 @@
       "title": "Parcerias Fortes",
       "description": "Construindo relacionamentos duradouros com produtores, distribuidores e varejistas de confiança para criar uma rede confiável que beneficia todos na cadeia de suprimentos."
     }
-  },
-  "partners": {
-    "title": "Nossos Parceiros",
-    "subtitle": "Colaboramos com parceiros confiáveis em todo o mundo para trazer as melhores frutas exóticas e garantir excelência em toda nossa cadeia de suprimentos.",
-    "description": "Colaboramos com parceiros confiáveis em todo o mundo para trazer as melhores frutas exóticas e garantir excelência em toda nossa cadeia de suprimentos.",
-    "specialties": "Especialidades",
-    "learnMore": "Saiba Mais",
-    "cta": {
-      "title": "Interessado em Parceria?",
-      "description": "Junte-se à nossa rede de parceiros confiáveis e nos ajude a entregar as melhores frutas exóticas aos mercados mundiais.",
-      "button": "Entre em Contato"
-    },
-    "ctaTitle": "Interessado em Parceria?",
-    "ctaDescription": "Junte-se à nossa rede de parceiros confiáveis e nos ajude a entregar as melhores frutas exóticas aos mercados mundiais.",
-    "ctaButton": "Entre em Contato"
   },
   "aboutUs": {
     "title": "Sobre Nós",
