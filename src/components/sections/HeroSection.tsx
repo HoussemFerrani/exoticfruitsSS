@@ -20,7 +20,7 @@ export default function HeroSection() {
         className="absolute inset-0 w-full h-full object-cover"
         style={{ filter: "brightness(0.7)" }}
       >
-        <source src="https://storage.googleapis.com/works23/ExoticFruits/5450548-uhd_3840_2160_30fps.mp4" type="video/mp4" />
+        <source src="/66.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay for better text readability */}
