@@ -230,7 +230,7 @@ export default function ContactSection() {
               </a>
 
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Medellín+Colombia"
+                href="https://www.google.com/maps/search/?api=1&query=Montréal+Québec+Canada"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"
@@ -242,7 +242,7 @@ export default function ContactSection() {
                   <div>
                     <h4 className="font-semibold text-gray-900">Location</h4>
                     <p className="text-gray-600 group-hover:text-orange-600 transition-colors">
-                      Medellín, Colombia
+                      Montréal, Québec, Canada
                     </p>
                   </div>
                 </div>
