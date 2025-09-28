@@ -57,16 +57,16 @@
     "language": "Idioma"
   },
   "hero": {
-    "title": "Fruit Exotic International Inc",
-    "subtitle": "Del corazón de Colombia a tus manos — frescura en la que puedes confiar, calidad que puedes saborear.",
+    "title": "Fruit Exotic Inc",
+    "subtitle": "Del corazón de Colombia a tus manos — frescura en la que puedes confiar, y dondequiera que estés en el mundo, déjanos ser tu mano derecha en Colombia.",
     "cta": "Explora Nuestras Frutas"
   },
   "about": {
-    "company": "Fruit Exotic International",
+    "company": "Fruit Exotic",
     "title": "De la Granja al Mercado",
     "story": "Nuestra Historia",
     "network": "Red Global",
-    "description": "Fundada por especialistas apasionados de la fruta, Fruit Exotic International conecta a los productores de frutas tropicales con los minoristas premium de todo el mundo. Después de años de viajar por regiones tropicales, descubrimos la increíble diversidad y calidad de las frutas exóticas que rara vez llegan a los mercados globales. Esto nos inspiró a crear una red que trae estos tesoros directamente a clientes exigentes."
+    "description": "Fundada por especialistas apasionados de la fruta, Fruit Exotic conecta a los productores de frutas tropicales con los minoristas premium de todo el mundo. Después de años de viajar por regiones tropicales, descubrimos la increíble diversidad y calidad de las frutas exóticas que rara vez llegan a los mercados globales. Esto nos inspiró a crear una red que trae estos tesoros directamente a clientes exigentes."
   },
   "mission": {
     "title": "Nuestra Misión",
@@ -79,7 +79,7 @@
     "title": "¿A Quién Servimos?",
     "heading": "Socios Globales",
     "description1": "Servimos a minoristas premium, tiendas de comestibles especializadas, restaurantes de alta gama y distribuidores mayoristas que demandan las mejores frutas exóticas. Desde mercados boutique que buscan variedades raras hasta cadenas establecidas que quieren calidad consistente, atendemos a empresas que valoran la excelencia.",
-    "description2": "Ya sea que estén en Nueva York, Londres o Tokio, Fruit Exotic International asegura que sus clientes experimenten el sabor auténtico del paraíso tropical, entregado fresco a su puerta."
+    "description2": "Ya sea que estén en Nueva York, Londres o Tokio, Fruit Exotic asegura que sus clientes experimenten el sabor auténtico del paraíso tropical, entregado fresco a su puerta."
   },
   "coreValues": {
     "title": "Nuestros Valores Fundamentales",
@@ -117,7 +117,7 @@
   },
   "aboutUs": {
     "title": "Acerca de Nosotros",
-    "company": "Exotic Fruits International",
+    "company": "Exotic Fruits Inc",
     "description1": "es tu fuente confiable para frutas exóticas y tropicales premium, cuidadosamente cosechadas de las regiones más fértiles de Colombia.",
     "description2": "A través de fuertes asociaciones con productores locales, aseguramos que cada envío entregue frescura y calidad incomparables — trayendo la rica biodiversidad de Colombia directamente a tu mercado.",
     "learnMore": "Aprende Más Sobre Nosotros"
@@ -240,7 +240,7 @@
     },
     "story": {
       "title": "Nuestra Historia",
-      "description1": "En Fruit Exotic International Inc by I Defense, cada fruta comienza con una historia de pasión y tradición.",
+      "description1": "En Fruit Exotic Inc by I Defense, cada fruta comienza con una historia de pasión y tradición.",
       "description2": "Nuestro viaje comenzó en Colombia hace más de siete años, con una misión en mente: compartir los tesoros tropicales del país con el mundo.",
       "description3": "Detrás de cada mango, lima o mangostán están los agricultores que se levantan con el sol, trabajando la tierra con dedicación y cuidado. Su conocimiento, transmitido de generación en generación, asegura que cada fruta se cultive naturalmente, se coseche a mano y se nutra con amor por la tierra.",
       "description4": "Desde estos huertos, continuamos el viaje - lavando, clasificando y empacando cuidadosamente cada fruta para cumplir con los más altos estándares de calidad. Hoy, nuestras exportaciones llegan a socios en Canadá, Europa y Oriente Medio, entregando frescura y autenticidad en cada caja.",
@@ -272,7 +272,7 @@
     },
     "certifications": {
       "title": "Certificaciones de Calidad",
-      "description": "Cada envío de exportación de Fruits Exotics International Inc. Por I Defense está acompañado por un certificado fitosanitario oficial. Esto asegura que cada fruta que entregamos cumple estrictamente con los estándares internacionales de seguridad alimentaria, dando a nuestros clientes confianza en la calidad, seguridad y autenticidad de nuestros productos."
+      "description": "Cada envío de exportación de Fruits Exotics Inc. Por I Defense está acompañado por un certificado fitosanitario oficial. Esto asegura que cada fruta que entregamos cumple estrictamente con los estándares internacionales de seguridad alimentaria, dando a nuestros clientes confianza en la calidad, seguridad y autenticidad de nuestros productos."
     },
     "companyValues": {
       "qualityFirst": {
@@ -333,7 +333,8 @@
       "behindScenes": "Entre Bastidores",
       "recipes": "Recetas"
     },
-    "readMore": "Leer Más"
+    "readMore": "Leer Más",
+    "closeArticle": "Cerrar Artículo"
   },
   "productDetails": {
     "mango": {

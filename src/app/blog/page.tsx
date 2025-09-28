@@ -20,7 +20,6 @@ const getBlogPosts = (t: any) => [
     tags: ["Fruits Exotiques", "Santé", "Bien-être", "Nutrition"],
     featured: false,
     author: "ExoticFruits Team",
-    publishedDate: "2024-09-20",
     readTime: "5 min",
     content: t("blogArticles.1.content")
   },
@@ -33,7 +32,6 @@ const getBlogPosts = (t: any) => [
     tags: ["Qualité", "Conseils", "Achat", "Fraîcheur"],
     featured: false,
     author: "ExoticFruits Team",
-    publishedDate: "2024-09-18",
     readTime: "4 min",
     content: t("blogArticles.2.content")
   },
@@ -46,7 +44,6 @@ const getBlogPosts = (t: any) => [
     tags: ["Guide", "Choix", "Conseils", "Humeur"],
     featured: false,
     author: "ExoticFruits Team",
-    publishedDate: "2024-09-15",
     readTime: "3 min",
     content: t("blogArticles.3.content")
   },
@@ -59,7 +56,6 @@ const getBlogPosts = (t: any) => [
     tags: ["Variété", "Nutrition", "Santé", "Habitudes"],
     featured: false,
     author: "ExoticFruits Team",
-    publishedDate: "2024-09-12",
     readTime: "4 min",
     content: t("blogArticles.4.content")
   },
@@ -72,7 +68,6 @@ const getBlogPosts = (t: any) => [
     tags: ["Immunité", "Défenses naturelles", "Vitamine C", "Anti-inflammatoire"],
     featured: false,
     author: "ExoticFruits Team",
-    publishedDate: "2024-09-10",
     readTime: "4 min",
     content: t("blogArticles.5.content")
   },
@@ -85,7 +80,6 @@ const getBlogPosts = (t: any) => [
     tags: ["Agriculture durable", "Écologie", "Qualité", "Environnement"],
     featured: false,
     author: "ExoticFruits Team",
-    publishedDate: "2024-09-08",
     readTime: "3 min",
     content: t("blogArticles.6.content")
   },
@@ -98,7 +92,6 @@ const getBlogPosts = (t: any) => [
     tags: ["Engagement", "Partenaires", "Éthique", "Agriculture responsable"],
     featured: false,
     author: "ExoticFruits Team",
-    publishedDate: "2024-09-05",
     readTime: "4 min",
     content: t("blogArticles.7.content")
   }

@@ -95,14 +95,14 @@ export default function Footer() {
               <div className="flex items-center gap-3 mb-6">
                 <Image
                   src="/logo  fruit exotic.png"
-                  alt="Fruit Exotic International Logo"
+                  alt="Fruit Exotic Logo"
                   width={200}
                   height={200}
                   className="h-16 w-16 object-contain drop-shadow-lg"
                 />
                 <div>
                   <h3 className="text-xl font-bold text-white">Fruit Exotic</h3>
-                  <p className="text-sm text-orange-400">International</p>
+                  <p className="text-sm text-orange-400">Inc</p>
                 </div>
               </div>
 
@@ -225,7 +225,7 @@ export default function Footer() {
           className="mt-8 pt-6 border-t border-white/20 flex flex-col sm:flex-row justify-between items-center gap-4"
         >
           <p className="text-white/60 text-sm">
-            © Fruit Exotic International. {t("footer.rights")}.
+            © Fruit Exotic Inc. {t("footer.rights")}.
           </p>
           <p className="text-white/60 text-sm">
             Created by{" "}

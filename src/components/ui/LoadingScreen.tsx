@@ -21,7 +21,7 @@ export default function LoadingScreen({ message }: LoadingScreenProps) {
         <div className="flex flex-col items-center gap-6">
           <Image
             src="/logo  fruit exotic.png"
-            alt="Fruit Exotic International Logo"
+            alt="Fruit Exotic Logo"
             width={160}
             height={160}
             priority

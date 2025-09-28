@@ -28,7 +28,8 @@
       "Bash(do echo \"Checking $img:\")",
       "Bash(next dev:*)",
       "Bash(npm uninstall:*)",
-      "Bash(npm cache clean:*)"
+      "Bash(npm cache clean:*)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []

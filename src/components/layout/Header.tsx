@@ -184,7 +184,7 @@ export default function Header() {
               <Link href="/" className="flex items-center">
                 <Image
                   src="/logo  fruit exotic.png"
-                  alt="Fruit Exotic International inc Logo"
+                  alt="Fruit Exotic inc Logo"
                   width={428}
                   height={428}
                   className="h-28 w-auto transition-transform duration-300 hover:scale-105"

@@ -2,8 +2,9 @@
 
 import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Calendar, User, Clock, Tag } from "lucide-react";
+import { X, User, Clock, Tag } from "lucide-react";
 import Image from "next/image";
+import { useI18n } from "@/contexts/I18nContext";
 
 type BlogPost = {
   id: number;
@@ -15,7 +16,6 @@ type BlogPost = {
   featured?: boolean;
   content: string;
   author?: string;
-  publishedDate?: string;
   readTime?: string;
 };
 
@@ -26,6 +26,8 @@ interface BlogArticleModalProps {
 }
 
 export default function BlogArticleModal({ article, isOpen, onClose }: BlogArticleModalProps) {
+  const { t } = useI18n();
+
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -172,12 +174,6 @@ export default function BlogArticleModal({ article, isOpen, onClose }: BlogArtic
                       {article.author}
                     </div>
                   )}
-                  {article.publishedDate && (
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      {article.publishedDate}
-                    </div>
-                  )}
                   {article.readTime && (
                     <div className="flex items-center gap-2">
                       <Clock className="w-4 h-4" />
@@ -242,7 +238,7 @@ export default function BlogArticleModal({ article, isOpen, onClose }: BlogArtic
                   }}
                   className="px-8 py-3 rounded-2xl font-semibold text-white bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 transition-all duration-300 hover:shadow-lg cursor-pointer"
                 >
-                  Fermer l'article
+                  {t("blogPage.closeArticle")}
                 </motion.button>
               </motion.div>
             </div>
