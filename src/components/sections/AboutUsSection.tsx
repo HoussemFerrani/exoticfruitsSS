@@ -169,7 +169,7 @@ export default function AboutUsSection() {
                 whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
               >
                 <Image
-                  src="/about.jpeg"
+                  src="/about.jpg"
                   alt="Fresh exotic fruits from Colombia"
                   fill
                   className="object-cover"
@@ -193,7 +193,7 @@ export default function AboutUsSection() {
                 whileHover={{ scale: 1.05, rotate: 1, transition: { duration: 0.3 } }}
               >
                 <Image
-                  src="/truck.jpeg"
+                  src="/truck.jpg"
                   alt="Truck delivering fruits"
                   fill
                   className="object-cover"
