@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from "react";
 
-type Locale = "en" | "fr" | "es" | "ar" | "ru";
+type Locale = "en" | "fr" | "es" | "ar" | "ru" | "pt" | "ur";
 
 type TranslationKey = string;
 
@@ -35,13 +35,15 @@ export function I18nProvider({ children, defaultLocale = "en" }: I18nProviderPro
     fr: {},
     es: {},
     ar: {},
-    ru: {}
+    ru: {},
+    pt: {},
+    ur: {}
   });
   const [isLoading, setIsLoading] = useState(false);
   const [isHydrated, setIsHydrated] = useState(false);
 
   // RTL languages
-  const rtlLanguages: Locale[] = ["ar"];
+  const rtlLanguages: Locale[] = ["ar", "ur"];
   const isRTL = rtlLanguages.includes(locale);
   const dir = isRTL ? "rtl" : "ltr";
 
@@ -86,12 +88,12 @@ export function I18nProvider({ children, defaultLocale = "en" }: I18nProviderPro
       // Use setTimeout to defer locale detection to avoid hydration mismatch
       setTimeout(() => {
         const savedLocale = localStorage.getItem("exoticfruits-locale") as Locale;
-        if (savedLocale && ["en", "fr", "es", "ar", "ru"].includes(savedLocale)) {
+        if (savedLocale && ["en", "fr", "es", "ar", "ru", "pt", "ur"].includes(savedLocale)) {
           setLocale(savedLocale);
         } else {
           // Try to detect browser language
           const browserLang = navigator.language.split("-")[0] as Locale;
-          if (["en", "fr", "es", "ar", "ru"].includes(browserLang)) {
+          if (["en", "fr", "es", "ar", "ru", "pt", "ur"].includes(browserLang)) {
             setLocale(browserLang);
           }
         }

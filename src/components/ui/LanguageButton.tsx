@@ -11,6 +11,8 @@ const LANGUAGE_OPTIONS: Array<{ code: Locale; name: string; flag: string }> = [
   { code: "es", name: "Español", flag: "ES" },
   { code: "ar", name: "العربية", flag: "AR" },
   { code: "ru", name: "Русский", flag: "RU" },
+  { code: "pt", name: "Português", flag: "PT" },
+  { code: "ur", name: "اردو", flag: "UR" },
 ];
 
 export default function LanguageButton() {
@@ -140,7 +142,7 @@ export default function LanguageButton() {
                     locale === language.code ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-800'
                   }`}>{language.flag}</span>
                   <span className={`flex-1 font-medium text-sm ${
-                    language.code === 'ar' ? 'text-right' : 'text-left'
+                    language.code === 'ar' || language.code === 'ur' ? 'text-right' : 'text-left'
                   }`}>
                     {language.name}
                   </span>

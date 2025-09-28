@@ -1,0 +1,489 @@
+{
+  "general": {
+    "selectLanguage": "Selecionar Idioma",
+    "changeLanguage": "Alterar idioma do site"
+  },
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "services": "Serviços",
+    "contact": "Contato",
+    "blog": "Blog",
+    "partners": "Parceiros",
+    "products": "Produtos"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados",
+    "brand": {
+      "tagline": "Frutas exóticas premium do coração da Colômbia. Qualidade colhida com cuidado, entregue com paixão."
+    },
+    "trustBadges": {
+      "freshGuarantee": "Garantia de Frescor",
+      "fastDelivery": "Entrega Rápida"
+    },
+    "quickLinks": {
+      "title": "Links Rápidos",
+      "home": "Início",
+      "fruits": "Nossas Frutas",
+      "about": "Sobre Nós",
+      "contact": "Contato",
+      "shipping": "Informações de Envio"
+    },
+    "products": {
+      "title": "Nossos Produtos",
+      "tropical": "Frutas Tropicais",
+      "exotic": "Variedades Exóticas",
+      "citrus": "Frutas Cítricas",
+      "berries": "Berries Premium",
+      "seasonal": "Seleção Sazonal"
+    },
+    "contact": {
+      "title": "Entre em Contato",
+      "location": "Medellín, Colômbia",
+      "phone": "+57 123 456 7890",
+      "email": "info@fruitexotic.com"
+    },
+    "social": {
+      "title": "Siga Nossa Jornada",
+      "subtitle": "Mantenha-se conectado conosco para atualizações frescas, vibrações tropicais e as últimas novidades da Colômbia"
+    }
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro",
+    "success": "Sucesso",
+    "exploreButton": "Explore Nossas Frutas",
+    "discoverMore": "Descubra Mais",
+    "language": "Idioma"
+  },
+  "hero": {
+    "title": "Fruit Exotic International Inc",
+    "subtitle": "Do coração da Colômbia às suas mãos — frescor em que você pode confiar, qualidade que você pode saborear.",
+    "cta": "Explore Nossas Frutas"
+  },
+  "about": {
+    "company": "Fruit Exotic International",
+    "title": "Da Fazenda ao Mercado",
+    "story": "Nossa História",
+    "network": "Rede Global",
+    "description": "Fundada por especialistas apaixonados por frutas, a Fruit Exotic International conecta produtores de frutas tropicais a varejistas premium em todo o mundo. Após anos viajando por regiões tropicais, descobrimos a incrível diversidade e qualidade das frutas exóticas que raramente chegam aos mercados globais. Isso nos inspirou a criar uma rede que traz esses tesouros diretamente aos clientes exigentes."
+  },
+  "mission": {
+    "title": "Nossa Missão",
+    "heading": "Qualidade Premium",
+    "description1": "Conectamos o mundo aos melhores tesouros agrícolas da Colômbia, entregando frutas exóticas premium para atacadistas, distribuidores e varejistas globalmente.",
+    "description2": "Ser a mão direita dos nossos parceiros internacionais, trazendo o melhor da Colômbia com produtos de qualidade superior, preços competitivos e logística confiável.",
+    "description3": "Do Canadá à Europa ao Oriente Médio — apoiamos seu negócio com produtos nos quais você pode confiar e serviço com o qual você pode contar."
+  },
+  "whoWeServe": {
+    "title": "A Quem Servimos?",
+    "heading": "Parceiros Globais",
+    "description1": "Servimos varejistas premium, lojas de produtos especiais, restaurantes de alto padrão e distribuidores atacadistas que exigem as melhores frutas exóticas. De mercados boutique procurando variedades raras a redes estabelecidas querendo qualidade consistente, atendemos empresas que valorizam a excelência.",
+    "description2": "Seja você em Nova York, Londres ou Tóquio, a Fruit Exotic International garante que seus clientes experimentem o sabor autêntico do paraíso tropical, entregue fresco à sua porta."
+  },
+  "coreValues": {
+    "title": "Nossos Valores Fundamentais",
+    "qualityFirst": {
+      "title": "Qualidade em Primeiro Lugar",
+      "description": "Priorizamos a excelência em todos os aspectos do nosso negócio, desde a obtenção das melhores frutas até a entrega de produtos premium que excedem as expectativas."
+    },
+    "reliableLogistics": {
+      "title": "Logística Confiável",
+      "description": "Nossa rede de transporte avançada garante entrega pontual em todo o mundo, mantendo o frescor da fazenda ao destino através de frete aéreo e marítimo."
+    },
+    "sustainability": {
+      "title": "Sustentabilidade",
+      "description": "Estamos comprometidos com a responsabilidade ambiental e o abastecimento ético, apoiando práticas agrícolas sustentáveis e compensação justa para os produtores."
+    },
+    "strongPartnerships": {
+      "title": "Parcerias Fortes",
+      "description": "Construindo relacionamentos duradouros com produtores, distribuidores e varejistas de confiança para criar uma rede confiável que beneficia todos na cadeia de suprimentos."
+    }
+  },
+  "partners": {
+    "title": "Nossos Parceiros",
+    "subtitle": "Colaboramos com parceiros confiáveis em todo o mundo para trazer as melhores frutas exóticas e garantir excelência em toda nossa cadeia de suprimentos.",
+    "description": "Colaboramos com parceiros confiáveis em todo o mundo para trazer as melhores frutas exóticas e garantir excelência em toda nossa cadeia de suprimentos.",
+    "specialties": "Especialidades",
+    "learnMore": "Saiba Mais",
+    "cta": {
+      "title": "Interessado em Parceria?",
+      "description": "Junte-se à nossa rede de parceiros confiáveis e nos ajude a entregar as melhores frutas exóticas aos mercados mundiais.",
+      "button": "Entre em Contato"
+    },
+    "ctaTitle": "Interessado em Parceria?",
+    "ctaDescription": "Junte-se à nossa rede de parceiros confiáveis e nos ajude a entregar as melhores frutas exóticas aos mercados mundiais.",
+    "ctaButton": "Entre em Contato"
+  },
+  "aboutUs": {
+    "title": "Sobre Nós",
+    "company": "Exotic Fruits International",
+    "description1": "é sua fonte confiável para frutas exóticas e tropicais premium, cuidadosamente colhidas das regiões mais férteis da Colômbia.",
+    "description2": "Através de parcerias fortes com produtores locais, garantimos que cada remessa entregue frescor e qualidade incomparáveis — trazendo a rica biodiversidade da Colômbia diretamente ao seu mercado.",
+    "learnMore": "Saiba Mais Sobre Nós"
+  },
+  "specialties": {
+    "nationwideDistribution": "Distribuição Nacional",
+    "freshDelivery": "Entrega Fresca",
+    "qualityAssurance": "Garantia de Qualidade",
+    "premiumQuality": "Qualidade Premium",
+    "europeanDistribution": "Distribuição Europeia",
+    "exoticSpecialties": "Especialidades Exóticas",
+    "gourmetSelection": "Seleção Gourmet",
+    "premiumService": "Serviço Premium",
+    "fineFoodDistribution": "Distribuição de Alimentos Finos",
+    "freshProduce": "Produtos Frescos",
+    "canadianMarket": "Mercado Canadense",
+    "qualityDistribution": "Distribuição de Qualidade",
+    "retailExcellence": "Excelência no Varejo",
+    "freshGroceries": "Mercearias Frescas",
+    "communityFocus": "Foco na Comunidade",
+    "foodService": "Serviço de Alimentação",
+    "professionalDistribution": "Distribuição Profissional",
+    "restaurantSupply": "Fornecimento para Restaurantes"
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "stillHaveQuestions": "Ainda Tem Dúvidas?",
+    "contactDescription": "Nossa equipe de especialistas está aqui para ajudá-lo a encontrar as frutas exóticas perfeitas para suas necessidades.",
+    "contactExperts": "Entre em Contato com Nossos Especialistas",
+    "cta": {
+      "title": "Ainda Tem Dúvidas?",
+      "description": "Nossa equipe de especialistas está aqui para ajudá-lo a encontrar as frutas exóticas perfeitas para suas necessidades.",
+      "button": "Entre em Contato com Nossos Especialistas"
+    },
+    "questions": {
+      "1": {
+        "question": "O que torna suas frutas exóticas de qualidade premium?",
+        "answer": "Nossas frutas são obtidas diretamente de fazendas orgânicas certificadas nas regiões mais férteis da Colômbia. Mantemos padrões rigorosos de controle de qualidade, garantindo frescor ideal através de nossa logística avançada de cadeia fria e entregamos apenas os melhores espécimes que atendem aos nossos critérios rigorosos de sabor, aparência e valor nutricional."
+      },
+      "2": {
+        "question": "Como vocês garantem o frescor durante o transporte internacional?",
+        "answer": "Utilizamos sistemas de distribuição de cadeia fria de última geração que mantêm níveis precisos de temperatura e umidade durante toda a jornada. Nossas frutas são colhidas no pico de maturação e imediatamente processadas através de nossas instalações com temperatura controlada, garantindo que cheguem ao seu destino com máximo frescor e sabor."
+      },
+      "3": {
+        "question": "Quais frutas exóticas vocês se especializam em importar?",
+        "answer": "Especializamo-nos em uma gama diversificada de frutas exóticas premium incluindo fruta-do-dragão, physalis, mangostão, tamarillo, maracujá e muitas variedades raras colombianas. Nossa seleção varia sazonalmente para garantir que sempre ofereçamos as frutas mais frescas e de melhor qualidade disponíveis de nossos parceiros agricultores de confiança."
+      },
+      "4": {
+        "question": "Vocês oferecem preços atacadistas para empresas?",
+        "answer": "Sim, oferecemos preços atacadistas competitivos para restaurantes, lojas de produtos, distribuidores e outras empresas. Nosso programa atacadista inclui descontos por volume, horários de entrega flexíveis e gerenciamento de conta dedicado para garantir que seu negócio receba frutas exóticas consistentes e de alta qualidade."
+      },
+      "5": {
+        "question": "Quais certificações suas frutas possuem?",
+        "answer": "Nossas frutas vêm com certificações abrangentes incluindo certificação orgânica, conformidade com comércio justo e padrões internacionais de segurança alimentar. Trabalhamos exclusivamente com fazendas certificadas que seguem práticas agrícolas sustentáveis e atendem critérios rigorosos de responsabilidade ambiental e social."
+      },
+      "6": {
+        "question": "Como posso fazer um pedido e quais são as quantidades mínimas?",
+        "answer": "Você pode fazer pedidos através do nosso site ou entrando em contato diretamente com nossa equipe de vendas. As quantidades mínimas de pedido variam por tipo de fruta e destino, mas acomodamos tanto pedidos especiais pequenos quanto grandes remessas comerciais. Nossa equipe trabalhará com você para encontrar a melhor solução para suas necessidades específicas."
+      }
+    }
+  },
+  "products": {
+    "title": "Nossos Produtos",
+    "subtitle": "Qualidade Premium",
+    "description": "Descubra nossa seleção premium de frutas exóticas e tropicais, cuidadosamente obtidas das melhores fazendas ao redor do mundo. Das tropicais clássicas às variedades raras, trazemos as frutas mais frescas e saborosas.",
+    "sliderTitle": "Nossas Frutas Exóticas Premium",
+    "sliderDescription": "Descubra a incrível variedade de frutas exóticas frescas que importamos diretamente da Colômbia",
+    "quote": "Qualidade colhida com cuidado, entregue com paixão",
+    "search": {
+      "placeholder": "Buscar frutas por nome...",
+      "label": "Buscar",
+      "clearSearch": "Limpar Busca",
+      "resultsCount": "{count} resultado{plural} encontrado"
+    },
+    "categories": {
+      "all": "Todas",
+      "tropical": "Tropicais",
+      "exotic": "Exóticas",
+      "citrus": "Cítricas",
+      "stoneFruits": "Frutas de Caroço",
+      "berries": "Berries",
+      "seasonal": "Sazonais"
+    },
+    "actions": {
+      "moreInfo": "Mais Informações",
+      "buyNow": "Comprar Agora",
+      "addToFavorites": "Adicionar aos Favoritos",
+      "removeFromFavorites": "Remover dos Favoritos"
+    },
+    "messages": {
+      "noResults": "Nenhum produto encontrado",
+      "noResultsDescription": "Tente ajustar seus critérios de busca ou filtro.",
+      "noResultsSearch": "Nenhuma fruta encontrada para \"{query}\"",
+      "noResultsSearchDescription": "Tente buscar por palavras-chave diferentes ou navegue pelas nossas categorias acima.",
+      "noResultsCategory": "Nenhum produto encontrado nesta categoria",
+      "noResultsCategoryDescription": "Tente selecionar uma categoria diferente ou buscar por frutas específicas.",
+      "outOfStock": "Fora de Estoque",
+      "inStock": "Em Estoque"
+    }
+  },
+  "testimonials": {
+    "title": "Depoimentos",
+    "subtitle": "O que nossos parceiros dizem sobre nossas frutas exóticas premium.",
+    "thomasFruits": {
+      "quote": "Qualidade do produto: Muito boa, frutas bem maduras, pouca perda no recebimento.",
+      "author": "Thomas Fruits",
+      "meta": "Parceiro - Canadá"
+    },
+    "iga": {
+      "quote": "Qualidade consistente do produto: 5/5 – As frutas são frescas, bem calibradas, com excelente apresentação e maturação ideal para venda.",
+      "author": "IGA",
+      "meta": "Parceiro - Canadá"
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "title": "Sobre Nós",
+      "subtitle": "Mais que frutas - entregamos confiança, autenticidade e o sabor da Colômbia",
+      "description": "Mais que frutas - entregamos confiança, autenticidade e o sabor da Colômbia"
+    },
+    "story": {
+      "title": "Nossa História",
+      "description1": "Na Fruit Exotic International Inc by I Defense, cada fruta começa com uma história de paixão e tradição.",
+      "description2": "Nossa jornada começou na Colômbia há mais de sete anos, com uma missão em mente: compartilhar os tesouros tropicais do país com o mundo.",
+      "description3": "Por trás de cada manga, lima ou mangostão estão agricultores que se levantam com o sol, trabalhando a terra com dedicação e cuidado. Seu conhecimento, passado de geração em geração, garante que cada fruta seja cultivada naturalmente, colhida à mão e nutrida com amor pela terra.",
+      "description4": "Dessas hortas, continuamos a jornada - cuidadosamente lavando, classificando e embalando cada fruta para atender aos mais altos padrões de qualidade. Hoje, nossas exportações chegam a parceiros no Canadá, Europa e Oriente Médio, entregando frescor e autenticidade em cada caixa.",
+      "finalDescription": "Nossa história é de trabalho árduo, confiança e conexão - dos campos da Colômbia às mesas ao redor do mundo."
+    },
+    "whatWeOffer": {
+      "title": "O Que Oferecemos",
+      "premiumFruits": {
+        "title": "Frutas Exóticas Premium",
+        "subtitle": "das melhores colheitas da Colômbia",
+        "description": "De mangas baby e mangas Palmer a limas, abacates e mangostões — entregamos as melhores colheitas da Colômbia, cultivadas com cuidado e colhidas no pico de maturação."
+      },
+      "customPackaging": {
+        "title": "Soluções de Embalagem Personalizadas",
+        "subtitle": "adaptadas ao seu mercado",
+        "description": "Seu mercado é único — e sua embalagem também. Fornecemos formatos, marcas e designs personalizados para atender exatamente às suas necessidades."
+      },
+      "exportLogistics": {
+        "title": "Logística de Exportação Confiável",
+        "subtitle": "entrega mundial garantida",
+        "description": "Seja por carga aérea semanal ou cargas completas de contêiner, garantimos entrega rápida, flexível e segura em todo o mundo."
+      },
+      "globalReach": {
+        "title": "Alcance Global e Parcerias",
+        "subtitle": "conectando mercados mundiais",
+        "description": "Com clientes confiáveis no Canadá, Europa e Oriente Médio, conectamos os tesouros agrícolas da Colômbia aos mercados ao redor do globo."
+      },
+      "checkProducts": "Confira Nossos Produtos"
+    },
+    "certifications": {
+      "title": "Certificações de Qualidade",
+      "description": "Cada remessa de exportação da Fruits Exotics International Inc. By I Defense é acompanhada de um certificado fitossanitário oficial. Isso garante que cada fruta que entregamos esteja em estrita conformidade com os padrões internacionais de segurança alimentar, dando aos nossos clientes confiança na qualidade, segurança e autenticidade de nossos produtos."
+    },
+    "companyValues": {
+      "qualityFirst": {
+        "title": "Qualidade em Primeiro Lugar",
+        "description": "Tecnologia avançada avalia a maturidade, firmeza, densidade e teor de açúcar de cada fruta antes da exportação."
+      },
+      "traceability": {
+        "title": "Rastreabilidade Completa",
+        "description": "Cada remessa recebe um código único, garantindo transparência completa da fazenda colombiana ao seu mercado."
+      },
+      "certifiedExcellence": {
+        "title": "Excelência Certificada",
+        "description": "Certificados fitossanitários oficiais garantem conformidade com padrões internacionais de segurança alimentar."
+      },
+      "sustainablePartnership": {
+        "title": "Parceria Sustentável",
+        "description": "Relacionamentos diretos com produtores colombianos apoiam práticas agrícolas sustentáveis e comércio justo."
+      }
+    },
+    "timeline": {
+      "2018": {
+        "title": "Fundação em Montreal",
+        "description": "Estabelecemos nosso centro de distribuição na 9600 Meilleur Street, criando um hub estratégico para os mercados canadenses."
+      },
+      "2019": {
+        "title": "Parcerias Colombianas",
+        "description": "Construímos relacionamentos diretos com produtores de frutas premium nas diversas regiões agrícolas da Colômbia."
+      },
+      "2021": {
+        "title": "Integração Tecnológica",
+        "description": "Implementamos sistemas avançados de controle de qualidade para avaliação e certificação precisas de frutas."
+      },
+      "2024": {
+        "title": "Expansão de Mercado",
+        "description": "Servindo mercados especializados em todo o Canadá com distribuição consistente e de alta qualidade de frutas exóticas."
+      }
+    }
+  },
+  "productsPage": {
+    "hero": {
+      "subtitle": "Qualidade Premium",
+      "title": "Nossos Produtos",
+      "description": "Descubra nossa seleção premium de frutas exóticas e tropicais, cuidadosamente obtidas das melhores fazendas ao redor do mundo. Das tropicais clássicas às variedades raras, trazemos as frutas mais frescas e saborosas."
+    }
+  },
+  "blogPage": {
+    "hero": {
+      "subtitle": "Insights e Histórias",
+      "title": "Nosso Blog",
+      "description": "Descubra o fascinante mundo das frutas exóticas através de insights especializados, histórias de sustentabilidade e aventuras culinárias. Junte-se a nós numa jornada de sabor, conhecimento e inspiração."
+    },
+    "categories": {
+      "all": "Todas",
+      "education": "Educação",
+      "sustainability": "Sustentabilidade",
+      "tipsGuides": "Dicas e Guias",
+      "health": "Saúde",
+      "behindScenes": "Bastidores",
+      "recipes": "Receitas"
+    },
+    "readMore": "Leia Mais"
+  },
+  "productDetails": {
+    "mango": {
+      "name": "Papaia",
+      "category": "Tropical",
+      "ediblePart": "Polpa",
+      "consumption": "Fresca, vitaminas, sobremesas",
+      "healthBenefits": ["Rica em Vitamina C", "Alta em fibras", "Antioxidantes"]
+    },
+    "dragon-fruit": {
+      "name": "Fruta do Dragão",
+      "category": "Exótica",
+      "ediblePart": "Polpa com sementes",
+      "consumption": "Fresca, saladas de frutas, tigelas de vitamina",
+      "healthBenefits": ["Baixa em calorias", "Rica em ferro", "Vitamina C"]
+    },
+    "passion-fruit": {
+      "name": "Physalis",
+      "category": "Tropical",
+      "ediblePart": "Polpa e sementes",
+      "consumption": "Fresca, sucos, cobertura de sobremesas",
+      "healthBenefits": ["Alta em fibras", "Vitamina A", "Potássio"]
+    },
+    "rambutan": {
+      "name": "Maracujá",
+      "category": "Exótica",
+      "ediblePart": "Polpa translúcida",
+      "consumption": "Fresca, saladas de frutas",
+      "healthBenefits": ["Vitamina C", "Cobre", "Manganês"]
+    },
+    "lychee": {
+      "name": "Mangostão",
+      "category": "Tropical",
+      "ediblePart": "Polpa doce",
+      "consumption": "Fresca, coquetéis, sobremesas",
+      "healthBenefits": ["Vitamina C", "Cobre", "Vitamina B6"]
+    },
+    "star-fruit": {
+      "name": "Banana",
+      "category": "Tropical",
+      "ediblePart": "Fruta inteira",
+      "consumption": "Fresca, guarnição, saladas",
+      "healthBenefits": ["Baixas calorias", "Vitamina C", "Fibras"]
+    },
+    "papaya": {
+      "name": "Melão Cantaloupe",
+      "category": "Tropical",
+      "ediblePart": "Polpa laranja",
+      "consumption": "Fresca, vitaminas, saladas",
+      "healthBenefits": ["Enzimas digestivas", "Vitamina C", "Folato"]
+    },
+    "jackfruit": {
+      "name": "Feijoa",
+      "category": "Exótica",
+      "ediblePart": "Vagens amarelas",
+      "consumption": "Fresca, curries, sobremesas",
+      "healthBenefits": ["Alta em fibras", "Vitamina A", "Potássio"]
+    },
+    "durian": {
+      "name": "Graviola",
+      "category": "Exótica",
+      "ediblePart": "Polpa tipo creme",
+      "consumption": "Fresca, sobremesas, sorvete",
+      "healthBenefits": ["Alta em energia", "Vitamina B", "Potássio"]
+    },
+    "kiwi": {
+      "name": "Lima",
+      "category": "Tropical",
+      "ediblePart": "Polpa verde com sementes",
+      "consumption": "Fresca, vitaminas, saladas de frutas",
+      "healthBenefits": ["Vitamina C", "Fibras", "Antioxidantes"]
+    },
+    "guava": {
+      "name": "Abacate",
+      "category": "Tropical",
+      "ediblePart": "Polpa rosa/branca",
+      "consumption": "Fresca, sucos, geleias",
+      "healthBenefits": ["Vitamina C", "Fibras", "Folato"]
+    },
+    "pomegranate": {
+      "name": "Maçã Verde",
+      "category": "Frutas de Caroço",
+      "ediblePart": "Sementes vermelhas (arilos)",
+      "consumption": "Fresca, sucos, saladas",
+      "healthBenefits": ["Antioxidantes", "Vitamina C", "Fibras"]
+    },
+    "persimmon": {
+      "name": "Curuba",
+      "category": "Frutas de Caroço",
+      "ediblePart": "Polpa laranja",
+      "consumption": "Fresca, seca, sobremesas",
+      "healthBenefits": ["Vitamina A", "Fibras", "Manganês"]
+    },
+    "blueberries": {
+      "name": "Figo da Índia",
+      "category": "Berries",
+      "ediblePart": "Berry inteiro",
+      "consumption": "Fresca, vitaminas, confeitaria",
+      "healthBenefits": ["Antioxidantes", "Vitamina K", "Fibras"]
+    },
+    "blackberries": {
+      "name": "Tamarillo",
+      "category": "Berries",
+      "ediblePart": "Berry inteiro",
+      "consumption": "Fresca, geleias, sobremesas",
+      "healthBenefits": ["Vitamina C", "Fibras", "Antioxidantes"]
+    },
+    "blood-orange": {
+      "name": "Aloe Vera",
+      "category": "Cítrica",
+      "ediblePart": "Segmentos de polpa vermelha",
+      "consumption": "Fresca, sucos, coquetéis",
+      "healthBenefits": ["Vitamina C", "Antocianinas", "Folato"]
+    }
+  },
+  "blogArticles": {
+    "1": {
+      "title": "Frutas exóticas, um recurso para sua saúde diária",
+      "excerpt": "🥭🐉 E se suas frutas se tornassem suas aliadas de bem-estar cotidiano? Ricas em vitaminas, fibras e antioxidantes, as frutas exóticas são muito mais que simples guloseimas exóticas. Descubra por que merecem um lugar na sua rotina de saúde.",
+      "content": "🥭🐉 E se suas frutas se tornassem suas aliadas de bem-estar cotidiano?\n\nRicas em vitaminas, fibras e antioxidantes, as frutas exóticas são muito mais que simples guloseimas exóticas 🌴\n\nAqui está o porquê elas merecem um lugar na sua rotina de saúde 👇\n\n✅ **Energia natural**\n➡️ Maracujá ou graviola proporcionam um verdadeiro impulso sem açúcar artificial adicionado.\n\n✅ **Digestão melhorada**\n➡️ Papaia e mangostão contêm enzimas naturais que ajudam na digestão adequada.\n\n✅ **Beleza da pele**\n➡️ Fruta do dragão é rica em água e antioxidantes, perfeita para pele hidratada e radiante.\n\n✅ **Imunidade fortalecida**\n➡️ Rambutan e curuba são carregados de vitamina C: ideal para combater a fadiga menor.\n\n💡 **Dica de bem-estar:**\nAdicione 1 ou 2 frutas exóticas aos seus cafés da manhã, saladas ou vitaminas todos os dias e veja a diferença!"
+    },
+    "2": {
+      "title": "Como reconhecer uma fruta exótica de qualidade?",
+      "excerpt": "🥭🍍 Antes de provar uma fruta tropical, aqui estão 5 dicas para fazer a escolha certa no mercado ou online. Descubra como reconhecer uma fruta madura através da cor, fragrância, textura e mais.",
+      "content": "🥭🍍 Como reconhecer uma fruta exótica de qualidade?\n\nAntes de provar uma fruta tropical, aqui estão 5 dicas para fazer a escolha certa no mercado ou online ⬇️\n\n✅ **1. Cor**\nUma fruta madura tem cor vibrante e uniforme.\n👉 Exemplo: uma manga madura é amarela/laranja, sem manchas verdes duras.\n\n✅ **2. Fragrância**\nUma boa fruta exótica cheira bem! Cheire a base da fruta:\n💡 Um aroma doce = bom sinal de maturação.\n\n✅ **3. Textura**\nA casca deve estar macia sem estar mole.\n🥥 Muito dura = ainda não madura / Muito mole = muito madura.\n\n✅ **4. Peso**\nUma fruta pesada para seu tamanho geralmente é bem suculenta.\n🍊 Mais peso = mais sabor.\n\n✅ **5. Origem e frescor**\nFavoreça frutas colhidas na maturidade e importadas por especialistas"
+    },
+    "3": {
+      "title": "Qual fruta exótica escolher de acordo com seus desejos?",
+      "excerpt": "🍍✨ Frutada, refrescante, energizante... cada fruta exótica tem sua personalidade! Você não sabe qual escolher? Descubra nosso guia rápido para escolher a fruta perfeita de acordo com seu humor ou necessidades.",
+      "content": "🍍✨ Qual fruta exótica escolher de acordo com seus desejos?\n\nFrutada, refrescante, energizante... cada fruta exótica tem sua personalidade!\n\nVocê não sabe qual escolher? Aqui está um guia rápido para ajudá-lo de acordo com seu humor ou necessidades 👇\n\n💧 **Precisa de hidratação?**\n→ Fruta do dragão: rica em água, perfeita após esportes ou em clima quente!\n\n🍬 **Desejo de doçura?**\n→ Papaia ou graviola: textura derretida, sabor doce e reconfortante\n\n⚡ **Precisa de impulso natural?**\n→ Maracujá: rico em vitamina C e antioxidantes, ideal para impulso de energia\n\n🧘‍♀️ **Pausa de bem-estar?**\n→ Mangostão ou feijoa: bom para digestão e sistema imunológico\n\n🎉 **Aperitivo ou momento festivo?**\n→ Mangostão, curuba ou carambola: visuais incríveis, perfeitos para compartilhar ou destacar em suas receitas!\n\n🌴 **Confie no seu paladar... ou deixe-se surpreender!**"
+    },
+    "4": {
+      "title": "E se variar suas frutas exóticas se tornasse seu melhor hábito de saúde?",
+      "excerpt": "Comer frutas exóticas é bom. Mas variar espécies e cores é ainda melhor para sua saúde! Descubra por que a diversidade é essencial para maximizar os benefícios nutricionais.",
+      "content": "E se variar suas frutas exóticas se tornasse seu melhor hábito de saúde?\n\nComer frutas exóticas é bom. Mas variar espécies e cores é ainda melhor para sua saúde! 💪🌿\n\nAqui está o porquê a diversidade é essencial:\n\n✅ **Cada fruta tem seus próprios nutrientes:**\nMangostão é rico em xantonas antioxidantes\nPapaia apoia a digestão graças às suas enzimas\nFruta do dragão (ou pitaya) é hidratante, rica em fibras e antioxidantes\nGraviola é calmante e rica em vitaminas B\nRambutan fortalece a imunidade com sua vitamina C\n\n✅ **Mais cores = mais benefícios!**\nPigmentos naturais (laranja, roxo, verde, rosa) também são protetores naturais para suas células.\n\n✅ **Menos monotonia = mais prazer!**\nMudar suas frutas regularmente também significa manter o desejo de comer bem, sem frustração."
+    },
+    "5": {
+      "title": "Os benefícios das frutas exóticas no sistema imunológico",
+      "excerpt": "🍍🥭 Você sabia que algumas frutas exóticas são verdadeiras aliadas para fortalecer suas defesas naturais? Descubra 5 superfrutas para integrar em sua rotina de saúde para fortalecer sua imunidade.",
+      "content": "🍍 Os benefícios das frutas exóticas no sistema imunológico 🥭\n\nVocê sabia que algumas frutas exóticas são verdadeiras aliadas para fortalecer suas defesas naturais? 💪\n\nAqui estão 5 superfrutas para integrar em sua rotina de saúde:\n\n✅ **Maracujá** – Fonte de vitamina C, estimula a produção de glóbulos brancos.\n\n✅ **Papaia** – Contém uma enzima chamada papaína e vitaminas C e E: um coquetel anti-inflamatório.\n\n✅ **Graviola** – Conhecida por suas propriedades antibacterianas e antivirais naturais.\n\n💡 Além de serem deliciosas, essas frutas tropicais ajudam você a aumentar a energia e resistir melhor às infecções, especialmente durante períodos de fadiga ou mudanças sazonais.\n\n🌱 **Dica:** consuma-as frescas, em vitaminas, saladas ou como suco prensado para preservar todos os seus benefícios!"
+    },
+    "6": {
+      "title": "Por que escolher frutas exóticas da agricultura sustentável?",
+      "excerpt": "🌍 Na FruitExotica.ca, não escolhemos frutas aleatoriamente. Selecionamos com respeito pela terra... e por você! Descubra 3 boas razões para favorecer a agricultura sustentável para suas frutas exóticas.",
+      "content": "🌍 Por que escolher frutas exóticas da agricultura sustentável?\n\nNa FruitExotica.ca, não escolhemos frutas aleatoriamente. Selecionamos com respeito pela terra... e por você 🍍💚\n\nAqui estão 3 boas razões para favorecer a agricultura sustentável 👇\n\n✅ **1. Respeito pelos solos e biodiversidade**\nPlantações sustentáveis evitam pesticidas químicos prejudiciais e preservam ecossistemas tropicais 🌿\n\n✅ **2. Menos desperdício, mais qualidade**\nMétodos de cultivo racionais = frutas colhidas na maturidade, menos perda, mais sabor 😋\n\n✅ **3. Para sua saúde e do planeta**\nMenos químicos, mais nutrientes naturais 🌱 = uma escolha vantajosa em todas as frentes"
+    },
+    "7": {
+      "title": "Nosso compromisso: agricultura respeitosa com a terra e as pessoas",
+      "excerpt": "Acreditamos que uma fruta saborosa começa com terra respeitada. Descubra nosso compromisso diário com a agricultura sustentável, em colaboração direta com nossos produtores parceiros apaixonados.",
+      "content": "Nosso compromisso: agricultura respeitosa com a terra e as pessoas\n\nAcreditamos que uma fruta saborosa começa com terra respeitada.\n\nÉ por isso que nos comprometemos todos os dias com a agricultura sustentável, em colaboração direta com nossos produtores parceiros.\n\n✅ **Sem pesticidas químicos:** nossas frutas crescem em ambiente natural, sem produtos prejudiciais para você ou o planeta.\n\n✅ **Métodos agrícolas responsáveis:** compostagem, gestão da água, rotação de culturas... cada gesto conta.\n\n✅ **Apoio às comunidades locais:** trabalhamos de mãos dadas com agricultores apaixonados, para produção ética e justa.\n\n🍍 Quando você escolhe Fruit Exotica, escolhe produtos bons para sua saúde e para o planeta.\n\n**E VOCÊ, QUE GESTOS FAZ DIARIAMENTE PARA UMA ALIMENTAÇÃO MAIS RESPONSÁVEL?**\n\n💚 **COMPARTILHE ESTE POST PARA APOIAR UMA AGRICULTURA MAIS HUMANA.**"
+    }
+  }
+}
